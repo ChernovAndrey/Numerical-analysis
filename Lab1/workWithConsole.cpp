@@ -1,0 +1,42 @@
+//
+// Created by andrey on 06.09.17.
+//
+#include <iostream>
+#include "workWithConsole.h"
+using namespace std;
+
+void printVector(vector<double> v){
+    for (double i : v) {
+        cout << i << " ";
+    }
+    cout << endl;
+}
+void printMatrix(vector<vector<double>> m) {
+
+    for (auto &str : m) {
+        for (double el : str) {
+            cout << el << "    ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
+
+vector<vector<double>> InputMatrix() {
+    int n, m;
+    cout << "input matrix size:" << endl;
+    cout << "n=";
+    cin >> n;
+    cout << "m=";
+    cin >> m;
+    vector<vector<double>> matrix(n);
+    for (int i = 0; i < n; i++) {
+        vector<double> help(m);
+        cout <<"input "<< i+1 <<" str:"<< endl;
+        for(int j = 0; j<m ;j++){
+            cin >> help[j];
+        }
+        matrix[i]=help;
+    }
+    return matrix;
+}
