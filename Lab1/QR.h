@@ -6,6 +6,8 @@
 #ifndef LAB1_QR_H
 #define LAB1_QR_H
 
+template<typename T>
+std::vector<T> methodQR(std::vector<std::vector<T>> matrix);
 
-std::vector<double> methodQR(std::vector<std::vector<double>> matrix);
+#include "QR.cpp"
 #endif //LAB1_QR_H

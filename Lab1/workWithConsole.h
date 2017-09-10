@@ -1,11 +1,21 @@
 //
 // Created by andrey on 06.09.17.
 //
-#include <vector>
 #ifndef LAB1_WORLWITHCONSOLE_H
 #define LAB1_WORLWITHCONSOLE_H
+#include<iostream>
+#include <vector>
+using namespace std;
 
-void printVector(std::vector<double> v);
-void printMatrix(std::vector<std::vector<double>> m);
-std::vector<std::vector<double>> InputMatrix();
+template<typename T>
+void printVector(std::vector<T> v);
+
+template<typename T>
+void printMatrix(std::vector<std::vector<T>> m);
+
+//std::vector<std::vector<double>> InputMatrix();
+
+#include "workWithConsole.cpp"
+
 #endif //LAB1_WORLWITHCONSOLE_H
+

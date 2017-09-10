@@ -105,9 +105,6 @@
 		<Unit filename="/home/andrey/CLionProjects/MV/Lab1/sourceMatrices.h">
 			<Option target="Lab1"/>
 		</Unit>
-		<Unit filename="/home/andrey/CLionProjects/MV/Lab1/workWithConsole.cpp">
-			<Option target="Lab1"/>
-		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/MV/Lab1/workWithConsole.h">
 			<Option target="Lab1"/>
 		</Unit>

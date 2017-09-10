@@ -7,18 +7,15 @@
 #include<vector>
 #include "gauss.h"
 #include "sourceMatrices.h"
-#include "workWithConsole.h"
 #include "QR.h"
 using namespace std;
 
-
-
 int main() {
-    //auto matrix = InputMatrix();
-    auto matrix = getMatrixEx4();
+    vector<vector<float>> matrix;
+    getMatrixEx4(matrix);// return double
     printMatrix(matrix);
 
-   auto result = methodQR(matrix);
+    auto result = methodQR(matrix);
     //auto result = methodGauss(matrix);
     if (result.empty()){
         cout<<"matrix degenerate";

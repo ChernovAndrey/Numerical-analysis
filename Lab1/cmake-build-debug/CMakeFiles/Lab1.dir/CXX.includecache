@@ -7,8 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/andrey/CLionProjects/MV/Lab1/QR.cpp
-QR.h
-/home/andrey/CLionProjects/MV/Lab1/QR.h
+iostream
+-
 workWithConsole.h
 /home/andrey/CLionProjects/MV/Lab1/workWithConsole.h
 cmath
@@ -19,6 +19,8 @@ iostream
 -
 vector
 -
+QR.cpp
+/home/andrey/CLionProjects/MV/Lab1/QR.cpp
 
 /home/andrey/CLionProjects/MV/Lab1/gauss.cpp
 iostream
@@ -33,6 +35,8 @@ workWithConsole.h
 /home/andrey/CLionProjects/MV/Lab1/gauss.h
 vector
 -
+gauss.cpp
+/home/andrey/CLionProjects/MV/Lab1/gauss.cpp
 
 /home/andrey/CLionProjects/MV/Lab1/main.cpp
 iostream
@@ -43,8 +47,6 @@ gauss.h
 /home/andrey/CLionProjects/MV/Lab1/gauss.h
 sourceMatrices.h
 /home/andrey/CLionProjects/MV/Lab1/sourceMatrices.h
-workWithConsole.h
-/home/andrey/CLionProjects/MV/Lab1/workWithConsole.h
 QR.h
 /home/andrey/CLionProjects/MV/Lab1/QR.h
 
@@ -57,14 +59,20 @@ vector
 /home/andrey/CLionProjects/MV/Lab1/sourceMatrices.h
 vector
 -
+sourceMatrices.cpp
+/home/andrey/CLionProjects/MV/Lab1/sourceMatrices.cpp
 
 /home/andrey/CLionProjects/MV/Lab1/workWithConsole.cpp
 iostream
 -
-workWithConsole.h
-/home/andrey/CLionProjects/MV/Lab1/workWithConsole.h
-
-/home/andrey/CLionProjects/MV/Lab1/workWithConsole.h
 vector
 -
+
+/home/andrey/CLionProjects/MV/Lab1/workWithConsole.h
+iostream
+-
+vector
+-
+workWithConsole.cpp
+/home/andrey/CLionProjects/MV/Lab1/workWithConsole.cpp
 

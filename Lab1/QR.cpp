@@ -1,14 +1,13 @@
 //
 // Created by andrey on 06.09.17.
 //
-
-#include "QR.h"
+#include<iostream>
 #include "workWithConsole.h"
 #include<cmath>
 using namespace std;
 
 //посление столбцы не трогаем
-std::vector<std::vector<double>> matrixMultiplication(std::vector<std::vector<double>> T,std::vector<std::vector<double>> matrix) {
+/* std::vector<std::vector<double>> matrixMultiplication(std::vector<std::vector<double>> T,std::vector<std::vector<double>> matrix) {
     //умножаем T на A(посление столбцы в matrix не трогаем)
     vector<vector<double >> C(T.size());
     for (int i = 0; i < T.size(); i++) {
@@ -43,7 +42,7 @@ std::vector<std::vector<double>> matrixMultiplication(std::vector<std::vector<do
         matrix[i][matrix[i].size()-1]=bNew[i];
     }
     return C;
-}
+}*/
 
 //матрица на которую умножаем исходную на каждом шаге, k - номер строки strk
 // (и номер элемента, который искл.), m- номер строки strm
@@ -86,13 +85,14 @@ std::vector<std::vector<double>> matrixMultiplication(std::vector<std::vector<do
 }*/
 
 //прямой ход метода вращений
-vector<vector<double>> rotation(vector<vector<double>> matrix, int ni, int nj) {  //ni, nj -номер строк
+template <typename T>
+ vector<vector<T>> rotation(vector<vector<T>> matrix, int ni, int nj) {  //ni, nj -номер строк
     cout << matrix.size() <<endl;
-    double Sqrt = sqrt(matrix[ni][ni]*matrix[ni][ni] + matrix[nj][ni]*matrix[nj][ni]);
-    double c = matrix[ni][ni]/Sqrt;
-    double s = matrix[nj][ni]/Sqrt;
-    vector<double> strI(matrix.size()+1); //cтолбцов на 1 больше чем строк
-    vector<double> strJ(matrix.size()+1);
+    T Sqrt = sqrt(matrix[ni][ni]*matrix[ni][ni] + matrix[nj][ni]*matrix[nj][ni]);
+    T c = matrix[ni][ni]/Sqrt;
+    T s = matrix[nj][ni]/Sqrt;
+    vector<T> strI(matrix.size()+1); //cтолбцов на 1 больше чем строк
+    vector<T> strJ(matrix.size()+1);
     for(int i=0; i< matrix.size()+1; i++){
         strI[i] = c*matrix[ni][i] + s*matrix[nj][i];
         strJ[i] = -s*matrix[ni][i] + c*matrix[nj][i];
@@ -102,7 +102,8 @@ vector<vector<double>> rotation(vector<vector<double>> matrix, int ni, int nj) {
     return matrix;
 }
 //треугольная матрица
-vector<vector<double>> getRMatrix(vector<vector<double>> matrix){
+template <typename T>
+ vector<vector<T>> getRMatrix(vector<vector<T>> matrix){
     for (int i =0; i<matrix.size()-1; i++) {
         //vector<double> str(matrix[i]);
         for( int j=i+1; j<matrix.size(); j++){
@@ -113,8 +114,9 @@ vector<vector<double>> getRMatrix(vector<vector<double>> matrix){
     }
     return matrix;
 }
-vector<double> calculateResultVectorQR(vector<vector<double>> matrix){
-    vector<double> result(matrix.size());
+template <typename T>
+vector<T> calculateResultVectorQR(vector<vector<T>> matrix){
+    vector<T> result(matrix.size());
     for(auto i= static_cast<int>(matrix.size() - 1); i >= 0; i--){
         double s =0.0;
         for(auto j=i+1;j<matrix.size();j++){
@@ -124,8 +126,8 @@ vector<double> calculateResultVectorQR(vector<vector<double>> matrix){
     }
     return result;
 }
-
-std::vector<double> methodQR(std::vector<std::vector<double>> matrix){
+template<typename T>
+std::vector<T> methodQR(std::vector<std::vector<T>> matrix){
     auto R = getRMatrix(matrix);// std::move что это?
     printMatrix(R);
     return calculateResultVectorQR(R);

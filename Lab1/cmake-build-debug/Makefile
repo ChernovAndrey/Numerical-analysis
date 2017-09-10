@@ -231,33 +231,6 @@ sourceMatrices.cpp.s:
 	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/sourceMatrices.cpp.s
 .PHONY : sourceMatrices.cpp.s
 
-workWithConsole.o: workWithConsole.cpp.o
-
-.PHONY : workWithConsole.o
-
-# target to build an object file
-workWithConsole.cpp.o:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/workWithConsole.cpp.o
-.PHONY : workWithConsole.cpp.o
-
-workWithConsole.i: workWithConsole.cpp.i
-
-.PHONY : workWithConsole.i
-
-# target to preprocess a source file
-workWithConsole.cpp.i:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/workWithConsole.cpp.i
-.PHONY : workWithConsole.cpp.i
-
-workWithConsole.s: workWithConsole.cpp.s
-
-.PHONY : workWithConsole.s
-
-# target to generate assembly for a file
-workWithConsole.cpp.s:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/workWithConsole.cpp.s
-.PHONY : workWithConsole.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -279,9 +252,6 @@ help:
 	@echo "... sourceMatrices.o"
 	@echo "... sourceMatrices.i"
 	@echo "... sourceMatrices.s"
-	@echo "... workWithConsole.o"
-	@echo "... workWithConsole.i"
-	@echo "... workWithConsole.s"
 .PHONY : help
 
 

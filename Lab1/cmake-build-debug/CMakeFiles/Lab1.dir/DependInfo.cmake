@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/andrey/CLionProjects/MV/Lab1/gauss.cpp" "/home/andrey/CLionProjects/MV/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/gauss.cpp.o"
   "/home/andrey/CLionProjects/MV/Lab1/main.cpp" "/home/andrey/CLionProjects/MV/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/main.cpp.o"
   "/home/andrey/CLionProjects/MV/Lab1/sourceMatrices.cpp" "/home/andrey/CLionProjects/MV/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/sourceMatrices.cpp.o"
-  "/home/andrey/CLionProjects/MV/Lab1/workWithConsole.cpp" "/home/andrey/CLionProjects/MV/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/workWithConsole.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
