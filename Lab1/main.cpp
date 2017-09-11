@@ -14,9 +14,9 @@ using namespace std;
 int main() {
 
      vector<vector<double>> matrix;
-    matrix = ReadFile(matrix,1);
+//    matrix = ReadFile(matrix,2);
+    getMatrixEx4(matrix);// return double
     printMatrix(matrix);
-    //getMatrixEx4(matrix);// return double
     //printMatrix(matrix);
 
     auto result = methodQR(matrix);
@@ -25,10 +25,10 @@ int main() {
         cout<<"matrix degenerate";
     };
     printVector(result);
-     result = methodGauss(matrix);
+/*     result = methodGauss(matrix);
     if (result.empty()){
         cout<<"matrix degenerate";
     };
-    printVector(result);
+    printVector(result);*/
     return 0;
 }
