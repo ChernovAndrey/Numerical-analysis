@@ -48,10 +48,10 @@ RM = /home/andrey/Загрузки/clion-2017.2.2/bin/cmake/bin/cmake -E remove 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andrey/CLionProjects/MV/Lab1
+CMAKE_SOURCE_DIR = /home/andrey/CLionProjects/NumericalMethods/Lab1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andrey/CLionProjects/MV/Lab1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrey/CLionProjects/MV/Lab1/cmake-build-debug/CMakeFiles /home/andrey/CLionProjects/MV/Lab1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug/CMakeFiles /home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrey/CLionProjects/MV/Lab1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,33 @@ gauss.cpp.s:
 	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/gauss.cpp.s
 .PHONY : gauss.cpp.s
 
+generalMethods.o: generalMethods.cpp.o
+
+.PHONY : generalMethods.o
+
+# target to build an object file
+generalMethods.cpp.o:
+	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/generalMethods.cpp.o
+.PHONY : generalMethods.cpp.o
+
+generalMethods.i: generalMethods.cpp.i
+
+.PHONY : generalMethods.i
+
+# target to preprocess a source file
+generalMethods.cpp.i:
+	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/generalMethods.cpp.i
+.PHONY : generalMethods.cpp.i
+
+generalMethods.s: generalMethods.cpp.s
+
+.PHONY : generalMethods.s
+
+# target to generate assembly for a file
+generalMethods.cpp.s:
+	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/generalMethods.cpp.s
+.PHONY : generalMethods.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -231,6 +258,33 @@ sourceMatrices.cpp.s:
 	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/sourceMatrices.cpp.s
 .PHONY : sourceMatrices.cpp.s
 
+workWithConsole.o: workWithConsole.cpp.o
+
+.PHONY : workWithConsole.o
+
+# target to build an object file
+workWithConsole.cpp.o:
+	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/workWithConsole.cpp.o
+.PHONY : workWithConsole.cpp.o
+
+workWithConsole.i: workWithConsole.cpp.i
+
+.PHONY : workWithConsole.i
+
+# target to preprocess a source file
+workWithConsole.cpp.i:
+	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/workWithConsole.cpp.i
+.PHONY : workWithConsole.cpp.i
+
+workWithConsole.s: workWithConsole.cpp.s
+
+.PHONY : workWithConsole.s
+
+# target to generate assembly for a file
+workWithConsole.cpp.s:
+	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/workWithConsole.cpp.s
+.PHONY : workWithConsole.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,12 +300,18 @@ help:
 	@echo "... gauss.o"
 	@echo "... gauss.i"
 	@echo "... gauss.s"
+	@echo "... generalMethods.o"
+	@echo "... generalMethods.i"
+	@echo "... generalMethods.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... sourceMatrices.o"
 	@echo "... sourceMatrices.i"
 	@echo "... sourceMatrices.s"
+	@echo "... workWithConsole.o"
+	@echo "... workWithConsole.i"
+	@echo "... workWithConsole.s"
 .PHONY : help
 
 

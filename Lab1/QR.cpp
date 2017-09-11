@@ -3,71 +3,42 @@
 //
 #include<iostream>
 #include "workWithConsole.h"
+#include "generalMethods.h"
 #include<cmath>
 using namespace std;
+template <typename T>
+vector<vector <T>> matrixMultiplication(vector<vector<T>> a, vector<vector<T>> b){
+    vector<vector<T>> multi(a.size(),vector<T>(a[a.size()-1].size(),0.0));
 
-//посление столбцы не трогаем
-/* std::vector<std::vector<double>> matrixMultiplication(std::vector<std::vector<double>> T,std::vector<std::vector<double>> matrix) {
-    //умножаем T на A(посление столбцы в matrix не трогаем)
-    vector<vector<double >> C(T.size());
-    for (int i = 0; i < T.size(); i++) {
-        vector<double> help(T[i].size());
-        for (int j = 0; j < T[i].size() - 1; j++) {
-            help[j] = 0;
-            for (int k = 0; k < matrix[i].size() - 1; k++)
-                help[j] += T[i][k] * matrix[k][j];
-        }
-        C[i] = help;
-    }
-
-    //умножаем T на b(посление столбцы в matrix)
-    vector<double> b(matrix.size());
-    for(int i = 0; i<matrix.size();i++){
-        b[i]=matrix[i][matrix[i].size()-1];
-    }
-    cout <<"b:"<<endl;
-    printVector(b);
-    vector<double> bNew(matrix.size());
-    for(int i=0; i<T.size(); i++)
-    {
-        bNew[i]=0;
-        for(int j=0; j<T[i].size(); j++)
-        {
-            bNew[i]+=T[i][j]*b[j];
+    for(int i = 0; i < a.size(); ++i) {
+        for (int j = 0; j < a[i].size(); ++j) {
+            int f =b[i].size();
+            for (int k = 0; k < a[i].size(); ++k) {
+                multi[i][j] += a[i][k] * b[k][j];
+            }
         }
     }
-    cout <<"bNew:"<<endl;
-    printVector(bNew);
-    for(int i = 0; i<matrix.size();i++){
-        matrix[i][matrix[i].size()-1]=bNew[i];
-    }
-    return C;
-}*/
-
-//матрица на которую умножаем исходную на каждом шаге, k - номер строки strk
-// (и номер элемента, который искл.), m- номер строки strm
-/*vector<vector<double>> createTMatrix(vector<double> strk,vector<double> strm, int k, int m){
-    double Sqrt =sqrt(strk[k]*strk[k] + strm[k]*strm[k]);
-    double c = strk[k]/Sqrt;
-    double s = strm[k]/Sqrt;
-    cout <<"size="<< strk.size()<<endl;
-    vector<vector<double >> T(strk.size()-1); //вообще костыль, но столбцов гарантировано больше на 1 чем стр.
-    for(int i=0;  i < T.size(); i++){
-        vector<double> strT(strk.size()-1);
+    return multi;
+}
+template<typename T>
+vector<vector<T>> createTijMatrix(T c, T s, int ni, int nj,int strSize){ //содание Tij матрицы, strSize-кол-во строк
+    vector<vector<T>> Tij(strSize);
+    for(int i=0;  i < strSize; i++){
+        vector<T> strT(strSize+1);//стобцов на 1 больше чем строк
         for(int j =0; j<strT.size(); j++){
-            if((i==k)&&(j==k)){
+            if((i==ni)&&(j==nj)){
                 strT[j] = c;
                 continue;
             }
-            if((i==m)&&(j==m)){
+            if((i==nj)&&(j==nj)){
                 strT[j] = c;
                 continue;
             }
-            if((i==k)&&(j==m)){
+            if((i==ni)&&(j==nj)){
                 strT[j] = s;
                 continue;
             }
-            if((i==m)&&(j==k)){
+            if((i==nj)&&(j==ni)){
                 strT[j] = -s;
                 continue;
             }
@@ -77,22 +48,18 @@ using namespace std;
             }
             strT[j]=0;
         }
-        T[i]=strT;
+        Tij[i] = strT;
     }
-    cout <<"T"<<endl;
-    printMatrix(T);
-    return T;
-}*/
+    printMatrix(Tij);
+    return Tij;
+}
 
-//прямой ход метода вращений
+//замена i, j  строки матрицы на их линейную комбинацию с коэф
 template <typename T>
- vector<vector<T>> rotation(vector<vector<T>> matrix, int ni, int nj) {  //ni, nj -номер строк
-    cout << matrix.size() <<endl;
-    T Sqrt = sqrt(matrix[ni][ni]*matrix[ni][ni] + matrix[nj][ni]*matrix[nj][ni]);
-    T c = matrix[ni][ni]/Sqrt;
-    T s = matrix[nj][ni]/Sqrt;
+vector<vector<T>> transformateMatrix(vector<vector<T>> matrix, T c, T s, int ni, int nj){
     vector<T> strI(matrix.size()+1); //cтолбцов на 1 больше чем строк
     vector<T> strJ(matrix.size()+1);
+    cout<< matrix[0][0];
     for(int i=0; i< matrix.size()+1; i++){
         strI[i] = c*matrix[ni][i] + s*matrix[nj][i];
         strJ[i] = -s*matrix[ni][i] + c*matrix[nj][i];
@@ -101,34 +68,73 @@ template <typename T>
     matrix[nj]= strJ;
     return matrix;
 }
+
+template <typename T>
+void upsertTMatrix(T c, T s, int ni, int nj,vector<vector<T>> &TMatrix, bool flag){//инициализация или обновление
+    if(!flag){
+      TMatrix=createTijMatrix(c, s, ni, nj, static_cast<int>(TMatrix.size()));
+    }else{
+        TMatrix=transformateMatrix(TMatrix,c,s,ni,nj);
+    }
+}
+
+//прямой ход метода вращений
+template <typename T>
+vector<vector<T>> rotation(vector<vector<T>> matrix, int ni, int nj,vector<vector<T>> &TMatrix, bool flagInitTMatrix =false) {  //ni, nj -номер строк
+    T Sqrt = sqrt(matrix[ni][ni]*matrix[ni][ni] + matrix[nj][ni]*matrix[nj][ni]);
+    T c = matrix[ni][ni]/Sqrt;
+    T s = matrix[nj][ni]/Sqrt;
+    if(!TMatrix.empty()) {
+        upsertTMatrix(c,s,ni,nj,TMatrix,flagInitTMatrix);
+    }
+    matrix = transformateMatrix(matrix,c,s,ni,nj);
+    return matrix;
+}
+
+
+template<typename  T>
+vector<vector <T>> transposeMatrix(vector<vector <T>> matrix){
+    vector<vector<T>> newMatrix(matrix[matrix.size()-1].size(),vector<T>(matrix.size(),0.0));
+    for(int i=0;i<matrix.size(); i++) {
+        vector<T> help(matrix.size());
+        for (int j = 0; j < matrix[i].size(); ++j) {
+            newMatrix[j][i]=matrix[i][j];
+        }
+    }
+    return newMatrix;
+}
 //треугольная матрица
 template <typename T>
  vector<vector<T>> getRMatrix(vector<vector<T>> matrix){
+    vector<vector<T>> TMatrix(matrix.size());
+    auto flagInitTMatrix = false;//инициализирована ли матрица или нет
+    const T E =0.2*1e-5;
     for (int i =0; i<matrix.size()-1; i++) {
-        //vector<double> str(matrix[i]);
         for( int j=i+1; j<matrix.size(); j++){
             //auto T = createTMatrix(matrix[i], matrix[j],i,j);
            // auto A = matrixMultiplication(T, matrix);
-            matrix = rotation(matrix, i, j);
+            if(abs(matrix[i][i])< E){
+                int nMaxStr =findMaxStr(i,i,matrix);
+                if (abs(matrix[nMaxStr][i]) < E){
+                    return {};
+                }
+                matrix = swapStrMatrix(nMaxStr,i,matrix);
+            }
+            matrix = rotation(matrix, i, j, TMatrix,flagInitTMatrix);
+            flagInitTMatrix=true;
         }
     }
+    cout<<"T"<<endl;
+    cout<<"---------------------------";
+    printMatrix(TMatrix);
+    printMatrix(transposeMatrix(TMatrix));
+    printMatrix(matrixMultiplication(TMatrix,matrix));
     return matrix;
 }
-template <typename T>
-vector<T> calculateResultVectorQR(vector<vector<T>> matrix){
-    vector<T> result(matrix.size());
-    for(auto i= static_cast<int>(matrix.size() - 1); i >= 0; i--){
-        double s =0.0;
-        for(auto j=i+1;j<matrix.size();j++){
-            s= s - matrix[i][j]*result[j];
-        }
-        result[i] =(s + matrix[i][matrix[i].size()-1])/matrix[i][i]; // прибавляем: поледний столбец, i-ая строка
-    }
-    return result;
-}
+
 template<typename T>
 std::vector<T> methodQR(std::vector<std::vector<T>> matrix){
     auto R = getRMatrix(matrix);// std::move что это?
     printMatrix(R);
-    return calculateResultVectorQR(R);
+    return Reverse(R);
 }

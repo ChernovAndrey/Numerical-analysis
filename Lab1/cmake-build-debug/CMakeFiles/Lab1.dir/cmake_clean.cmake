@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Lab1.dir/gauss.cpp.o"
   "CMakeFiles/Lab1.dir/sourceMatrices.cpp.o"
   "CMakeFiles/Lab1.dir/QR.cpp.o"
+  "CMakeFiles/Lab1.dir/generalMethods.cpp.o"
+  "CMakeFiles/Lab1.dir/workWithConsole.cpp.o"
   "Lab1.pdb"
   "Lab1"
 )

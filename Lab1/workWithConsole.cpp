@@ -24,6 +24,8 @@ void printMatrix(vector<vector<T>> m) {
     cout << endl;
 }
 
+
+
 /*
 vector<vector<double>> InputMatrix() {
     int n, m;
