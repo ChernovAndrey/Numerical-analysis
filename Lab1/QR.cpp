@@ -5,20 +5,9 @@
 #include "workWithConsole.h"
 #include "generalMethods.h"
 #include<cmath>
+#include "assert.h"
 using namespace std;
-template <typename T>
-vector<vector <T>> matrixMultiplication(vector<vector<T>> a, vector<vector<T>> b){
-    vector<vector<T>> multi(a.size(),vector<T>(a[a.size()-1].size(),0.0));
 
-    for(int i = 0; i < a.size(); ++i) {
-        for (int j = 0; j < a[i].size(); ++j) {
-            for (int k = 0; k < a[i].size(); ++k) {
-                multi[i][j] += a[i][k] * b[k][j];
-            }
-        }
-    }
-    return multi;
-}
 template<typename T>
 vector<vector<T>> createTijMatrix(T c, T s, int ni, int nj,int strSize){ //содание Tij матрицы, strSize-кол-во строк
     vector<vector<T>> Tij(strSize);
@@ -49,8 +38,6 @@ vector<vector<T>> createTijMatrix(T c, T s, int ni, int nj,int strSize){ //со�
         }
         Tij[i] = strT;
     }
-    cout<<"Tij"<<endl;
-    printMatrix(Tij);
     return Tij;
 }
 
@@ -90,20 +77,6 @@ vector<vector<T>> rotation(vector<vector<T>> matrix, int ni, int nj,vector<vecto
     return matrix;
 }
 
-//на вход подается расширенная матрица и просто отбрасывается последний столбец
-template <typename T>
-vector<vector<T>> excludeVectorB(vector<vector<T>> matrix){
-    vector<vector<T>> newMatrix(matrix.size());
-    for(int i=0;i<matrix.size();i++){
-        vector<T> help(matrix[i].size()-1);
-        for (int j = 0; j < matrix[i].size()-1; j++){
-            help[j]=matrix[i][j];
-        }
-        newMatrix[i]=help;
-    }
-    return newMatrix;
-}
-
 template<typename  T>
 vector<vector <T>> transposeMatrix(vector<vector <T>> matrix){
     vector<vector<T>> newMatrix(matrix[matrix.size()-1].size(),vector<T>(matrix.size(),0.0));
@@ -134,12 +107,11 @@ template <typename T>
             flagInitTMatrix=true;
         }
     }
-    cout <<"TMatrix:"<<endl;
-    printMatrix(TMatrix);
     auto Q = transposeMatrix(TMatrix);
-    cout <<"TMatrix:"<<endl;
-    printMatrix(TMatrix);
     auto R = excludeVectorB(matrix);
+    cout <<"Q:"<<endl;
+    printMatrix(Q);
+    cout <<"R:"<<endl;
     printMatrix(R);
     cout <<"A:"<<endl;
     printMatrix(matrixMultiplication(Q,R));
@@ -148,7 +120,17 @@ template <typename T>
 
 template<typename T>
 std::vector<T> methodQR(std::vector<std::vector<T>> matrix){
+    auto A = excludeVectorB(matrix);
+    auto b = getVectorB(matrix);
     auto triangularMatrix = getTriangularMatrix(matrix);
     printMatrix(triangularMatrix);
-    return Reverse(triangularMatrix);
+    auto result = Reverse(triangularMatrix);
+    if (result.empty()){
+     //   cout <<"matrix degenerate"<<endl;
+        return {};
+    }
+    auto b1 = multiMatrixVector(A,result);
+    printVector(b);
+    cout<< "residual="<< getResidual(b,b1)<<endl;
+    return result;
 }

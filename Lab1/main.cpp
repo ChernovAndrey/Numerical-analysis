@@ -13,9 +13,9 @@ using namespace std;
 
 int main() {
 
-     vector<vector<double>> matrix;
-//    matrix = ReadFile(matrix,2);
-    getMatrixEx4(matrix);// return double
+     vector<vector<double>> matrix;//поменять константу если меняешь тип, а в плюсах есть рефлексия?
+   matrix = ReadFile(matrix,1);
+//    getMatrixEx4(matrix);// return double
     printMatrix(matrix);
     //printMatrix(matrix);
 
@@ -25,10 +25,11 @@ int main() {
         cout<<"matrix degenerate";
     };
     printVector(result);
-/*     result = methodGauss(matrix);
-    if (result.empty()){
+    result = methodGauss(matrix);
+   if (result.empty()){
         cout<<"matrix degenerate";
-    };
-    printVector(result);*/
+    }else {
+       printVector(result);
+   }
     return 0;
 }

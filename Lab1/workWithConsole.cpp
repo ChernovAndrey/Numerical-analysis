@@ -10,7 +10,7 @@ using namespace std;
 template<typename T>
 void printVector(vector<T> v){
     cout<<"vector:"<<endl;
-    for (double i : v) {
+    for (T i : v) {
         cout << i << "    ";
     }
     cout << endl;
@@ -19,7 +19,7 @@ template<typename T>
 void printMatrix(vector<vector<T>> m) {
 
     for (auto &str : m) {
-        for (double el : str) {
+        for (T el : str) {
             cout << el << "    ";
         }
         cout << endl;

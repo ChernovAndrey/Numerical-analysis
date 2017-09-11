@@ -42,10 +42,19 @@ vector<vector<T>> getTriangleMatrix(vector<vector<T>> matrix){
 
 template <typename T>
 vector<T> methodGauss(vector<vector<T>> matrix){
+    auto A=excludeVectorB(matrix);
+    auto b=getVectorB(matrix);
     matrix = getTriangleMatrix(matrix);
     printMatrix(matrix);
     if (matrix.empty()) {
         return {};
     }
-    return Reverse(matrix);
+    auto result = Reverse(matrix);
+    if (result.empty()){
+       // cout <<"matrix degenerate"<<endl;
+        return {};
+    }
+    auto b1 = multiMatrixVector(A,result);
+    cout<<"Residual="<< getResidual(b1,b)<<endl;
+    return result;
 }
