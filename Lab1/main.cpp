@@ -5,15 +5,19 @@
 
 #include <iostream>
 #include<vector>
+#include <fstream>
 #include "gauss.h"
 #include "sourceMatrices.h"
 #include "QR.h"
 using namespace std;
 
 int main() {
-    vector<vector<float>> matrix;
-    getMatrixEx4(matrix);// return double
+
+     vector<vector<double>> matrix;
+    matrix = ReadFile(matrix,1);
     printMatrix(matrix);
+    //getMatrixEx4(matrix);// return double
+    //printMatrix(matrix);
 
     auto result = methodQR(matrix);
     //auto result = methodGauss(matrix);
@@ -26,6 +30,5 @@ int main() {
         cout<<"matrix degenerate";
     };
     printVector(result);
-
     return 0;
 }

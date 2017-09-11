@@ -3,12 +3,15 @@
 //
 #include <iostream>
 #include <vector>
+#include <fstream>
+
 using namespace std;
 
 template<typename T>
 void printVector(vector<T> v){
+    cout<<"vector:"<<endl;
     for (double i : v) {
-        cout << i << " ";
+        cout << i << "    ";
     }
     cout << endl;
 }
@@ -23,6 +26,7 @@ void printMatrix(vector<vector<T>> m) {
     }
     cout << endl;
 }
+
 
 
 

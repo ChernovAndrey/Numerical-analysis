@@ -59,6 +59,8 @@ iostream
 -
 vector
 -
+fstream
+-
 gauss.h
 /home/andrey/CLionProjects/NumericalMethods/Lab1/gauss.h
 sourceMatrices.h
@@ -71,6 +73,10 @@ iostream
 -
 vector
 -
+fstream
+-
+assert.h
+/home/andrey/CLionProjects/NumericalMethods/Lab1/assert.h
 
 /home/andrey/CLionProjects/NumericalMethods/Lab1/sourceMatrices.h
 vector
@@ -82,6 +88,8 @@ sourceMatrices.cpp
 iostream
 -
 vector
+-
+fstream
 -
 
 /home/andrey/CLionProjects/NumericalMethods/Lab1/workWithConsole.h

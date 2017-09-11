@@ -108,7 +108,7 @@ template <typename T>
  vector<vector<T>> getRMatrix(vector<vector<T>> matrix){
     vector<vector<T>> TMatrix(matrix.size());
     auto flagInitTMatrix = false;//инициализирована ли матрица или нет
-    const T E =0.2*1e-5;
+    const T E =1e-14;
     for (int i =0; i<matrix.size()-1; i++) {
         for( int j=i+1; j<matrix.size(); j++){
             //auto T = createTMatrix(matrix[i], matrix[j],i,j);
@@ -128,7 +128,7 @@ template <typename T>
     cout<<"---------------------------";
     printMatrix(TMatrix);
     printMatrix(transposeMatrix(TMatrix));
-    printMatrix(matrixMultiplication(TMatrix,matrix));
+   // printMatrix(matrixMultiplication(TMatrix,matrix));
     return matrix;
 }
 

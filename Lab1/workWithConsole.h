@@ -13,6 +13,8 @@ void printVector(std::vector<T> v);
 template<typename T>
 void printMatrix(std::vector<std::vector<T>> m);
 
+
+
 //std::vector<std::vector<double>> InputMatrix();
 
 #include "workWithConsole.cpp"

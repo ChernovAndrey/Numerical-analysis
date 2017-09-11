@@ -17,7 +17,7 @@ using namespace std;
 template <typename T>
 vector<vector<T>> getTriangleMatrix(vector<vector<T>> matrix){
     int i=0;
-    const T E = 1e-7;
+    const T E = 1e-14;
     for (; i < matrix.size()-1; i++){ //сколько проходов глобально итерации прямого обхода
         int nMaxStr =findMaxStr(i,i,matrix);
         if (abs(matrix[nMaxStr][i]) < E){
