@@ -15,22 +15,12 @@ template <typename T>
 class QR : public BasicInterface<T>{
 public:
 
-    static vector<vector <T>> transposeMatrix(vector<vector <T>> matrix){
-        vector<vector<T>> newMatrix(matrix[matrix.size()-1].size(),vector<T>(matrix.size(),0.0));
-        for(int i=0;i<matrix.size(); i++) {
-            vector<T> help(matrix.size());
-            for (int j = 0; j < matrix[i].size(); ++j) {
-                newMatrix[j][i]=matrix[i][j];
-            }
-        }
-        return newMatrix;
-    }
-
 private:
     QR(vector<vector<T>> A, vector<T> b){
         this->A=A;
         this->b=b;
     }
+
     vector<vector<T>> createTijMatrix(T c, T s, int ni, int nj,int strSize){ //содание Tij матрицы, strSize-кол-во строк
         vector<vector<T>> Tij(strSize);
         for(int i=0;  i < strSize; i++){

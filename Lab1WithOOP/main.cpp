@@ -16,6 +16,53 @@ vector<vector<number>>getInvertibleMatrix(vector<vector<number>> matrix){
     return QR<number>::transposeMatrix(inverseMatrix);
 }
 
+
+number getNormMatrix1(const vector<vector<number>> &matrix){ //по столбцам
+    number norm;
+    bool flagInit = false;
+    for(int j=0; j<matrix[0].size();j++){
+        number max = 0.0;
+        for (auto &el : matrix) {
+            max+=abs(el[j]);
+        }
+        if(!flagInit) {
+            norm = max;
+            flagInit =true;
+        }else {
+            if (norm < max) norm = max;
+        }
+    }
+}
+
+
+number getNormMatrix3(const vector<vector<number>> &matrix){ // по строкам
+    number norm ;
+    bool flagInit = false;
+    for (auto str : matrix) {
+        number max = 0.0;
+        for (auto el : str) {
+            max+=abs(el);
+        }
+        if(!flagInit) {
+            norm = max;
+            flagInit =true;
+        }else {
+            if (norm < max) norm = max;
+        }
+    }
+    return norm;
+}
+
+number getConditionNumber(const vector<vector<number>> &matrix,int nNorm){//nNorm- номер нормы
+    if(nNorm==1){
+            return getNormMatrix1(matrix)*getNormMatrix1(getInvertibleMatrix(matrix));
+        }
+    if(nNorm==3){
+        return getNormMatrix3(matrix)*getNormMatrix3(getInvertibleMatrix(matrix));
+    }
+    assert(false);
+}
+
 int main() {
     vector<vector<number>> matrix;
     getMatrixEx4(matrix);

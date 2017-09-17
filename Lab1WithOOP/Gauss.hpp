@@ -16,8 +16,23 @@ private:
         this->A=A;
         this->b=b;
     }
+//поиск максимального элемента в столбце nColumn, начиная со строки nBeginStr
+    int findMaxStr(int nColumn,int nBeginStr, vector<vector<T>> matrix){
+        const T E = 1e-7;
+        if (nBeginStr+1 >= matrix.size()){  //проверка на выход за пределы
+            return nBeginStr;
+        }
+        int nMax=nBeginStr;
+        T max = matrix[nBeginStr][nColumn];
+        for(int i = nBeginStr+1; i< matrix.size(); i++){
+            if (matrix[i][nColumn] - max > E){
+                max = matrix[i][nColumn];
+                nMax = i;
+            }
+        }
+        return nMax;
+    }
 
-public:
     void convertToTriangleMatrix(){
         int i=0;
         for (; i < this->A.size()-1; i++){ //сколько проходов глобально итерации прямого обхода
@@ -41,6 +56,7 @@ public:
         }
     }
 
+public:
     static vector<T> solveSystem(vector<vector<T>> A, vector<T> b){
         auto* instance = new Gauss(A,b);
         try {
