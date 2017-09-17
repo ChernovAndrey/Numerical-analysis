@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Lab1.dir/QR.cpp.o"
   "CMakeFiles/Lab1.dir/generalMethods.cpp.o"
   "CMakeFiles/Lab1.dir/workWithConsole.cpp.o"
+  "CMakeFiles/Lab1.dir/invertibleMatrixGauss.cpp.o"
   "Lab1.pdb"
   "Lab1"
 )

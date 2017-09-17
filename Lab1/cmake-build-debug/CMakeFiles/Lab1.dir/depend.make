@@ -15,12 +15,15 @@ CMakeFiles/Lab1.dir/gauss.cpp.o: ../workWithConsole.h
 
 CMakeFiles/Lab1.dir/generalMethods.cpp.o: ../generalMethods.cpp
 
+CMakeFiles/Lab1.dir/invertibleMatrixGauss.cpp.o: ../invertibleMatrixGauss.cpp
+
 CMakeFiles/Lab1.dir/main.cpp.o: ../QR.cpp
 CMakeFiles/Lab1.dir/main.cpp.o: ../QR.h
 CMakeFiles/Lab1.dir/main.cpp.o: ../gauss.cpp
 CMakeFiles/Lab1.dir/main.cpp.o: ../gauss.h
 CMakeFiles/Lab1.dir/main.cpp.o: ../generalMethods.cpp
 CMakeFiles/Lab1.dir/main.cpp.o: ../generalMethods.h
+CMakeFiles/Lab1.dir/main.cpp.o: ../invertibleMatrixGauss.cpp
 CMakeFiles/Lab1.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Lab1.dir/main.cpp.o: ../sourceMatrices.cpp
 CMakeFiles/Lab1.dir/main.cpp.o: ../sourceMatrices.h

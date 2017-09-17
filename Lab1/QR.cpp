@@ -4,8 +4,10 @@
 #include<iostream>
 #include "workWithConsole.h"
 #include "generalMethods.h"
+#include "cmath"
 #include<cmath>
-#include "assert.h"
+#include <cassert>
+
 using namespace std;
 
 template<typename T>
@@ -67,9 +69,13 @@ void upsertTMatrix(T c, T s, int ni, int nj,vector<vector<T>> &TMatrix, bool fla
 //прямой ход метода вращений
 template <typename T>
 vector<vector<T>> rotation(vector<vector<T>> matrix, int ni, int nj,vector<vector<T>> &TMatrix, bool flagInitTMatrix =false) {  //ni, nj -номер строк
-    T Sqrt = sqrt(matrix[ni][ni]*matrix[ni][ni] + matrix[nj][ni]*matrix[nj][ni]);
-    T c = matrix[ni][ni]/Sqrt;
-    T s = matrix[nj][ni]/Sqrt;
+    T sqrtA = sqrt(matrix[ni][ni]*matrix[ni][ni] + matrix[nj][ni]*matrix[nj][ni]);
+    const T E =1e-6;
+    if(abs(sqrtA)<E){
+        throw INFINITY;
+    }
+    T c = matrix[ni][ni]/sqrtA;
+    T s = matrix[nj][ni]/sqrtA;
     if(!TMatrix.empty()) {
         upsertTMatrix(c,s,ni,nj,TMatrix,flagInitTMatrix);
     }
@@ -90,21 +96,24 @@ vector<vector <T>> transposeMatrix(vector<vector <T>> matrix){
 }
 //треугольная матрица
 template <typename T>
- vector<vector<T>> getTriangularMatrix(vector<vector<T>> matrix){
+ vector<vector<T>> getTriangularMatrixQR(vector<vector<T>> matrix){
     vector<vector<T>> TMatrix(matrix.size());
     auto flagInitTMatrix = false;//инициализирована ли матрица или нет
     const T E =1e-14;
     for (int i =0; i<matrix.size()-1; i++) {
         for( int j=i+1; j<matrix.size(); j++){
-            if(abs(matrix[i][i])< E){
+            /*if(abs(matrix[i][i])< E){
                 int nMaxStr =findMaxStr(i,i,matrix);
                 if (abs(matrix[nMaxStr][i]) < E){
                     return {};
                 }
                 matrix = swapStrMatrix(nMaxStr,i,matrix);
+            }*/
+            try {
+                matrix = rotation(matrix, i, j, TMatrix, flagInitTMatrix);
+                flagInitTMatrix = true;
             }
-            matrix = rotation(matrix, i, j, TMatrix,flagInitTMatrix);
-            flagInitTMatrix=true;
+            catch (...){}//ignore
         }
     }
     auto Q = transposeMatrix(TMatrix);
@@ -119,18 +128,18 @@ template <typename T>
 }
 
 template<typename T>
-std::vector<T> methodQR(std::vector<std::vector<T>> matrix){
+std::vector<T> methodQR(std::vector<std::vector<T>> matrix) {
     auto A = excludeVectorB(matrix);
     auto b = getVectorB(matrix);
-    auto triangularMatrix = getTriangularMatrix(matrix);
+    auto triangularMatrix = getTriangularMatrixQR(matrix);
     printMatrix(triangularMatrix);
     auto result = Reverse(triangularMatrix);
-    if (result.empty()){
-     //   cout <<"matrix degenerate"<<endl;
+    if (result.empty()) {
+        // cout <<"matrix degenerate"<<endl;
         return {};
     }
-    auto b1 = multiMatrixVector(A,result);
+    auto b1 = multiMatrixVector(A, result);
     printVector(b);
-    cout<< "residual="<< getResidual(b,b1)<<endl;
+    cout << "residual=" << getResidual(b, b1) << endl;
     return result;
 }

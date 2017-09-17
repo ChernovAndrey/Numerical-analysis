@@ -14,9 +14,11 @@ workWithConsole.h
 generalMethods.h
 /home/andrey/CLionProjects/NumericalMethods/Lab1/generalMethods.h
 cmath
+/home/andrey/CLionProjects/NumericalMethods/Lab1/cmath
+cmath
 -
-assert.h
-/home/andrey/CLionProjects/NumericalMethods/Lab1/assert.h
+cassert
+-
 
 /home/andrey/CLionProjects/NumericalMethods/Lab1/QR.h
 iostream
@@ -43,6 +45,8 @@ vector
 -
 gauss.cpp
 /home/andrey/CLionProjects/NumericalMethods/Lab1/gauss.cpp
+invertibleMatrixGauss.cpp
+/home/andrey/CLionProjects/NumericalMethods/Lab1/invertibleMatrixGauss.cpp
 
 /home/andrey/CLionProjects/NumericalMethods/Lab1/generalMethods.cpp
 iostream
@@ -60,12 +64,18 @@ vector
 generalMethods.cpp
 /home/andrey/CLionProjects/NumericalMethods/Lab1/generalMethods.cpp
 
+/home/andrey/CLionProjects/NumericalMethods/Lab1/invertibleMatrixGauss.cpp
+iostream
+-
+cmath
+-
+vector
+-
+
 /home/andrey/CLionProjects/NumericalMethods/Lab1/main.cpp
 iostream
 -
 vector
--
-fstream
 -
 gauss.h
 /home/andrey/CLionProjects/NumericalMethods/Lab1/gauss.h

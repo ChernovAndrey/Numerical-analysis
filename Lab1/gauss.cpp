@@ -15,9 +15,9 @@ using namespace std;
 //возвращается номер строки, с максимальным элементом
 
 template <typename T>
-vector<vector<T>> getTriangleMatrix(vector<vector<T>> matrix){
+vector<vector<T>> getTriangleMatrixGauss(vector<vector<T>> matrix){
     int i=0;
-    const T E = 1e-14;
+    const T E = 1e-7;
     for (; i < matrix.size()-1; i++){ //сколько проходов глобально итерации прямого обхода
         int nMaxStr =findMaxStr(i,i,matrix);
         if (abs(matrix[nMaxStr][i]) < E){
@@ -27,7 +27,7 @@ vector<vector<T>> getTriangleMatrix(vector<vector<T>> matrix){
         vector<T> strMatrix(matrix[i]);
         for(int j=i+1; j< matrix.size(); j++){ // итерации по срокам матрицы, которые ниже текущего положения
             T c = matrix[j][i]/strMatrix[i]; //коэфф вычитания
-            for(int k=0; k< strMatrix.size(); k++){ //вычитание стоблцов
+            for(int k=0; k< strMatrix.size(); k++){ //вычитание строк, итерация по cтолбцам
                 matrix[j][k] = matrix[j][k] - c * strMatrix[k];
             }
         }
@@ -40,11 +40,12 @@ vector<vector<T>> getTriangleMatrix(vector<vector<T>> matrix){
 }
 
 
+
 template <typename T>
 vector<T> methodGauss(vector<vector<T>> matrix){
     auto A=excludeVectorB(matrix);
     auto b=getVectorB(matrix);
-    matrix = getTriangleMatrix(matrix);
+    matrix = getTriangleMatrixGauss(matrix);
     printMatrix(matrix);
     if (matrix.empty()) {
         return {};

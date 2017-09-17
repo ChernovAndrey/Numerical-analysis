@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/andrey/CLionProjects/NumericalMethods/Lab1/QR.cpp" "/home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/QR.cpp.o"
   "/home/andrey/CLionProjects/NumericalMethods/Lab1/gauss.cpp" "/home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/gauss.cpp.o"
   "/home/andrey/CLionProjects/NumericalMethods/Lab1/generalMethods.cpp" "/home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/generalMethods.cpp.o"
+  "/home/andrey/CLionProjects/NumericalMethods/Lab1/invertibleMatrixGauss.cpp" "/home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/invertibleMatrixGauss.cpp.o"
   "/home/andrey/CLionProjects/NumericalMethods/Lab1/main.cpp" "/home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/main.cpp.o"
   "/home/andrey/CLionProjects/NumericalMethods/Lab1/sourceMatrices.cpp" "/home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/sourceMatrices.cpp.o"
   "/home/andrey/CLionProjects/NumericalMethods/Lab1/workWithConsole.cpp" "/home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/workWithConsole.cpp.o"

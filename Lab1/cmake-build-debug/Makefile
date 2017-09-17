@@ -204,6 +204,33 @@ generalMethods.cpp.s:
 	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/generalMethods.cpp.s
 .PHONY : generalMethods.cpp.s
 
+invertibleMatrixGauss.o: invertibleMatrixGauss.cpp.o
+
+.PHONY : invertibleMatrixGauss.o
+
+# target to build an object file
+invertibleMatrixGauss.cpp.o:
+	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/invertibleMatrixGauss.cpp.o
+.PHONY : invertibleMatrixGauss.cpp.o
+
+invertibleMatrixGauss.i: invertibleMatrixGauss.cpp.i
+
+.PHONY : invertibleMatrixGauss.i
+
+# target to preprocess a source file
+invertibleMatrixGauss.cpp.i:
+	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/invertibleMatrixGauss.cpp.i
+.PHONY : invertibleMatrixGauss.cpp.i
+
+invertibleMatrixGauss.s: invertibleMatrixGauss.cpp.s
+
+.PHONY : invertibleMatrixGauss.s
+
+# target to generate assembly for a file
+invertibleMatrixGauss.cpp.s:
+	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/invertibleMatrixGauss.cpp.s
+.PHONY : invertibleMatrixGauss.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -303,6 +330,9 @@ help:
 	@echo "... generalMethods.o"
 	@echo "... generalMethods.i"
 	@echo "... generalMethods.s"
+	@echo "... invertibleMatrixGauss.o"
+	@echo "... invertibleMatrixGauss.i"
+	@echo "... invertibleMatrixGauss.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

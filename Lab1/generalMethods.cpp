@@ -6,12 +6,13 @@
 #include <vector>
 #include <cmath>
 #include "cassert"
+
 using namespace std;
 
 //обратный ход
 template <typename T>
 vector<T> Reverse(vector<vector<T>> matrix){
-    const T E = 1e-14;
+    const T E = 1e-7;
     vector<T> result(matrix.size());
     for(int i = static_cast<int>(matrix.size() - 1); i >= 0; i--){
         double s =0.0;
@@ -27,7 +28,7 @@ vector<T> Reverse(vector<vector<T>> matrix){
 //поиск максимального элемента в столбце nColumn, начиная со строки nBeginStr
 template <typename T>
 int findMaxStr(int nColumn,int nBeginStr, vector<vector<T>> matrix){
-    const T E = 1e-14;
+    const T E = 1e-7;
     if (nBeginStr+1 >= matrix.size()){  //проверка на выход за пределы
         return nBeginStr;
     }
@@ -111,3 +112,6 @@ vector<vector<T>> excludeVectorB(vector<vector<T>> matrix){
     }
     return newMatrix;
 }
+
+
+

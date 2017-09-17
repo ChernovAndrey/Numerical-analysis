@@ -102,6 +102,9 @@
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab1/generalMethods.h">
 			<Option target="Lab1"/>
 		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab1/invertibleMatrixGauss.cpp">
+			<Option target="Lab1"/>
+		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab1/main.cpp">
 			<Option target="Lab1"/>
 		</Unit>
