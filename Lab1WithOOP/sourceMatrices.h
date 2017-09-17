@@ -15,7 +15,7 @@ template <typename T>
 void getMatrixEx3(std::vector<std::vector<T>> &matrix);
 
 template <typename T>
-vector<vector<T>> ReadFile(vector<vector<T>> matrix, int number);
+vector<vector<T>> readFile(vector<vector<T>> matrix, int number);
 
 template <typename T>
 void getMatrixEx4(std::vector<std::vector<T>> &matrix);

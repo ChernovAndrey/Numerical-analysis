@@ -65,7 +65,8 @@ number getConditionNumber(const vector<vector<number>> &matrix,int nNorm){//nNor
 
 int main() {
     vector<vector<number>> matrix;
-    getMatrixEx4(matrix);
+    //getMatrixEx4(matrix);
+    matrix=readFile(matrix,1);
     BasicInterface<number>::printMatrix(matrix);
     auto A =BasicInterface<number>::getMatrixA(matrix);
     auto result =Gauss<number>::solveSystem(A,BasicInterface<number>::getVectorB(matrix));
@@ -76,10 +77,10 @@ int main() {
         cout<<"result:"<<endl;
         BasicInterface<number>::printVector(result);
     }
-    auto inverseA=getInvertibleMatrix(A);
+ /*   auto inverseA=getInvertibleMatrix(A);
     cout<<"inverse";
     BasicInterface<number>::printMatrix(inverseA);
     auto E =BasicInterface<number>::matrixMultiplication(inverseA,A);
-    BasicInterface<number>::printMatrix(E);
+    BasicInterface<number>::printMatrix(E);*/
     return 0;
 }

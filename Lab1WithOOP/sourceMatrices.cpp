@@ -10,7 +10,7 @@ using namespace std;
 
 
 template <typename T>
-vector<vector<T>> ReadFile(vector<vector<T>> matrix, int number){//number - номер файла
+vector<vector<T>> readFile(vector<vector<T>> matrix, int number){//number - номер файла
   //  matrix = new vector(4,vector<T>(5));
     ifstream in;
     if(number==1) {

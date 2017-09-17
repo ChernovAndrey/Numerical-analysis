@@ -15,9 +15,9 @@ template <typename T>
 class BasicInterface {
 
 protected:
+    vector<vector<T>> originalA;//исходная матрица
     vector<vector<T>> A;
     vector<T> b;
-
     BasicInterface() = default;
 
     virtual void convertToTriangleMatrix()=0;
@@ -61,24 +61,13 @@ protected:
 
      void swapStr(int nStr1,int nStr2) {
          if (nStr1 == nStr2) return;
-
-         vector<T> swapHelpA(A[nStr1]);
-         A[nStr1] = A[nStr2];
-         A[nStr2] = swapHelpA;
-
-         T swapHelpB=b[nStr1];
-         b[nStr1] = b[nStr2];
-         b[nStr2] = swapHelpB;
-
+         swap(A[nStr1],A[nStr2]);
+         swap(b[nStr1],b[nStr2]);
      }
 
 
     T getResidualWithB(vector<T> b1){
         T norm;
-        cout<<"b1";
-        printVector(b1);
-        printVector(this->b);
-        if (b1.size()!=this->b.size()) assert(false);
         for(int i=0;i<this->b.size();i++){
             norm+=(b1[i]-this->b[i])*(b1[i]-this->b[i]);
         }
@@ -152,22 +141,14 @@ public:
     }
 
     static vector<T> solveSystem(BasicInterface* instance){
-        //  BasicInterface instance = BasicInterface(A,b);
-        //    instance->convertToTriangleMatrix();
         printMatrix(instance->A);
-        /*if (matrix.empty()) {
-            return {};
-        }*/
-
         auto result = instance->reverse();
         if (result.empty()){
-            // cout <<"matrix degenerate"<<endl;
             return {};
         }
 
         cout<<"Residual="<< instance->getResidualWithB(multiMatrixVector(instance->A,result)) <<endl;
 
-        delete instance;
         return result;
     }
 
