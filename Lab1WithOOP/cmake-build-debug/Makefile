@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+sourceMatrices.o: sourceMatrices.cpp.o
+
+.PHONY : sourceMatrices.o
+
+# target to build an object file
+sourceMatrices.cpp.o:
+	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/sourceMatrices.cpp.o
+.PHONY : sourceMatrices.cpp.o
+
+sourceMatrices.i: sourceMatrices.cpp.i
+
+.PHONY : sourceMatrices.i
+
+# target to preprocess a source file
+sourceMatrices.cpp.i:
+	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/sourceMatrices.cpp.i
+.PHONY : sourceMatrices.cpp.i
+
+sourceMatrices.s: sourceMatrices.cpp.s
+
+.PHONY : sourceMatrices.s
+
+# target to generate assembly for a file
+sourceMatrices.cpp.s:
+	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/sourceMatrices.cpp.s
+.PHONY : sourceMatrices.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sourceMatrices.o"
+	@echo "... sourceMatrices.i"
+	@echo "... sourceMatrices.s"
 .PHONY : help
 
 

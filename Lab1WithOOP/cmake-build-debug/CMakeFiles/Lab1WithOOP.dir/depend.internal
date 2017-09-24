@@ -6,5 +6,11 @@ CMakeFiles/Lab1WithOOP.dir/main.cpp.o
  /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/Gauss.hpp
  /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/QR.hpp
  /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/main.cpp
+ /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/matrixOperations.cpp
+ /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/matrixOperations.h
  /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/sourceMatrices.cpp
  /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/sourceMatrices.h
+ /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/vectorOperations.cpp
+ /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/vectorOperations.h
+CMakeFiles/Lab1WithOOP.dir/sourceMatrices.cpp.o
+ /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/sourceMatrices.cpp

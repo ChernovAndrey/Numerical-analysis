@@ -15,7 +15,7 @@ template <typename T>
 class BasicInterface {
 
 protected:
-    vector<vector<T>> originalA;//исходная матрица
+   vector<vector<T>> originalA;//исходная матрица
     vector<vector<T>> A;
     vector<T> b;
     BasicInterface() = default;
@@ -67,6 +67,8 @@ protected:
 
 
     T getResidualWithB(vector<T> b1){
+     //   cout<<"b1";
+     //   printVector(b1);
         T norm;
         for(int i=0;i<this->b.size();i++){
             norm+=(b1[i]-this->b[i])*(b1[i]-this->b[i]);
@@ -100,28 +102,6 @@ public:
         return newMatrix;
     }
 
-    //достаем последний столбец из матрицы
-    static vector<T> getVectorB(vector<vector<T>> matrix){
-        vector<T> result;
-        for(int i=0;i< matrix.size();i++){
-            result.push_back(matrix[i][matrix[i].size()-1]);
-        }
-        return result;
-    }
-
-    //на вход подается расширенная матрица и просто отбрасывается последний столбец
-    static vector<vector<T>> getMatrixA(vector<vector<T>> matrix){
-        vector<vector<T>> newMatrix(matrix.size());
-        for(int i=0;i<matrix.size();i++){
-            vector<T> help(matrix[i].size()-1);
-            for (int j = 0; j < matrix[i].size()-1; j++){
-                help[j]=matrix[i][j];
-            }
-            newMatrix[i]=help;
-        }
-        return newMatrix;
-    }
-
     static void printVector(vector<T> v){
         cout<<"vector:"<<endl;
         for (T i : v) {
@@ -141,13 +121,13 @@ public:
     }
 
     static vector<T> solveSystem(BasicInterface* instance){
-        printMatrix(instance->A);
+      //  printMatrix(instance->A);
         auto result = instance->reverse();
         if (result.empty()){
             return {};
         }
 
-        cout<<"Residual="<< instance->getResidualWithB(multiMatrixVector(instance->A,result)) <<endl;
+   //     cout<<"Residual="<< instance->getResidualWithB(multiMatrixVector(instance->A,result)) <<endl;
 
         return result;
     }

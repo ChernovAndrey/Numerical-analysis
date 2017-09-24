@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Lab1WithOOP.dir/main.cpp.o  -o Lab1WithOOP 
+/usr/bin/c++  -g   CMakeFiles/Lab1WithOOP.dir/main.cpp.o CMakeFiles/Lab1WithOOP.dir/sourceMatrices.cpp.o  -o Lab1WithOOP 

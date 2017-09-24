@@ -108,12 +108,12 @@ private:
         }
         auto Q = BasicInterface<T>::transposeMatrix(TMatrix);
         auto R = this->A;
-        cout <<"Q:"<<endl;
+      /*  cout <<"Q:"<<endl;
         BasicInterface<T>::printMatrix(Q);
         cout <<"R:"<<endl;
         BasicInterface<T>::printMatrix(R);
         cout <<"A:"<<endl;
-        BasicInterface<T>::printMatrix(BasicInterface<T>::matrixMultiplication(Q,R));
+        BasicInterface<T>::printMatrix(BasicInterface<T>::matrixMultiplication(Q,R));*/
     }
 public:
     static vector<T> solveSystem(vector<vector<T>> A, vector<T> b){
@@ -124,7 +124,7 @@ public:
         catch (...){
             return {};
         }
-        BasicInterface<T>::printVector(instance->b);
+      //  BasicInterface<T>::printVector(instance->b);
         auto result = BasicInterface<T>::solveSystem(instance);
         delete instance;
         return result;

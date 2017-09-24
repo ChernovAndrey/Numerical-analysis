@@ -45,6 +45,28 @@ sourceMatrices.h
 /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/sourceMatrices.h
 QR.hpp
 /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/QR.hpp
+cmath
+-
+matrixOperations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/matrixOperations.h
+vectorOperations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/vectorOperations.h
+
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/matrixOperations.cpp
+vector
+-
+Gauss.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/Gauss.hpp
+QR.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/QR.hpp
+
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/matrixOperations.h
+vector
+-
+Gauss.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/Gauss.hpp
+matrixOperations.cpp
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/matrixOperations.cpp
 
 /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/sourceMatrices.cpp
 iostream
@@ -61,4 +83,10 @@ vector
 -
 sourceMatrices.cpp
 /home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/sourceMatrices.cpp
+
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/vectorOperations.cpp
+
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/vectorOperations.h
+vectorOperations.cpp
+/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/vectorOperations.cpp
 

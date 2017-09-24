@@ -1,12 +1,10 @@
 //
-// Created by andrey on 17.09.17.
+// Created by andrey on 24.09.17.
 //
 
-#ifndef LAB1WITHOOP_CONDITIONS_H
-#define LAB1WITHOOP_CONDITIONS_H
 #include <vector>
 #include "Gauss.hpp"
-
+#include "QR.hpp"
 using namespace std;
 template<typename T>
 vector<vector<T>>getInvertibleMatrix(vector<vector<T>> matrix){
@@ -15,7 +13,7 @@ vector<vector<T>>getInvertibleMatrix(vector<vector<T>> matrix){
     for (int i = 0; i < matrix.size(); i++){
         vector<T> e(matrix.size(),0.0);
         e[i]=1.0;
-        inverseMatrix[i] = Gauss<T>::solveSystem(matrix,e);
+        inverseMatrix[i] = QR<T>::solveSystem(matrix,e);
     }
     return BasicInterface<T>::transposeMatrix(inverseMatrix);
 }
@@ -36,6 +34,7 @@ T getNormMatrix1(const vector<vector<T>> &matrix){ //по столбцам
             if (norm < max) norm = max;
         }
     }
+    return norm;
 }
 
 template<typename T>
@@ -68,4 +67,38 @@ T getConditionNumber(const vector<vector<T>> &matrix,int nNorm){//nNorm- ном�
     assert(false);
 }
 
-#endif //LAB1WITHOOP_CONDITIONS_H
+//достаем последний столбец из матрицы
+template<typename T>
+vector<T> getVectorB(vector<vector<T>> matrix){
+    vector<T> result;
+    for(int i=0;i< matrix.size();i++){
+        result.push_back(matrix[i][matrix[i].size()-1]);
+    }
+    return result;
+}
+
+//на вход подается расширенная матрица и просто отбрасывается последний столбец
+template <typename T>
+vector<vector<T>> getMatrixA(vector<vector<T>> matrix){
+    vector<vector<T>> newMatrix(matrix.size());
+    for(int i=0;i<matrix.size();i++){
+        vector<T> help(matrix[i].size()-1);
+        for (int j = 0; j < matrix[i].size()-1; j++){
+            help[j]=matrix[i][j];
+        }
+        newMatrix[i]=help;
+    }
+    return newMatrix;
+}
+
+template <typename T>
+void printMatrix(vector<vector<T>> m) {
+    for (auto &str : m) {
+        for (T el : str) {
+            cout << el << "    ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
+

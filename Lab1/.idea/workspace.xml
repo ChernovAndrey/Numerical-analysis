@@ -25,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
@@ -49,11 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stl_vector.h" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
+      <file leaf-file-name="workWithConsole.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workWithConsole.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11772">
-              <caret line="654" column="0" lean-forward="false" selection-start-line="654" selection-start-column="0" selection-end-line="654" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -69,12 +79,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generalMethods.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="generalMethods.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generalMethods.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2052">
-              <caret line="114" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+            <state relative-caret-position="72">
+              <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding>
+                <element signature="e#41#60#0" expanded="true" />
                 <element signature="e#162#174#0" expanded="true" />
                 <element signature="e#740#752#0" expanded="true" />
                 <element signature="e#1212#1224#0" expanded="true" />
@@ -142,19 +153,6 @@
               <folding>
                 <element signature="e#199#211#0" expanded="true" />
                 <element signature="e#298#318#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="invertibleMatrixGauss.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/invertibleMatrixGauss.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-              <folding>
-                <element signature="e#40#59#0" expanded="true" />
-                <element signature="e#124#136#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -234,9 +232,9 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="69" />
-    <option name="width" value="1853" />
+    <option name="x" value="992" />
+    <option name="y" value="24" />
+    <option name="width" value="926" />
     <option name="height" value="1020" />
   </component>
   <component name="ProjectView">
@@ -327,18 +325,21 @@
       <workItem from="1505148862716" duration="11029000" />
       <workItem from="1505194732486" duration="963000" />
       <workItem from="1505577477378" duration="13279000" />
-      <workItem from="1505643872190" duration="1414000" />
+      <workItem from="1505643872190" duration="1827000" />
+      <workItem from="1505988149404" duration="1085000" />
+      <workItem from="1506009522164" duration="1232000" />
+      <workItem from="1506250580046" duration="234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106475000" />
+    <option name="totallyTimeSpent" value="109439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327551" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -672,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workWithConsole.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/systems/DATA2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -690,7 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1818">
           <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -708,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generalMethods.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="515">
@@ -726,10 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-            <element signature="e#124#136#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,29 +719,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11772">
           <caret line="654" column="0" lean-forward="false" selection-start-line="654" selection-start-column="0" selection-end-line="654" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gauss.h">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
-            <element signature="e#199#211#0" expanded="true" />
-            <element signature="e#298#318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sourceMatrices.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding>
-            <element signature="e#286#298#0" expanded="true" />
-            <element signature="e#365#377#0" expanded="true" />
-            <element signature="e#454#466#0" expanded="true" />
+            <element signature="e#42#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -774,14 +742,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gauss.cpp">
+    <entry file="file://$PROJECT_DIR$/workWithConsole.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="48" column="24" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-            <element signature="e#339#351#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -793,19 +766,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generalMethods.cpp">
+    <entry file="file://$PROJECT_DIR$/sourceMatrices.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="114" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding>
-            <element signature="e#162#174#0" expanded="true" />
-            <element signature="e#740#752#0" expanded="true" />
-            <element signature="e#1212#1224#0" expanded="true" />
-            <element signature="e#1480#1492#0" expanded="true" />
-            <element signature="e#1702#1715#0" expanded="true" />
-            <element signature="e#1998#2010#0" expanded="true" />
-            <element signature="e#2491#2503#0" expanded="true" />
-            <element signature="e#2787#2799#0" expanded="true" />
+            <element signature="e#286#298#0" expanded="true" />
+            <element signature="e#365#377#0" expanded="true" />
+            <element signature="e#454#466#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -827,12 +795,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/gauss.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="864">
+          <caret line="48" column="24" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
           <folding>
-            <element signature="e#42#61#0" expanded="true" />
+            <element signature="e#40#59#0" expanded="true" />
+            <element signature="e#339#351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauss.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#199#211#0" expanded="true" />
+            <element signature="e#298#318#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generalMethods.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#162#174#0" expanded="true" />
+            <element signature="e#740#752#0" expanded="true" />
+            <element signature="e#1212#1224#0" expanded="true" />
+            <element signature="e#1480#1492#0" expanded="true" />
+            <element signature="e#1702#1715#0" expanded="true" />
+            <element signature="e#1998#2010#0" expanded="true" />
+            <element signature="e#2491#2503#0" expanded="true" />
+            <element signature="e#2787#2799#0" expanded="true" />
           </folding>
         </state>
       </provider>

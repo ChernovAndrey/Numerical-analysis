@@ -87,9 +87,6 @@
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/BasicInterface.hpp">
 			<Option target="Lab1WithOOP"/>
 		</Unit>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/Conditions.hpp">
-			<Option target="Lab1WithOOP"/>
-		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/Gauss.hpp">
 			<Option target="Lab1WithOOP"/>
 		</Unit>
@@ -97,6 +94,9 @@
 			<Option target="Lab1WithOOP"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/main.cpp">
+			<Option target="Lab1WithOOP"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/sourceMatrices.cpp">
 			<Option target="Lab1WithOOP"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab1WithOOP/sourceMatrices.h">
