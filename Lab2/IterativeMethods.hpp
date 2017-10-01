@@ -1,7 +1,6 @@
 //
 // Created by andrey on 21.09.17.
 //
-
 #ifndef LAB2_ITERATIVEMETHODS_H
 #define LAB2_ITERATIVEMETHODS_H
 #include <iostream>
@@ -27,7 +26,7 @@ public:
     }
 
     static vector<T> solveSystem(IterativeMethods* instance){
-        instance->matrixNormalizationA();
+      //  instance->matrixNormalizationA();
         instance->convertToIterativeMatrix();
         return instance->iterations();
     }
@@ -35,27 +34,6 @@ public:
 protected:
 
     virtual void convertToIterativeMatrix()=0;//C в уравнении x=C*x + b
-
-    void matrixNormalizationA(){
-        T normA = getNormMatrix3(A);
-        while(normA >= (1-1e-10)){
-            for(int i=0;i<A.size();i++){
-                T max  = abs(A[i][0]);
-                for(int j=1;j<A[0].size();j++){
-                    if(abs(A[i][j])> max) {
-                        max = abs(A[i][j]);
-                    }
-                }
-                max++;//чтобы всегда больше одного
-                for(int j=0;j<A[0].size();j++){
-                    A[i][j] = A[i][j]/max;
-                }
-                b[i]=b[i]/max;
-            }
-            normA = getNormMatrix3(A);
-        }
-        cout<<"normA="<<normA<<endl;
-    }
 
     vector<T> iterations(){
         auto normA = getNormMatrix3(A);
@@ -66,16 +44,17 @@ protected:
         int countIterations=0;
         while( ((normVector(diffVectors(x,prevX))>=eps1) || !flag) ){
             prevX = x;
-            x = sumVector(multiMatrixVector(A,x),b);
+            //x = sumVector(multiMatrixVector(A,x),b);
+            x=modificationX(prevX);
             flag = true;
             countIterations++;
         }
         cout<<"Count iterations="<< countIterations <<endl;
         return x;
     }
-    
-    
-    
+
+    virtual vector<T> modificationX(const vector<T> &prevX)=0; //расчет k-ого x
+
 };
 
 

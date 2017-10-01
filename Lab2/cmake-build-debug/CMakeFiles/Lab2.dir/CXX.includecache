@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -23,6 +23,24 @@ iostream
 -
 IterativeMethods.hpp
 /home/andrey/CLionProjects/NumericalMethods/Lab2/IterativeMethods.hpp
+
+/home/andrey/CLionProjects/NumericalMethods/Lab2/MethodRelaxation.hpp
+iostream
+-
+MethodJacobi.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab2/MethodJacobi.hpp
+typeinfo
+-
+cassert
+/home/andrey/CLionProjects/NumericalMethods/Lab2/cassert
+cmath
+/home/andrey/CLionProjects/NumericalMethods/Lab2/cmath
+
+/home/andrey/CLionProjects/NumericalMethods/Lab2/MethodSeidel.hpp
+iostream
+-
+MethodRelaxation.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab2/MethodRelaxation.hpp
 
 /home/andrey/CLionProjects/NumericalMethods/Lab2/SimpleIteration.hpp
 iostream
@@ -49,6 +67,10 @@ SimpleIteration.hpp
 /home/andrey/CLionProjects/NumericalMethods/Lab2/SimpleIteration.hpp
 MethodJacobi.hpp
 /home/andrey/CLionProjects/NumericalMethods/Lab2/MethodJacobi.hpp
+MethodSeidel.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab2/MethodSeidel.hpp
+MethodRelaxation.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab2/MethodRelaxation.hpp
 IterativeMethods.hpp
 /home/andrey/CLionProjects/NumericalMethods/Lab2/IterativeMethods.hpp
 

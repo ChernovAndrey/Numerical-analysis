@@ -20,14 +20,14 @@ int main() {
 
     number coefDisturbance = 0.01;
     vector<vector<number>> matrix;
-    //getMatrixEx4(matrix);
+    getMatrixEx5(matrix);
     //matrix = readFile(matrix,1);
     auto A = getMatrixA(matrix);
     auto b = getVectorB(matrix);
 
     auto result = QR<number>::solveSystem(A,b);
 
-    cout<< "CondA="<<getConditionNumber(A,1)<<endl;
+    cout<< "CondA="<<getConditionNumber(A,3)<<endl;
 
     printVector(result);
 

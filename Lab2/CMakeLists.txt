@@ -7,4 +7,4 @@ set(SOURCE_FILES main.cpp)
 add_executable(Lab2 ${SOURCE_FILES} matrixOperations.h matrixOperations.cpp
         sourceMatrices.h sourceMatrices.cpp workWithConsole.cpp workWithConsole.h
         vectorOperations.cpp vectorOperations.h IterativeMethods.hpp SimpleIteration.hpp
-        MethodJacobi.hpp MethodRelaxation.hpp)
+        MethodJacobi.hpp MethodRelaxation.hpp MethodSeidel.hpp)

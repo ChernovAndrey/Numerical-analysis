@@ -6,40 +6,57 @@
 #define LAB2_METHODRELAXATION_H
 
 #include <iostream>
-#include <vector>
-#include "IterativeMethods.hpp"
+#include "MethodJacobi.hpp"
+#include <typeinfo>
+#include "cassert"
+#include "cmath"
 using namespace std;
+
 template <typename T>
-class MethodRelaxation : IterativeMethods<T> {
+class MethodRelaxation : public MethodJacobi<T> {
 
-private:
-    MethodRelaxation(T eps, const vector<T> &x, const vector<vector<T>> &A, const vector<T> &b) :
-            IterativeMethods<T>(eps, x, A, b) {};
-
-    void convertToIterativeMatrix() { //C в уравнении x=C*x + b
-        T omega = 1.0;
-        for (int i = 0; i < this->A.size(); i++) {
-            auto coef  = 1 / this->A[i][i];
-            this->b[i] = (this->b[i]) / (this->A[i][i]);
-            for (int j = 0; j < this->A.size(); j++) {
-                if (i == j) this->A[i][j] = 0.0;
-                else {
-                    this->A[i][j] = this->A[i][j] * coef;
-                }
-
-            }
+protected:
+     T w;
+    bool flagW;//1 или нет
+    bool compareWithOne(){
+        if(typeid(T).name()== typeid(double).name()){
+            return (abs(w-1)<1e-14);
         }
+
+        if(typeid(T).name()== typeid(float).name()){
+            return (abs(w-1)<1e-07);
+        }
+
+        cout<<"Invalid type";
+        assert(false);
     }
 
+    void shiftXm(T &Xm, const T &prevXm){
+        if(flagW) return;
+        Xm=w*Xm + (1.0-w)*prevXm;
+    }
 public:
-    static vector<T> solveSystem(T eps, const vector<T> &x, const vector<vector<T>> &A, const vector<T> &b) {
-        IterativeMethods<T> *instance = new MethodRelaxation(eps, x, A, b);
-        auto result = IterativeMethods<T>::solveSystem(instance);
-
-        delete instance;
-        return result;
+    MethodRelaxation(T eps, const vector<T> &x, const vector<vector<T>> &A, const vector<T> &b, const T w) :
+            MethodJacobi<T>(eps, x, A, b) {
+        this->w=w;
+        flagW=compareWithOne();
+    };
+private:
+    vector<T> modificationX(const vector<T> &prevX) {
+        vector<T> x(prevX.size());
+        for (int m = 0; m < x.size(); m++) {
+            x[m]=0;
+            for (int i = 0; i < m; i++) {
+                x[m] += this->A[m][i] * x[i];
+            }
+            for (int i = m+1; i < x.size(); i++) {
+                x[m] += this->A[m][i] * prevX[i];
+            }
+            x[m]+=this->b[m];
+            shiftXm(x[m],prevX[m]);
+        }
+        return x;
     }
 };
-
 
 #endif //LAB2_METHODRELAXATION_H

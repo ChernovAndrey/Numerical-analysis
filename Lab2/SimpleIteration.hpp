@@ -12,27 +12,37 @@ using namespace std;
 
 template <typename T>
 class SimpleIteration : public IterativeMethods<T>{
+private:
+    T parameter;
 public:
-    SimpleIteration(T eps, const vector<T> &x, const vector<vector<T>> &A, const vector<T> &b) :
-            IterativeMethods<T>(eps,x,A,b){};
+    SimpleIteration(T eps, const vector<T> &x, const vector<vector<T>> &A, const vector<T> &b, T parameter) ://parameter- итерационный параметр
+            IterativeMethods<T>(eps,x,A,b){
+        this->parameter=parameter;
+    };
 
 private:
-    void convertToIterativeMatrix(){ //C в уравнении x=C*x + b
-        printMatrix(this->A);
-        this->A=EMinusMatrix(this->A);
-        printMatrix(this->A);
+    void matrixNormalizationA(){
+        for(int i=0; i< this->A.size(); i++){
+            this->b[i]=parameter*this->b[i];
+            for(int j=0;j< this->A[0].size();j++){
+                this->A[i][j]=parameter*this->A[i][j];
+            }
+        }
+        T normA = getNormMatrix3(this->A);
+        cout<<"normA="<<normA<<endl;
     }
 
-public:
-    /*static vector<T> solveSystem(T eps, const vector<T> &x, const vector<vector<T>> &A, const vector<T> &b){
-        IterativeMethods<T>* instance = new SimpleIteration(eps,x,A,b);
-        auto result = IterativeMethods<T>::solveSystem(instance);
+    void convertToIterativeMatrix(){ //C в уравнении x=C*x + b
+        matrixNormalizationA();
+       // printMatrix(this->A);
+        this->A=EMinusMatrix(this->A);
+        cout<< "normC="<<getNormMatrix3(this->A)<<endl;
+      //  printMatrix(this->A);
+    }
 
-        delete instance;
-        return result;
-    }*/
-
-
+    vector<T> modificationX(const vector<T> &prevX) {
+        return sumVector(multiMatrixVector(this->A,prevX),this->b);
+    }
 };
 
 

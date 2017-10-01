@@ -18,7 +18,7 @@ public:
     MethodJacobi(T eps, const vector<T> &x, const vector<vector<T>> &A, const vector<T> &b) :
             IterativeMethods<T>(eps,x,A,b){};
 
-private:
+protected:
     void convertToIterativeMatrix(){ //C в уравнении x=C*x + b
         for(int i=0;i<this->A.size();i++){
             auto coef = -1/this->A[i][i];
@@ -33,16 +33,10 @@ private:
         }
     }
 
-public:
-   /* static vector<T> solveSystem(T eps, const vector<T> &x, const vector<vector<T>> &A, const vector<T> &b){
-        IterativeMethods<T>* instance = new MethodJacobi(eps,x,A,b);
-        auto result = IterativeMethods<T>::solveSystem(instance);
-
-        delete instance;
-        return result;
-    }*/
-
-
+private:
+    vector<T> modificationX(const vector<T> &prevX) {
+        return sumVector(multiMatrixVector(this->A,prevX),this->b);
+    }
 };
 
 

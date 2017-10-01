@@ -39,17 +39,18 @@ vector<vector<T>> ReadFile(vector<vector<T>> matrix, int number){//number - но
 }
 
 template<typename T>
-void getMatrixEx1(vector<vector<T>> &matrix){
+void setMatrixEx1(vector<vector<T>> &matrix){
     matrix ={
             {15, 2, -3, 7, 53},
             {-5, 11, 2, -3, -90},
             {0, -1, 7, 4, 107},
             {12, 0, -6, 20, 68}
+            //lambda max 25.1147
     };
 }
 
 template<typename T>
-void getMatrixEx2(vector<vector<T>>  &matrix){
+void setMatrixEx2(vector<vector<T>>  &matrix){
     matrix ={
             {86.00, -8.93, -9.59, -3.91, 818.58},
             {4.05, -100.00, -9.10, -8.14, 898.74},
@@ -60,7 +61,7 @@ void getMatrixEx2(vector<vector<T>>  &matrix){
 
 
 template<typename T>
-void getMatrixEx3(vector<vector<T>> &matrix){
+void setMatrixEx3(vector<vector<T>> &matrix){
     matrix = {
             {1, 1, 1, 1, 4},
             {2, 3, 3, 3, 11},
@@ -70,7 +71,7 @@ void getMatrixEx3(vector<vector<T>> &matrix){
 }
 
 template<typename T>
-void getMatrixEx4(vector<vector<T >> &matrix){
+void setMatrixEx4(vector<vector<T >> &matrix){
     matrix = {
             {10, 6, 2, 0, 25},
             {5, 1, -2, 4, 14},
@@ -80,7 +81,7 @@ void getMatrixEx4(vector<vector<T >> &matrix){
 }
 
 template <typename T>
-void getMatrixEx5(vector<vector<T>> &matrix){
+void setMatrixEx5(vector<vector<T>> &matrix){
     matrix ={
             {28.859, -0.008, 2.406, 19.240, 30.459},
             {14.436, -0.001, 1.203, 9.624, 18.248},

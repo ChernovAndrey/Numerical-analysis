@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/Lab2.dir/main.cpp.o CMakeFiles/Lab2.dir/matrixOperations.cpp.o CMakeFiles/Lab2.dir/sourceMatrices.cpp.o CMakeFiles/Lab2.dir/workWithConsole.cpp.o CMakeFiles/Lab2.dir/vectorOperations.cpp.o  -o Lab2 
+/usr/bin/c++  -g   CMakeFiles/Lab2.dir/main.cpp.o CMakeFiles/Lab2.dir/matrixOperations.cpp.o CMakeFiles/Lab2.dir/sourceMatrices.cpp.o CMakeFiles/Lab2.dir/workWithConsole.cpp.o CMakeFiles/Lab2.dir/vectorOperations.cpp.o  -o Lab2 
