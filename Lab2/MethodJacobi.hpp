@@ -14,13 +14,21 @@ using namespace std;
 template <typename T>
 class MethodJacobi : public IterativeMethods<T>{
 
+
 public:
     MethodJacobi(T eps, const vector<T> &x, const vector<vector<T>> &A, const vector<T> &b) :
             IterativeMethods<T>(eps,x,A,b){};
 
 protected:
-    void convertToIterativeMatrix(){ //C в уравнении x=C*x + b
+
+    void convertToIterativeMatrix() { //C в уравнении x=C*x + b
         for(int i=0;i<this->A.size();i++){
+
+            if (IterativeMethods<T>::compareWithZero(this->A[i][i])){
+                this->A= IterativeMethods<T>::swapStrIMatrix(this->A,i);
+                if(this->A.empty()) throw invalid_argument("invalid matrix");
+            }
+
             auto coef = -1/this->A[i][i];
             this->b[i]= (this->b[i])/(this->A[i][i]);
             for(int j=0;j<this->A.size();j++){

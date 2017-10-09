@@ -18,19 +18,6 @@ class MethodRelaxation : public MethodJacobi<T> {
 protected:
      T w;
     bool flagW;//1 или нет
-    bool compareWithOne(){
-        if(typeid(T).name()== typeid(double).name()){
-            return (abs(w-1)<1e-14);
-        }
-
-        if(typeid(T).name()== typeid(float).name()){
-            return (abs(w-1)<1e-07);
-        }
-
-        cout<<"Invalid type";
-        assert(false);
-    }
-
     void shiftXm(T &Xm, const T &prevXm){
         if(flagW) return;
         Xm=w*Xm + (1.0-w)*prevXm;
@@ -39,7 +26,7 @@ public:
     MethodRelaxation(T eps, const vector<T> &x, const vector<vector<T>> &A, const vector<T> &b, const T w) :
             MethodJacobi<T>(eps, x, A, b) {
         this->w=w;
-        flagW=compareWithOne();
+        flagW=IterativeMethods<T>::compareWithZero(this->w-1);
     };
 private:
     vector<T> modificationX(const vector<T> &prevX) {

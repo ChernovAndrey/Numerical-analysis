@@ -84,6 +84,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab2/DiagIterativeMethod.hpp">
+			<Option target="Lab2"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab2/DiagMethodRelaxation.hpp">
+			<Option target="Lab2"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab2/DiagMethodSeidel.hpp">
+			<Option target="Lab2"/>
+		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab2/IterativeMethods.hpp">
 			<Option target="Lab2"/>
 		</Unit>

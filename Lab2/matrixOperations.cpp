@@ -99,3 +99,22 @@ template <typename T>
     }
     return newMatrix;
 }
+
+template<typename T>
+T getNormMatrix1(const vector<vector<T>> &matrix){ //по столбцам
+    T norm;
+    bool flagInit = false;
+    for(int j=0; j<matrix[0].size();j++){
+        T max = 0.0;
+        for (auto &el : matrix) {
+            max+=abs(el[j]);
+        }
+        if(!flagInit) {
+            norm = max;
+            flagInit =true;
+        }else {
+            if (norm < max) norm = max;
+        }
+    }
+    return norm;
+}

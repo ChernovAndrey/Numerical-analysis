@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <tuple>
 #include "assert.h"
 using namespace std;
 //
@@ -57,36 +58,5 @@ void setMatrixEx2(vector<vector<T>>  &matrix){
             {0.26, 3.61, -71.80, -4.28,  -912.22},
             {-4.03, -6.88, 6.57, -198.60, -687.06}
     };
+    //{-199.045, -97.807, 85.8335, -73.3811} cобственные числа
 }
-
-
-template<typename T>
-void setMatrixEx3(vector<vector<T>> &matrix){
-    matrix = {
-            {1, 1, 1, 1, 4},
-            {2, 3, 3, 3, 11},
-            {2, 4, 4, 4, 15},
-            {4, 5, 6, 7, 22}
-    };
-}
-
-template<typename T>
-void setMatrixEx4(vector<vector<T >> &matrix){
-    matrix = {
-            {10, 6, 2, 0, 25},
-            {5, 1, -2, 4, 14},
-            {3, 5, 1, -1, 10},
-            {0, 6, -2, 2, 8}
-    };
-}
-
-template <typename T>
-void setMatrixEx5(vector<vector<T>> &matrix){
-    matrix ={
-            {28.859, -0.008, 2.406, 19.240, 30.459},
-            {14.436, -0.001, 1.203, 9.624, 18.248},
-            {120.204, -0.032, 10.024, 80.144, 128.156},
-            {-57.714, 0.016, -4.812, -38.478, -60.908}
-    };
-}
-

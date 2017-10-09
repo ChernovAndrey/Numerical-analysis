@@ -32,6 +32,9 @@ static vector<T> getVectorB(vector<vector<T>> matrix);
 template <typename T>
 vector<vector<T>> getMatrixA(vector<vector<T>> matrix);
 
+template<typename T>
+T getNormMatrix1(const vector<vector<T>> &matrix);
+
 #include "matrixOperations.cpp"
 
 #endif //LAB2_MATRIXOPERATIONS_H

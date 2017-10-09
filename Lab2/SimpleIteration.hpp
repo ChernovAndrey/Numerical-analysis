@@ -29,14 +29,12 @@ private:
             }
         }
         T normA = getNormMatrix3(this->A);
-        cout<<"normA="<<normA<<endl;
     }
 
     void convertToIterativeMatrix(){ //C в уравнении x=C*x + b
         matrixNormalizationA();
        // printMatrix(this->A);
         this->A=EMinusMatrix(this->A);
-        cout<< "normC="<<getNormMatrix3(this->A)<<endl;
       //  printMatrix(this->A);
     }
 

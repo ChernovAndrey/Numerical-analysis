@@ -6,6 +6,42 @@
 
 #IncludeRegexTransform: 
 
+/home/andrey/CLionProjects/NumericalMethods/Lab2/DiagIterativeMethod.hpp
+iostream
+-
+vector
+-
+matrixOperations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab2/matrixOperations.h
+vectorOperations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab2/vectorOperations.h
+workWithConsole.h
+/home/andrey/CLionProjects/NumericalMethods/Lab2/workWithConsole.h
+typeinfo
+-
+IterativeMethods.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab2/IterativeMethods.hpp
+
+/home/andrey/CLionProjects/NumericalMethods/Lab2/DiagMethodRelaxation.hpp
+iostream
+-
+MethodJacobi.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab2/MethodJacobi.hpp
+typeinfo
+-
+cassert
+/home/andrey/CLionProjects/NumericalMethods/Lab2/cassert
+cmath
+/home/andrey/CLionProjects/NumericalMethods/Lab2/cmath
+DiagIterativeMethod.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab2/DiagIterativeMethod.hpp
+
+/home/andrey/CLionProjects/NumericalMethods/Lab2/DiagMethodSeidel.hpp
+iostream
+-
+DiagMethodRelaxation.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab2/DiagMethodRelaxation.hpp
+
 /home/andrey/CLionProjects/NumericalMethods/Lab2/IterativeMethods.hpp
 iostream
 -
@@ -17,6 +53,8 @@ vectorOperations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab2/vectorOperations.h
 workWithConsole.h
 /home/andrey/CLionProjects/NumericalMethods/Lab2/workWithConsole.h
+typeinfo
+-
 
 /home/andrey/CLionProjects/NumericalMethods/Lab2/MethodJacobi.hpp
 iostream
@@ -73,6 +111,12 @@ MethodRelaxation.hpp
 /home/andrey/CLionProjects/NumericalMethods/Lab2/MethodRelaxation.hpp
 IterativeMethods.hpp
 /home/andrey/CLionProjects/NumericalMethods/Lab2/IterativeMethods.hpp
+tuple
+-
+DiagMethodRelaxation.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab2/DiagMethodRelaxation.hpp
+DiagMethodSeidel.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab2/DiagMethodSeidel.hpp
 
 /home/andrey/CLionProjects/NumericalMethods/Lab2/matrixOperations.cpp
 iostream
@@ -94,6 +138,8 @@ iostream
 vector
 -
 fstream
+-
+tuple
 -
 assert.h
 /home/andrey/CLionProjects/NumericalMethods/Lab2/assert.h

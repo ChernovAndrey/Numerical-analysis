@@ -12,48 +12,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6312420b-b14d-47ec-9dce-65371f119df3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/CMakeLists.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeCache.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/Makefile2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/progress.marks" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/flags.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/progress.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/cmake_install.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/untitled.cbp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../untitled/main.cpp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Lab1WithOOP" afterPath="$PROJECT_DIR$/cmake-build-debug/Lab1WithOOP" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/matrixOperations.cpp.o" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/matrixOperations.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/sourceMatrices.cpp.o" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/sourceMatrices.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/vectorOperations.cpp.o" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/vectorOperations.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/workWithConsole.cpp.o" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/workWithConsole.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/Lab2" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/Lab2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/CMakeLists.txt" afterPath="$PROJECT_DIR$/../Lab2/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/IterativeMethods.hpp" afterPath="$PROJECT_DIR$/../Lab2/IterativeMethods.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/MethodJacobi.hpp" afterPath="$PROJECT_DIR$/../Lab2/MethodJacobi.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/MethodRelaxation.hpp" afterPath="$PROJECT_DIR$/../Lab2/MethodRelaxation.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/SimpleIteration.hpp" afterPath="$PROJECT_DIR$/../Lab2/SimpleIteration.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/CXX.includecache" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/depend.internal" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/depend.make" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/flags.make" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/CMakeFiles/Lab2.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/cmake-build-debug/Lab2.cbp" afterPath="$PROJECT_DIR$/../Lab2/cmake-build-debug/Lab2.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/main.cpp" afterPath="$PROJECT_DIR$/../Lab2/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/matrixOperations.cpp" afterPath="$PROJECT_DIR$/../Lab2/matrixOperations.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/matrixOperations.h" afterPath="$PROJECT_DIR$/../Lab2/matrixOperations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/sourceMatrices.cpp" afterPath="$PROJECT_DIR$/../Lab2/sourceMatrices.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/sourceMatrices.h" afterPath="$PROJECT_DIR$/../Lab2/sourceMatrices.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/vectorOperations.cpp" afterPath="$PROJECT_DIR$/../Lab2/vectorOperations.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/vectorOperations.h" afterPath="$PROJECT_DIR$/../Lab2/vectorOperations.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,11 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="234">
+              <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -83,7 +65,7 @@
       <file leaf-file-name="QR.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QR.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
+            <state relative-caret-position="915">
               <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="71" selection-end-column="5" />
               <folding>
                 <element signature="e#0#33#0" expanded="false" />
@@ -107,8 +89,8 @@
       <file leaf-file-name="matrixOperations.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matrixOperations.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            <state relative-caret-position="155">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="e#41#58#0" expanded="true" />
                 <element signature="e#127#139#0" expanded="true" />
@@ -129,15 +111,14 @@
       <file leaf-file-name="BasicInterface.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BasicInterface.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2196">
-              <caret line="122" column="21" lean-forward="false" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
+            <state relative-caret-position="486">
+              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="76" selection-end-column="5" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#463#714#0" expanded="false" />
                 <element signature="e#720#1035#0" expanded="false" />
                 <element signature="e#1041#1505#0" expanded="false" />
                 <element signature="e#1512#1659#0" expanded="false" />
-                <element signature="e#1666#1907#0" expanded="false" />
                 <element signature="e#1922#2396#0" expanded="false" />
                 <element signature="e#2402#2815#0" expanded="false" />
                 <element signature="e#2821#2984#0" expanded="false" />
@@ -205,11 +186,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vectorOperations.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vectorOperations.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vectorOperations.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
               <folding>
                 <element signature="e#220#514#0" expanded="false" />
                 <element signature="e#516#707#0" expanded="false" />
@@ -224,7 +205,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>static</find>
       <find>exc</find>
       <find>matrix</find>
       <find>Gauss</find>
@@ -254,6 +234,7 @@
       <find>number</find>
       <find>getMa</find>
       <find>print</find>
+      <find>Residua</find>
     </findStrings>
     <replaceStrings>
       <replace>this-&gt;A</replace>
@@ -341,7 +322,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -395,29 +376,29 @@
       <workItem from="1506190592046" duration="660000" />
       <workItem from="1506250817988" duration="8006000" />
       <workItem from="1506405384847" duration="259000" />
+      <workItem from="1507579866017" duration="1392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52533000" />
+    <option name="totallyTimeSpent" value="53925000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="992" y="24" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24851751" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -526,7 +507,6 @@
             <element signature="e#720#1035#0" expanded="false" />
             <element signature="e#1041#1505#0" expanded="false" />
             <element signature="e#1512#1659#0" expanded="false" />
-            <element signature="e#1666#1907#0" expanded="false" />
             <element signature="e#1922#2396#0" expanded="false" />
             <element signature="e#2402#2815#0" expanded="false" />
             <element signature="e#2821#2984#0" expanded="false" />
@@ -612,7 +592,6 @@
             <element signature="e#720#1035#0" expanded="false" />
             <element signature="e#1041#1505#0" expanded="false" />
             <element signature="e#1512#1659#0" expanded="false" />
-            <element signature="e#1666#1907#0" expanded="false" />
             <element signature="e#1922#2396#0" expanded="false" />
             <element signature="e#2402#2815#0" expanded="false" />
             <element signature="e#2821#2984#0" expanded="false" />
@@ -705,7 +684,6 @@
             <element signature="e#720#1035#0" expanded="false" />
             <element signature="e#1041#1505#0" expanded="false" />
             <element signature="e#1512#1659#0" expanded="false" />
-            <element signature="e#1666#1907#0" expanded="false" />
             <element signature="e#1922#2396#0" expanded="false" />
             <element signature="e#2402#2815#0" expanded="false" />
             <element signature="e#2821#2984#0" expanded="false" />
@@ -811,19 +789,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Conditions.hpp" />
-    <entry file="file://$PROJECT_DIR$/vectorOperations.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-          <folding>
-            <element signature="e#220#514#0" expanded="false" />
-            <element signature="e#516#707#0" expanded="false" />
-            <element signature="e#717#729#0" expanded="true" />
-            <element signature="e#709#862#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gauss.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -851,10 +816,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sourceMatrices.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourceMatrices.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QR.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="71" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#33#0" expanded="false" />
+            <element signature="e#287#368#0" expanded="false" />
+            <element signature="e#2134#2433#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/matrixOperations.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        <state relative-caret-position="155">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
             <element signature="e#41#58#0" expanded="true" />
             <element signature="e#127#139#0" expanded="true" />
@@ -871,25 +866,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sourceMatrices.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BasicInterface.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2196">
-          <caret line="122" column="21" lean-forward="false" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
+        <state relative-caret-position="486">
+          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="76" selection-end-column="5" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#463#714#0" expanded="false" />
             <element signature="e#720#1035#0" expanded="false" />
             <element signature="e#1041#1505#0" expanded="false" />
             <element signature="e#1512#1659#0" expanded="false" />
-            <element signature="e#1666#1907#0" expanded="false" />
             <element signature="e#1922#2396#0" expanded="false" />
             <element signature="e#2402#2815#0" expanded="false" />
             <element signature="e#2821#2984#0" expanded="false" />
@@ -898,34 +884,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QR.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="71" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#33#0" expanded="false" />
-            <element signature="e#287#368#0" expanded="false" />
-            <element signature="e#2134#2433#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sourceMatrices.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="234">
+          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vectorOperations.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
+          <folding>
+            <element signature="e#220#514#0" expanded="false" />
+            <element signature="e#516#707#0" expanded="false" />
+            <element signature="e#717#729#0" expanded="true" />
+            <element signature="e#709#862#0" expanded="false" />
           </folding>
         </state>
       </provider>
