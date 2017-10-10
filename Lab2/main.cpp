@@ -50,54 +50,77 @@ void printResult(vector<T> v){
 }
 
 void runAllMethods(){
-    number r1 = 0.059;
+    number r1 = 0.05;
     number eps[] = {1e-4,1e-7};
     number w[] = {1.04,1.009};
     vector<number> x0(4,0);
+
     vector<vector<number>> matrix;
-    for (int i = 0; i < 2; ++i) {
-        if(i==0) setMatrixEx1(matrix);
-        else setMatrixEx2(matrix);
-        cout<<"при eps="<<eps[i]<<endl;
-        auto A = getMatrixA(matrix);
-        auto b = getVectorB(matrix);
-        if(i==0) {
-            cout <<"Метод пр. ит.:"<<'\t';
-            auto resultSimple = IterativeMethods<number>::solveSystem(new SimpleIteration<number>(eps[i],x0,A,b,r1));
-           cout<<"Residual="<<getResidual(b,multiMatrixVector(A,resultSimple))<<'\t'<<"tau="<<r1<<'\t'<<"result= ";
-            printResult(resultSimple);
-            cout<<endl;
+    for (double ep : eps) {
+        for (int i = 0; i < 2; ++i) {
+            if (i == 0) setMatrixEx1(matrix);
+            else setMatrixEx2(matrix);
+            cout << "при eps=" << ep << endl;
+            auto A = getMatrixA(matrix);
+            auto b = getVectorB(matrix);
+            if (i == 0) {
+                cout << "Метод пр. ит.:" << '\t';
+                auto resultSimple = IterativeMethods<number>::solveSystem(
+                        new SimpleIteration<number>(ep, x0, A, b, r1));
+                cout << "Residual=" << getResidual(b, multiMatrixVector(A, resultSimple)) << '\t' << "tau=" << r1
+                     << '\t' << "result= ";
+                printResult(resultSimple);
+                cout << endl;
+            }
+
+            cout << "Метод Якоби:" << '\t';
+            auto resultJacobi = IterativeMethods<number>::solveSystem(new MethodJacobi<number>(ep, x0, A, b));
+            cout << "Residual=" << getResidual(b, multiMatrixVector(A, resultJacobi)) << '\t' << "result= ";
+            printResult(resultJacobi);
+            cout << endl;
+
+            cout << "Метод Зейделя:" << '\t';
+            auto resultSeidel = IterativeMethods<number>::solveSystem(new MethodSeidel<number>(ep, x0, A, b));
+            cout << "Residual=" << getResidual(b, multiMatrixVector(A, resultSeidel)) << '\t' << "result= ";
+            printResult(resultSeidel);
+            cout << endl;
+
+            cout << "Метод релак.:" << '\t';
+            auto resultRelax = IterativeMethods<number>::solveSystem(
+                    new MethodRelaxation<number>(ep, x0, A, b, w[i]));
+            cout << "Residual=" << getResidual(b, multiMatrixVector(A, resultRelax)) << '\t' << "result= ";
+            printResult(resultRelax);
+            cout << "w=" << w[i] << '\t' << endl;
+
+            cout
+                    << "---------------------------------------------------------------------------------------------------------------"
+                    << endl;
         }
-
-        cout <<"Метод Якоби:"<<'\t';
-        auto resultJacobi = IterativeMethods<number>::solveSystem(new MethodJacobi<number>(eps[i],x0,A,b));
-        cout<<"Residual="<<getResidual(b,multiMatrixVector(A,resultJacobi))<<'\t'<<"result= ";
-        printResult(resultJacobi);
-        cout<<endl;
-
-        cout <<"Метод Зейделя:"<<'\t';
-        auto resultSeidel = IterativeMethods<number>::solveSystem(new MethodSeidel<number>(eps[i],x0,A,b));
-        cout<<"Residual="<<getResidual(b,multiMatrixVector(A,resultSeidel))<<'\t'<<"result= ";
-        printResult(resultSeidel);
-        cout<<endl;
-
-        cout<<"Метод релак.:"<<'\t';
-        auto resultRelax = IterativeMethods<number>::solveSystem(new MethodRelaxation<number>(eps[i],x0,A,b,w[i]));
-        cout<<"Residual="<<getResidual(b,multiMatrixVector(A,resultRelax))<<'\t'<<"result= ";
-        printResult(resultRelax);
-        cout<<"w="<<w[i]<<'\t'<<endl;
-
-        cout<<"---------------------------------------------------------------------------------------------------------------"<<endl;
     }
 }
 
 int main() {
-   runAllMethods();
-  /*  vector<vector<number>>matrix;
+  // runAllMethods();
+  /* vector<vector<number>>matrix;
     vector<number> b;
     vector<number>x;
     tie(matrix, b,x) = createDiagMatrix();
     printVector(b);
     printVector(IterativeMethods<number>::solveSystem(new DiagMethodRelaxation<number>(0.00001,x,matrix,b,1.05)));
     printVector(IterativeMethods<number>::solveSystem(new DiagMethodSeidel<number>(0.00001,x,matrix,b)));*/
+
+   vector<vector<number>> matrix;
+    setMatrixEx3(matrix);
+
+    number r2 = 0.000001;
+    number ep = 1e-4;
+    vector<number> x0(4,0);
+
+    auto A = getMatrixA(matrix);
+    auto b = getVectorB(matrix);
+
+    auto resultSimple = IterativeMethods<number>::solveSystem(
+            new SimpleIteration<number>(ep, x0, A, b, r2));
+    printVector(resultSimple);
+
 }

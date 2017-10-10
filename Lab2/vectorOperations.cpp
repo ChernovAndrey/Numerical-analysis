@@ -35,6 +35,15 @@ vector<T> diffVectors(vector<T> a, vector<T> b){
 }
 
 template <typename T>
+vector<T> multiNumberVector(vector<T> a, T number){
+    vector<T> c(a.size());
+    for(int i=0;i<a.size();i++){
+        c[i]= number*a[i];
+    }
+    return c;
+}
+
+template <typename T>
 T getResidual(vector<T> a,vector<T> b){
     T norm=0;
     for(int i=0;i<a.size();i++){

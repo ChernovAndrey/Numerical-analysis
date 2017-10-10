@@ -20,5 +20,8 @@ T normVector(vector<T> v);
 template <typename T>
 T getResidual(vector<T> a,vector<T> b);
 
+template <typename T>
+vector<T> multiNumberVector(vector<T> a, T number);
+
 #include "vectorOperations.cpp"
 #endif //LAB2_VECTOROPERATIONS_H

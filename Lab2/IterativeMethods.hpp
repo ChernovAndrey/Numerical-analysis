@@ -35,7 +35,18 @@ public:
             cout<< ex.what()<<endl;
             return {};
         }
-        cout<<"norm C ="<< getNormMatrix3(instance->A)<<'\t';
+        auto norm = getNormMatrix3(instance->A);
+        cout<<"norm C ="<< norm <<'\t';
+        //hard code for first ex
+       /* vector<T> res = {5, -7, 12, 4};
+        vector<T> x0(4,0);
+        auto suggestCountIter=1;
+        while(norm*normVector(diffVectors(res,x0))>instance->eps){
+            suggestCountIter++;
+            norm*=norm;
+        }
+        cout<<"suggest count iter>="<<suggestCountIter<<'\t';*/
+        //end hard
         return instance->iterations();
     }
 
