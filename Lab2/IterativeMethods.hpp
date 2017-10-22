@@ -94,7 +94,6 @@ protected:
         if (typeid(T).name() == typeid(float).name()) {
             return (abs(el) < 1e-07);
         }
-
         cout << "Invalid type";
         assert(false);
         return false;
