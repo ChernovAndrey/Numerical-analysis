@@ -15,6 +15,7 @@ using namespace std;
 class Interpolate {
 
 protected:
+    int numberSplit =0;
 
     const int countPoints=10;//кол-во точек для интерполяции
 
@@ -32,8 +33,8 @@ public:
     }
 
     void execute(){
-        writeValuesInFile(&Interpolate::calculateInterpolation,"/home/andrey/CLionProjects/NumericalMethods/Lab3/approx.txt");
-        writeValuesInFile(&Interpolate::calculateAccurately,"/home/andrey/CLionProjects/NumericalMethods/Lab3/accurate.txt");
+        writeValuesInFile(&Interpolate::calculateInterpolation,"/home/andrey/CLionProjects/NumericalMethods/Lab3/files/approx.txt");
+        writeValuesInFile(&Interpolate::calculateAccurately,"/home/andrey/CLionProjects/NumericalMethods/Lab3/files/accurate.txt");
     }
 
 private:
@@ -45,6 +46,7 @@ private:
             {
 
                 for(int i=0;i<xValues.size()-1;i++) {
+                    numberSplit=i;
                     file<<xValues[i]<<", "<<fxValues[i]<<endl;
                         double h=(xValues[i+1] - xValues[i])/(countPoints+1);
                         for(int j=1;j<=countPoints;j++) {

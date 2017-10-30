@@ -9,7 +9,7 @@
 #include <tuple>
 #include "iostream"
 #include <vector>
-#include "functions.h"
+#include "../tests/functions.h"
 #include "cmath"
 using namespace std;
 class Grid {

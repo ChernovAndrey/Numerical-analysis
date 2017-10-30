@@ -101,15 +101,15 @@ void runAllMethods(){
 
 int main() {
   // runAllMethods();
-  /* vector<vector<number>>matrix;
+   vector<vector<number>>matrix;
     vector<number> b;
     vector<number>x;
     tie(matrix, b,x) = createDiagMatrix();
     printVector(b);
     printVector(IterativeMethods<number>::solveSystem(new DiagMethodRelaxation<number>(0.00001,x,matrix,b,1.05)));
-    printVector(IterativeMethods<number>::solveSystem(new DiagMethodSeidel<number>(0.00001,x,matrix,b)));*/
+    printVector(IterativeMethods<number>::solveSystem(new DiagMethodSeidel<number>(0.00001,x,matrix,b)));
 
-   vector<vector<number>> matrix;
+ /*  vector<vector<number>> matrix;
     setMatrixEx3(matrix);
 
     number r2 = 0.000001;
@@ -121,6 +121,6 @@ int main() {
 
     auto resultSimple = IterativeMethods<number>::solveSystem(
             new SimpleIteration<number>(ep, x0, A, b, r2));
-    printVector(resultSimple);
+    printVector(resultSimple);*/
 
 }

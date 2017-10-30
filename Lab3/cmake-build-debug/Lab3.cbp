@@ -84,25 +84,40 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/ChebyshevGrid.h">
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/Grids/ChebyshevGrid.h">
 			<Option target="Lab3"/>
 		</Unit>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/Grid.h">
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/Grids/Grid.h">
 			<Option target="Lab3"/>
 		</Unit>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/Interpolate.h">
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/Grids/UniformGrid.h">
 			<Option target="Lab3"/>
 		</Unit>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/Lagrange.h">
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/Interpolating/CubicSpline.h">
 			<Option target="Lab3"/>
 		</Unit>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/UniformGrid.h">
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/Interpolating/Interpolate.h">
 			<Option target="Lab3"/>
 		</Unit>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/functions.h">
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/Interpolating/Lagrange.h">
+			<Option target="Lab3"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/helping/matrixOperations.h">
+			<Option target="Lab3"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/helping/vectorOperations.h">
+			<Option target="Lab3"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/helping/workWithConsole.h">
 			<Option target="Lab3"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/main.cpp">
+			<Option target="Lab3"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/solveSystem/Sweep.h">
+			<Option target="Lab3"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/tests/functions.h">
 			<Option target="Lab3"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab3/CMakeLists.txt">
