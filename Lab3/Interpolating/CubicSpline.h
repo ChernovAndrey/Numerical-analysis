@@ -62,6 +62,7 @@ private:
             d[i]=(c[i+1]-c[i])/(3*h[i+1]);
         }
         c.pop_back();
+        a.push_back(fxValues[fxValues.size()-1]);
         return make_tuple(a,b,c,d);
     }
 

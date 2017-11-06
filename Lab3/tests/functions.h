@@ -33,5 +33,5 @@ double func6(double x){
 
 
 double func(double x){  //текущая функция
-    return func5(x);
+    return func1(x);
 }
