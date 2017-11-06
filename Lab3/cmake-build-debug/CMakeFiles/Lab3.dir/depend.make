@@ -7,6 +7,8 @@ CMakeFiles/Lab3.dir/main.cpp.o: ../Grids/UniformGrid.h
 CMakeFiles/Lab3.dir/main.cpp.o: ../Interpolating/CubicSpline.h
 CMakeFiles/Lab3.dir/main.cpp.o: ../Interpolating/Interpolate.h
 CMakeFiles/Lab3.dir/main.cpp.o: ../Interpolating/Lagrange.h
+CMakeFiles/Lab3.dir/main.cpp.o: ../helping/vectorOperations.cpp
+CMakeFiles/Lab3.dir/main.cpp.o: ../helping/vectorOperations.h
 CMakeFiles/Lab3.dir/main.cpp.o: ../helping/workWithConsole.cpp
 CMakeFiles/Lab3.dir/main.cpp.o: ../helping/workWithConsole.h
 CMakeFiles/Lab3.dir/main.cpp.o: ../main.cpp

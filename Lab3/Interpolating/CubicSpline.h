@@ -29,6 +29,7 @@ private:
     vector<double> c;
     vector<double> d;
 
+
     tuple<vector<double>, vector<double>, vector<double>, vector<double>> getCoefPolinom() {
         vector<double> g(fxValues.size());
         vector<double> h(xValues.size());
@@ -45,18 +46,12 @@ private:
             h[i] = xValues[i] - xValues[i - 1];
             g[i] = (fxValues[i] - fxValues[i - 1]) / h[i];
         }
-        printVector(h);
-        printVector(g);
         vector<vector<double>> matrix;
         vector<double> f;
         vector<double> x;
         tie(matrix, f) = createDiagMatrix(h, g);
-        printVector(f);
-        printMatrix(matrix);
 
-        cout<<"c=";
         auto c=(new Sweep(matrix,f))->solveSystem();
-        printVector(c);
 
         vector<double> b(fxValues.size()-1);
         vector<double> d(fxValues.size()-1);

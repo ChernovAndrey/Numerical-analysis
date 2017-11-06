@@ -29,7 +29,7 @@ template <typename T>
 vector<T> diffVectors(vector<T> a, vector<T> b){
     vector<T> c(a.size());
     for(int i=0;i<a.size();i++){
-        c[i]= a[i] - b[i];
+        c[i]= abs(a[i] - b[i]);
     }
     return c;
 }

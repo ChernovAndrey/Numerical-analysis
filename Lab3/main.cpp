@@ -10,28 +10,70 @@
 
 using namespace std;
 
+void runAll() {
+    string path = "/home/andrey/CLionProjects/NumericalMethods/Lab3/files/";
+    int i = 1;
+    int n = 10;
+    double a = -1;
+    double b = 1;
+    while (i <= 3) {
+        if (i == 1) n = 3;
+        if (i == 2) n = 10;
+        if (i == 3) n = 100;
+
+        cout<<"---------------------------------------------------------------------------------------------------------------"<<endl;
+        Grid *grid = new UniformGrid(a, b, n);
+        Interpolate *interpolate = new Lagrange(grid->get());
+        cout << "grid:" << endl;
+        grid->print();
+        interpolate->execute(path+"approx"+"LU"+to_string(i)+".txt",path+"accur"+"LU"+to_string(i)+".txt");
+        cout<<"---------------------------------------------------------------------------------------------------------------"<<endl;
+
+        grid = new ChebyshevGrid(a, b, n);
+        interpolate = new Lagrange(grid->get());
+        cout << "grid:" << endl;
+        grid->print();
+        interpolate->execute(path+"approx"+"LC"+to_string(i)+".txt",path+"accur"+"LC"+to_string(i)+".txt");
+        cout<<"---------------------------------------------------------------------------------------------------------------"<<endl;
+
+        grid = new UniformGrid(a, b, n);
+        interpolate = new CubicSpline(grid->get());
+        cout << "grid:" << endl;
+        grid->print();
+        interpolate->execute(path+"approx"+"CUB"+to_string(i)+".txt",path+"accur"+"CUB"+to_string(i)+".txt");
+        cout<<"---------------------------------------------------------------------------------------------------------------"<<endl;
+
+
+        i++;
+    }
+}
+
 
 int main() {
-    double a =-1;
-    double b =1;
-    int n =14;
+    double a = -1;
+    double b = 1;
+    int n = 11;
 
-    Grid* grid = new UniformGrid(a,b,n);
-  //  Grid* grid = new ChebyshevGrid(a,b,n);
+    //Grid* grid = new UniformGrid(a,b,n);
+    //  Grid* grid = new ChebyshevGrid(a,b,n);
 
 
+    int i=3;
+    cout<< to_string(3);
 
-  // Interpolate* interpolate= new Lagrange(grid->get());
-    Interpolate* interpolate= new CubicSpline(grid->get());
+   runAll();
 
-    cout<<"grid:"<<endl;
-    grid->print();
+    //Interpolate* interpolate= new Lagrange(grid->get());
+    // Interpolate* interpolate= new CubicSpline(grid->get());
 
-    interpolate->execute();
+    // cout<<"grid:"<<endl;
+    //  grid->print();
 
- //   auto pair = createDiagMatrix();
+    // interpolate->execute();
 
-   // printVector((new Sweep(pair.first,pair.second))->solveSystem());
+    //  auto pair = createDiagMatrix();
+
+    // printVector((new Sweep(pair.first,pair.second))->solveSystem());
 
     return 0;
 }

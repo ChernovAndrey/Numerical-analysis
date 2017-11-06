@@ -8,6 +8,8 @@ CMakeFiles/Lab3.dir/main.cpp.o
  /home/andrey/CLionProjects/NumericalMethods/Lab3/Interpolating/CubicSpline.h
  /home/andrey/CLionProjects/NumericalMethods/Lab3/Interpolating/Interpolate.h
  /home/andrey/CLionProjects/NumericalMethods/Lab3/Interpolating/Lagrange.h
+ /home/andrey/CLionProjects/NumericalMethods/Lab3/helping/vectorOperations.cpp
+ /home/andrey/CLionProjects/NumericalMethods/Lab3/helping/vectorOperations.h
  /home/andrey/CLionProjects/NumericalMethods/Lab3/helping/workWithConsole.cpp
  /home/andrey/CLionProjects/NumericalMethods/Lab3/helping/workWithConsole.h
  /home/andrey/CLionProjects/NumericalMethods/Lab3/main.cpp

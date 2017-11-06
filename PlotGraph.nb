@@ -10,28 +10,116 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9641,        217]
-NotebookOptionsPosition[      9114,        195]
-NotebookOutlinePosition[      9449,        210]
-CellTagsIndexPosition[      9406,        207]
+NotebookDataLength[     12997,        303]
+NotebookOptionsPosition[     12283,        274]
+NotebookOutlinePosition[     12618,        289]
+CellTagsIndexPosition[     12575,        286]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData["\[IndentingNewLine]"], "Input",
- CellChangeTimes->{3.7175582783089867`*^9}],
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"i", "=", "\"\<1\>\""}]}]], "Input",
+ CellChangeTimes->{{3.7189653096279993`*^9, 3.71896531659063*^9}}],
+
+Cell[BoxData["\<\"1\"\>"], "Output",
+ CellChangeTimes->{{3.718965313228619*^9, 3.718965317184566*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"fileApproxLU", "=", 
+     RowBox[{
+     "\"\</home/andrey/CLionProjects/NumericalMethods/Lab3/files/approxLU\>\"\
+", "<>", "i", "<>", "\"\<.txt\>\""}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"fileApproxLC", "=", 
+     RowBox[{
+     "\"\</home/andrey/CLionProjects/NumericalMethods/Lab3/files/approxLC\>\"\
+", "<>", "i", "<>", "\"\<.txt\>\""}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "fileApproxCUB", "=", 
+     "\"\</home/andrey/CLionProjects/NumericalMethods/Lab3/files/approxCUB1.\
+txt\>\""}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "fileAccurLU", "=", 
+     "\"\</home/andrey/CLionProjects/NumericalMethods/Lab3/files/approxLU1.\
+txt\>\""}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "fileAccurLC", "=", 
+     "\"\</home/andrey/CLionProjects/NumericalMethods/Lab3/files/approxLC1.\
+txt\>\""}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "fileAccurCUB", "=", 
+     "\"\</home/andrey/CLionProjects/NumericalMethods/Lab3/files/approxCUB1.\
+txt\>\""}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{
+  3.7175582783089867`*^9, {3.71896423775758*^9, 3.718964283441304*^9}, {
+   3.718964358952951*^9, 3.718964361871513*^9}, {3.718964406183736*^9, 
+   3.718964420995255*^9}, {3.718964616812179*^9, 3.718964665844926*^9}, {
+   3.718964698322205*^9, 3.71896480108946*^9}, {3.718964850906197*^9, 
+   3.7189648693837337`*^9}, {3.718964925806987*^9, 3.718964974337285*^9}, {
+   3.7189650907626467`*^9, 3.7189650950621157`*^9}, {3.718965161327216*^9, 
+   3.7189651650859957`*^9}, {3.7189653238818703`*^9, 3.7189653614031973`*^9}}],
+
+Cell[BoxData["\<\"/home/andrey/CLionProjects/NumericalMethods/Lab3/files/\
+approxLU1.txt\"\>"], "Output",
+ CellChangeTimes->{3.7189653428249903`*^9}]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"dataApprox", " ", "=", " ", 
-    RowBox[{"Import", "[", 
-     RowBox[{
-     "\"\</home/andrey/CLionProjects/NumericalMethods/Lab3/files/approx.txt\>\
-\"", ",", "\"\<CSV\>\""}], "]"}]}], ";"}]}]], "Input",
+   RowBox[{
+    RowBox[{"dataApproxLU", " ", "=", " ", 
+     RowBox[{"Import", "[", 
+      RowBox[{"fileApproxLU", ",", "\"\<CSV\>\""}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dataApproxLC", " ", "=", " ", 
+     RowBox[{"Import", "[", 
+      RowBox[{"fileApproxLC", ",", "\"\<CSV\>\""}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dataApproxCUB", " ", "=", " ", 
+     RowBox[{"Import", "[", 
+      RowBox[{"fileApproxCUB", ",", "\"\<CSV\>\""}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dataAccurLU", " ", "=", " ", 
+     RowBox[{"Import", "[", 
+      RowBox[{"fileAccurLU", ",", "\"\<CSV\>\""}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dataAccurLC", " ", "=", " ", 
+     RowBox[{"Import", "[", 
+      RowBox[{"fileAccurLC", ",", "\"\<CSV\>\""}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dataAccurCUB", " ", "=", " ", 
+     RowBox[{"Import", "[", 
+      RowBox[{"fileAccurCUB", ",", "\"\<CSV\>\""}], "]"}]}], 
+    ";"}]}]}]], "Input",
  CellChangeTimes->{{3.71755832501618*^9, 3.717558417278514*^9}, {
    3.717682544614139*^9, 3.717682547683323*^9}, {3.717813611701318*^9, 
-   3.717813613458868*^9}, 3.71781674547285*^9}],
+   3.717813613458868*^9}, 3.71781674547285*^9, {3.7189642082470922`*^9, 
+   3.718964222824939*^9}, {3.7189642945831633`*^9, 3.7189642975457277`*^9}, {
+   3.718964994393001*^9, 3.718964997632648*^9}, {3.718965062108693*^9, 
+   3.7189651449640017`*^9}, {3.718965177218968*^9, 3.7189652028588457`*^9}}],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{3.717814525256661*^9, 3.717815145051016*^9}],
@@ -39,20 +127,11 @@ Cell[BoxData[""], "Input",
 Cell[BoxData[""], "Input",
  CellChangeTimes->{3.7178143681279488`*^9, 3.7178151426450357`*^9}],
 
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{
-    RowBox[{"dataAccur", " ", "=", " ", 
-     RowBox[{"Import", "[", 
-      RowBox[{
-      "\"\</home/andrey/CLionProjects/NumericalMethods/Lab3/files/accurate.\
-txt\>\"", ",", "\"\<CSV\>\""}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]"}]}]], "Input",
+Cell[BoxData["\[IndentingNewLine]"], "Input",
  CellChangeTimes->{{3.717558388297076*^9, 3.71755838839779*^9}, {
    3.717682499949059*^9, 3.7176825133617783`*^9}, {3.717682551885728*^9, 
    3.717682553134737*^9}, {3.717813621526339*^9, 3.717813622931848*^9}, 
-   3.717816750204648*^9}],
+   3.717816750204648*^9, 3.718964192176251*^9, 3.7189652261390657`*^9}],
 
 Cell[CellGroupData[{
 
@@ -209,16 +288,23 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 89, 1, 55, "Input"],
-Cell[650, 23, 460, 10, 121, "Input"],
-Cell[1113, 35, 90, 1, 32, "Input"],
-Cell[1206, 38, 94, 1, 32, "Input"],
-Cell[1303, 41, 559, 13, 143, "Input"],
 Cell[CellGroupData[{
-Cell[1887, 58, 244, 5, 32, "Input"],
-Cell[2134, 65, 6892, 124, 255, "Output"]
+Cell[580, 22, 160, 3, 55, "Input"],
+Cell[743, 27, 102, 1, 32, "Output"]
 }, Open  ]],
-Cell[9041, 192, 69, 1, 32, "Input"]
+Cell[CellGroupData[{
+Cell[882, 33, 1889, 43, 605, "Input"],
+Cell[2774, 78, 149, 2, 55, "Output"]
+}, Open  ]],
+Cell[2938, 83, 1570, 38, 165, "Input"],
+Cell[4511, 123, 90, 1, 32, "Input"],
+Cell[4604, 126, 94, 1, 32, "Input"],
+Cell[4701, 129, 330, 4, 55, "Input"],
+Cell[CellGroupData[{
+Cell[5056, 137, 244, 5, 32, "Input"],
+Cell[5303, 144, 6892, 124, 255, "Output"]
+}, Open  ]],
+Cell[12210, 271, 69, 1, 32, "Input"]
 }
 ]
 *)

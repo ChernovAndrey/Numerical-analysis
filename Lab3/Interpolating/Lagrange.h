@@ -13,20 +13,36 @@
 class Lagrange : public Interpolate {
 
 public:
+    bool firstIterFlag=true;
     explicit Lagrange(pair<vector<double>, vector<double>> values) : Interpolate(std::move(values)) {
 
     }
 
 private:
+    vector<double> C;
+
+    void initC(){
+        C= vector<double>(xValues.size());
+        for (int k = 0; k < xValues.size(); k++) {
+            C[k]=1.0;
+            for (int j = 0; j < xValues.size(); j++) {
+                if (k != j) C[k] *= 1 / (xValues[k] - xValues[j]);
+            }
+        }
+    }
 
     double calculateInterpolation(double x) override {
+        if(firstIterFlag){
+            initC();
+            firstIterFlag=false;
+        }
         double result = 0.0;
         for (int k = 0; k < xValues.size(); k++) {
-            double Ck = 1.0;
+            double hx = 1.0;
             for (int j = 0; j < xValues.size(); j++) {
-                if (k != j) Ck *= (x - xValues[j]) / (xValues[k] - xValues[j]);
+                if (k != j) hx *= (x - xValues[j]);
             }
-            result += Ck * fxValues[k];
+            result += hx * fxValues[k]*C[k];
         }
         return result;
     }

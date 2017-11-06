@@ -48,12 +48,14 @@ public:
         return  make_pair(xValues,fxValues);
     }
     void print(){
+        cout<<"x:"<<endl;
         for (double i : xValues) {
             cout<< i <<'\t';
         }
 
         cout<<endl;
 
+        cout<<"f(x):"<<endl;
         for (double i : fxValues) {
             cout<< i <<'\t';
         }

@@ -47,12 +47,30 @@ iomanip
 -
 iostream
 -
+../helping/vectorOperations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab3/helping/vectorOperations.h
 
 /home/andrey/CLionProjects/NumericalMethods/Lab3/Interpolating/Lagrange.h
 utility
 -
 Interpolate.h
 /home/andrey/CLionProjects/NumericalMethods/Lab3/Interpolating/Interpolate.h
+
+/home/andrey/CLionProjects/NumericalMethods/Lab3/helping/vectorOperations.cpp
+iostream
+-
+vector
+-
+cmath
+-
+
+/home/andrey/CLionProjects/NumericalMethods/Lab3/helping/vectorOperations.h
+iostream
+-
+vector
+-
+vectorOperations.cpp
+/home/andrey/CLionProjects/NumericalMethods/Lab3/helping/vectorOperations.cpp
 
 /home/andrey/CLionProjects/NumericalMethods/Lab3/helping/workWithConsole.cpp
 iostream

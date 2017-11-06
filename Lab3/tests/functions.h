@@ -24,6 +24,14 @@ double func4(double x){
 double func5(double x){
     return 1;
 }
+bool flagCout=false;
+double func6(double x){
+    if(!flagCout) std::cout<<"Оценка ошибки в точке x=2.2="<<pow(0.2,11)*exp(2.2)<<std::endl;
+    flagCout=true;
+    return exp(x);
+}
+
+
 double func(double x){  //текущая функция
-    return func3(x);
+    return func5(x);
 }
