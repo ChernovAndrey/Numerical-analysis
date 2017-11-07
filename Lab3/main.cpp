@@ -17,7 +17,7 @@ void runAll() {
     double a = -1;
     double b = 1;
     while (i <= 3) {
-        if (i == 1) n = 3;
+        if (i == 1) n = 5;
         if (i == 2) n = 10;
         if (i == 3) n = 100;
 
