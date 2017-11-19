@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Lab4.dir/main.cpp.o CMakeFiles/Lab4.dir/matrixOperations.cpp.o CMakeFiles/Lab4.dir/sourceMatrices.cpp.o CMakeFiles/Lab4.dir/vectorOperations.cpp.o  -o Lab4 
