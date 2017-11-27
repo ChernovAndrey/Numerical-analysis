@@ -18,6 +18,14 @@ cassert
 typeinfo
 -
 
+/home/andrey/CLionProjects/NumericalMethods/Lab4/Gauss.hpp
+vector
+-
+stack
+-
+utility
+-
+
 /home/andrey/CLionProjects/NumericalMethods/Lab4/QR.hpp
 iostream
 -
@@ -29,6 +37,8 @@ matrixOperations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab4/matrixOperations.h
 vectorOperations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab4/vectorOperations.h
+Gauss.hpp
+/home/andrey/CLionProjects/NumericalMethods/Lab4/Gauss.hpp
 
 /home/andrey/CLionProjects/NumericalMethods/Lab4/main.cpp
 iostream

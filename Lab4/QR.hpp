@@ -8,14 +8,18 @@ using namespace std;
 #include"cmath"
 #include "matrixOperations.h"
 #include "vectorOperations.h"
+#include "Gauss.hpp"
+
 template<typename T>
 class BasicInterface;
 
 template <typename T>
 class QR : public BasicInterface<T>{
 public:
-
 private:
+
+    static T getAccuracy(){return 1e-4;}
+
 
     explicit QR(vector<vector<T>> A){
         this->A=A;
@@ -98,9 +102,7 @@ private:
     }
 
 
-//замена i, j  строки матрицы на их линейную комбинацию с коэф
-//когда меняем матрицу A то меняем и вектор b, если меняем T, то естественно без вектора
-    void transformateStrMatrix(T c, T s, int ni, int nj,vector<vector<T>> &matrix, bool changeB=false){
+ void transformateStrMatrix(T c, T s, int ni, int nj,vector<vector<T>> &matrix, bool changeB=false){
         vector<T> strI(matrix[0].size());
         vector<T> strJ(matrix[0].size());
         for(int i=0; i< matrix[0].size(); i++){
@@ -147,7 +149,8 @@ private:
         vector<vector<T>> TMatrix(this->A.size());
         T sigma=this->A[this->A.size()-1][this->A.size()-1];//величина сдвига
 
-        while(!BasicInterface<T>::compareWithZero(norm)) {
+        int countIter=0;
+        while(norm>getAccuracy()) {
             shiftMatrix(this->A, sigma);
             auto flagInitTMatrix = false;//инициализирована ли матрица или нет
             for (int i = 0; i < this->A.size() - 1; i++) {
@@ -162,23 +165,27 @@ private:
             auto Q = BasicInterface<T>::transposeMatrix(TMatrix);
             this->A= BasicInterface<T>::matrixMultiplication(this->A,Q);
 
-            backShiftMatrix(this->A, sigma);
+         backShiftMatrix(this->A, sigma);
 
 
             norm = 0.0;
             for(int i=0;i<this->A[0].size()-1;i++){
                 T el =this->A[this->A.size()-1][i];
-                norm+=sqrt(abs(el));
+                norm+=el*el;
             }
+            norm=sqrt(norm);
+            cout<<"norm"<<norm<<endl;
+            countIter++;
           //  cout<<"norm="<<norm<<endl;
             //auto R = this->A;
-            /*     cout <<"Q:"<<endl;
+                 cout <<"Q:"<<endl;
                  printMatrix(Q);
-                 cout <<"R:"<<endl;
+            /*     cout <<"R:"<<endl;
                  printMatrix(R);
                  cout <<"A:"<<endl;
                  printMatrix(BasicInterface<T>::matrixMultiplication(Q,R));*/
         }
+        cout<<"countIter="<<countIter<<endl;
     }
 
 
@@ -199,10 +206,10 @@ private:
         auto R = this->A;
           cout <<"Q:"<<endl;
           BasicInterface<T>::printMatrix(Q);
-          cout <<"R:"<<endl;
+       /*   cout <<"R:"<<endl;
           BasicInterface<T>::printMatrix(R);
           cout <<"A:"<<endl;
-          BasicInterface<T>::printMatrix(BasicInterface<T>::matrixMultiplication(Q,R));
+          BasicInterface<T>::printMatrix(BasicInterface<T>::matrixMultiplication(Q,R));*/
     }
 
     void convertToHessenbergMatrix(){
@@ -237,7 +244,7 @@ public:
         vector<T> result(A.size());
         auto* instance = new QR(A);
         vector<vector<T>> eigenMatrix(A.size());
-        instance->convertToHessenbergMatrix();
+       instance->convertToHessenbergMatrix();
         cout<<"Hessenberg Matrix:"<<endl;
         printMatrix(instance->A);
         try {
@@ -245,6 +252,7 @@ public:
                 instance->iteration();
                 printMatrix(instance->A);
                 result[instance->A.size()-1]=instance->A[instance->A.size()-1][instance->A.size()-1];
+                cout<<"eigenValue="<<result[instance->A.size()-1]<<endl;
                 if(instance->A.size()==2) result[0]=instance->A[0][0];
                 instance->reductionDimensionMatrix();
             }
@@ -272,27 +280,63 @@ public:
 
 
 
-    static vector<T> findEigenVector(vector<vector<T>> matrix,T eigenValue) {
-
-        vector<T> x(matrix.size(), -0.25);
-        //x[0] = 1.0;
-
-        vector<T> xPrev(matrix.size(), 0);
-
+    static vector<T> reverseIterations(vector<vector<T>> matrix,T eigenValue) {
+        cout<<"eigen value:"<<eigenValue<<endl;
+        vector<T> x(matrix.size(), 0.5);//norm must be 1
+    /*    x[0]=-0.87;
+        x[1]=0.0;
+        x[2]=-0.25;
+        x[3]=-0.43;
+        auto norm=normVector(x);
+        for(int i=0;i<x.size();i++){
+            x[i]=x[i]/norm;
+        }*/
+        vector<T> xPrev(matrix.size(), 1.0);
         shiftMatrix(matrix, eigenValue);
-        while (!BasicInterface<T>::compareWithZero(getResidual(x, xPrev))) {
-
-            auto result = QR<T>::solveSystem(matrix, x);
-
+        int countIter=0;
+        while (getABSResidual(x, xPrev)>getAccuracy()) {
             xPrev=x;
-            auto norm=normVector(result);
-            for(int i=0;i<x.size();i++){
-                x[i]=result[i]/norm;
-            }
+            auto result = Gauss<T>::solveSystem(matrix, x);
+            //auto result = QR<T>::solveSystem(matrix, x);
+            normalizeVector(result);
+            x= result;
+            countIter++;
         }
+        cout<<"count iteration find eigen vectors:"<<countIter<<endl;
         return x;
     }
 
+    static vector<T> ratioRelay(vector<vector<T>> matrix){
+        vector<T> x(matrix.size(), 0.5);//norm must be 1
+        vector<T> xPrev(matrix.size(), 0.0);
+        vector<T> xPrev2(matrix.size(), 0.0);
+        int countIter=0;
+        while (exitConditions(x,xPrev,xPrev2,countIter)>getAccuracy()) {
+            xPrev2=xPrev;
+            xPrev = x;
+            T lambda = dotProduct(multiMatrixVector(matrix, x), x);
+            auto result = Gauss<T>::solveSystem(matrix, x);
+            //auto result = QR<T>::solveSystem(matrix, x);
+            normalizeVector(result);
+            x=result;
+            countIter++;
+            if (countIter>100){
+                cout<<"sorry, so long"<<endl;
+                cout<<getABSResidual(x,xPrev)<<endl;
+                return x;
+            }
+        }
+        cout <<"count iteration:"<<countIter<<endl;
+        return x;
+    }
+
+    //for ratio relay
+    static T exitConditions(vector<T> x, vector<T> xPrev,vector<T> xPrev2,int countIter){
+        if(countIter<2){
+            return getABSResidual(x, xPrev);
+        }
+        return abs(dotProduct(x,xPrev)-dotProduct(xPrev,xPrev2));
+    }
 };
 
 

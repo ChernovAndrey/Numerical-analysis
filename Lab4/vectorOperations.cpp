@@ -15,6 +15,16 @@ T getResidual(vector<T> a,vector<T> b){
 }
 
 template <typename T>
+T getABSResidual(vector<T> a,vector<T> b){
+    T norm=0;
+    for(int i=0;i<a.size();i++){
+        norm+=(abs(a[i])-abs(b[i]))*(abs(a[i])-abs(b[i]));
+    }
+    return sqrt(norm);
+}
+
+
+template <typename T>
 vector<T> multiMatrixVector(vector<vector<T>> m, vector<T> v){
     vector<T> result(v.size());
     for(int i=0;i < m.size(); i++){
@@ -32,9 +42,19 @@ T normVector(vector<T> v){
     for (int i = 0; i <v.size() ; ++i) {
         norm+=v[i]*v[i];
     }
-    cout<<"norm="<<norm<<endl;
     return sqrt(norm);
 }
+
+//cкалярное произведение
+template <typename T>
+T dotProduct(vector<T> v1, vector<T> v2){
+    T result=0.0;
+    for(int i=0;i<v1.size();i++){
+        result+=v1[i]*v2[i];
+    }
+    return result;
+}
+
 
 template<typename T>
 void printVector(vector<T> v){
@@ -43,4 +63,13 @@ void printVector(vector<T> v){
         cout << i << "    ";
     }
     cout << endl;
+}
+
+
+template <typename T>
+void normalizeVector(vector<T> &v){
+    T normV=normVector(v);
+    for(int i=0;i<v.size();i++){
+        v[i]=v[i]/normV;
+    }
 }

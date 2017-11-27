@@ -15,6 +15,7 @@ template <typename T>
 class BasicInterface {
 
 protected:
+
     vector<vector<T>> originalA;//исходная матрица
     vector<vector<T>> A;
     vector<T> b;
@@ -53,8 +54,11 @@ protected:
             for(auto j=i+1;j<A.size();j++){
                 s= s - A[i][j]*result[j];
             }
-            if(abs(A[i][i])< E) return {};
-            result[i] =(s + b[i])/A[i][i]; // прибавляем: поледний столбец, i-ая строка
+            if(compareWithZero(A[i][i])) {
+                cout<<"деление на ноль, BasicInterface, reverse"<<endl;
+                result[i]=0.25;
+                //return {};
+            }else result[i] =(s + b[i])/A[i][i]; // прибавляем: поледний столбец, i-ая строка
         }
         return result;
     }

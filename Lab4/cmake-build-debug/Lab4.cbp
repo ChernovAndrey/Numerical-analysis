@@ -87,6 +87,9 @@
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab4/BasicInterface.hpp">
 			<Option target="Lab4"/>
 		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab4/Gauss.hpp">
+			<Option target="Lab4"/>
+		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab4/QR.hpp">
 			<Option target="Lab4"/>
 		</Unit>

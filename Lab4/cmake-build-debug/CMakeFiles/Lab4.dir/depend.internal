@@ -3,6 +3,7 @@
 
 CMakeFiles/Lab4.dir/main.cpp.o
  /home/andrey/CLionProjects/NumericalMethods/Lab4/BasicInterface.hpp
+ /home/andrey/CLionProjects/NumericalMethods/Lab4/Gauss.hpp
  /home/andrey/CLionProjects/NumericalMethods/Lab4/QR.hpp
  /home/andrey/CLionProjects/NumericalMethods/Lab4/main.cpp
  /home/andrey/CLionProjects/NumericalMethods/Lab4/matrixOperations.cpp

@@ -24,15 +24,30 @@ int main() {
     auto eigenValues=QR<number>::findEigenValues(matrix);
     printVector(eigenValues);
 
-    for(int i=2;i<3;i++){
-        printVector(QR<number>::findEigenVector(matrix,eigenValues[i]));
+    cout<<"--------------------------------------------------------(finish find eigen values)"<<endl;
+
+    for(int i=0;i<eigenValues.size();i++){
+        cout <<"result eigen vector:"<<endl;
+        auto iterMatrix=matrix;
+        auto result=QR<number>::reverseIterations(iterMatrix,eigenValues[i]);
+        printVector(result);
+        shiftMatrix(iterMatrix,eigenValues[i]);
+        cout<<"check:"<<endl;
+        printVector(multiMatrixVector(iterMatrix,result));
+        cout<<"--------------------------------------------------------(finish find eigen vectors)"<<endl;
     }
 
-  /*  vector<vector<number>> matrix;
-    getMatrixEx1(matrix);
-    printMatrix(matrix);
-    auto res= QR<number>::solveSystem(getMatrixA(matrix),getVectorB(matrix));
-    printVector(res);*/
+
+    cout<<"vector find found throw ratio Relay:"<<endl;
+    auto result=QR<number>::ratioRelay(matrix);
+    printVector(result);
+    cout<<"--------------------------------------------------------(finish find eigen vector throw ratio relay)"<<endl;
+
+    /*  vector<vector<number>> matrix;
+      getMatrixEx1(matrix);
+      printMatrix(matrix);
+      auto res= QR<number>::solveSystem(getMatrixA(matrix),getVectorB(matrix));
+      printVector(res);*/
     /*  number coefDisturbance = 0.01;
       vector<vector<number>> matrix;
       getMatrixEx5(matrix);

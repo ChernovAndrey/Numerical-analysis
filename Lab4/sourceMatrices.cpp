@@ -39,13 +39,24 @@ vector<vector<T>> readFile(vector<vector<T>> matrix, int number){//number - но
 }
 
 template<typename T>
-void getMatrixEx1(vector<vector<T>> &matrix){
+void  getMatrixEx1(vector<vector<T>> &matrix){
     matrix ={
             {1.50, 0.00, -0.43, -0.75},
             {0.00, 3.00, 0.87, -0.50},
             {-0.43, 0.87, 2.90, -0.22},
             {-0.75, -0.50, -0.22, 2.60}
     };
+}
 
 
+
+
+template<typename T>
+void  getMatrixEx2(vector<vector<T>> &matrix){
+    matrix ={
+            {5.0, 6.0, 3.0, 3.0},
+            {-1, 0, 1, 0.0},
+            {1, 2, -1, 0},
+            {0.0, 0.0, 0.0, 8.0}
+    };
 }
