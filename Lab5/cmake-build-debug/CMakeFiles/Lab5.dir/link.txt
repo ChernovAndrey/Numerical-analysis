@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Lab5.dir/main.cpp.o CMakeFiles/Lab5.dir/vectorOperations.cpp.o CMakeFiles/Lab5.dir/matrixOperations.cpp.o CMakeFiles/Lab5.dir/sourceMatrices.cpp.o  -o Lab5 
