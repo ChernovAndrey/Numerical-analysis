@@ -20,5 +20,7 @@ T normVector(vector<T> v);
 template <typename T>
 void printVector(vector<T> v);
 
+template <typename T>
+vector<T> diffVectors(vector<T> v1, vector<T> v2);
 #include "vectorOperations.cpp"
 #endif //LAB1WITHOOP_VECTOROPERATIONS_H

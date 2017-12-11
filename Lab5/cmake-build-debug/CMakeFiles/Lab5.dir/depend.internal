@@ -8,7 +8,12 @@ CMakeFiles/Lab5.dir/main.cpp.o
  /home/andrey/CLionProjects/NumericalMethods/Lab5/Solve/SolveBisection.h
  /home/andrey/CLionProjects/NumericalMethods/Lab5/Solve/SolveEq.h
  /home/andrey/CLionProjects/NumericalMethods/Lab5/Solve/SolveNewton.h
+ /home/andrey/CLionProjects/NumericalMethods/Lab5/Solve/SystemSolveNewton.h
+ /home/andrey/CLionProjects/NumericalMethods/Lab5/System.h
  /home/andrey/CLionProjects/NumericalMethods/Lab5/main.cpp
+ /home/andrey/CLionProjects/NumericalMethods/Lab5/matrixOperations.cpp
+ /home/andrey/CLionProjects/NumericalMethods/Lab5/matrixOperations.h
+ /home/andrey/CLionProjects/NumericalMethods/Lab5/tests/Fxy.h
  /home/andrey/CLionProjects/NumericalMethods/Lab5/tests/functions.h
  /home/andrey/CLionProjects/NumericalMethods/Lab5/vectorOperations.cpp
  /home/andrey/CLionProjects/NumericalMethods/Lab5/vectorOperations.h

@@ -21,13 +21,16 @@ public:
         cout<<endl;
         assert(func(a)*func(b)<0);
         double xk= (func(a)*b-func(b)*a)/(func(a)-func(b));
-        //double xk= 8;
+        if(!((xk>=a)&&(xk<=b))) xk= (a+b)/2;
+
         assert((xk>=a)&&(xk<=b));
         cout<<"x0="<<xk<<endl;
         int countIter=0;
         double pr2Xk=b;
         double prXk=xk;
-        while(!SolveEq::compareWithZero(func(xk))){
+        bool flagFirst=false;
+       // while(!SolveEq::compareWithZero(func(xk))){
+        while((!SolveEq::compareWithZero(xk-prXk)) || !flagFirst){
             if(countIter>0) pr2Xk = prXk;
             prXk = xk;
             xk= xk - func(xk)/derivative(xk);
@@ -39,6 +42,7 @@ public:
             countIter++;
             cout<<"x"<<countIter<<"="<<xk<<endl;
             assert((xk>=a)&&(xk<=b));
+            flagFirst=true;
         }
         cout<<"count Iterations(a="<<a<<",b="<<b<<")="<<countIter<<endl;
         cout<<"------------------------------------------------------"<<endl;

@@ -58,6 +58,28 @@ SolveEq.h
 ../tests/functions.h
 /home/andrey/CLionProjects/NumericalMethods/Lab5/tests/functions.h
 
+/home/andrey/CLionProjects/NumericalMethods/Lab5/Solve/SystemSolveNewton.h
+iostream
+/home/andrey/CLionProjects/NumericalMethods/Lab5/Solve/iostream
+vector
+/home/andrey/CLionProjects/NumericalMethods/Lab5/Solve/vector
+../vectorOperations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab5/vectorOperations.h
+../matrixOperations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab5/matrixOperations.h
+../tests/Fxy.h
+/home/andrey/CLionProjects/NumericalMethods/Lab5/tests/Fxy.h
+
+/home/andrey/CLionProjects/NumericalMethods/Lab5/System.h
+queue
+-
+iostream
+/home/andrey/CLionProjects/NumericalMethods/Lab5/iostream
+vector
+/home/andrey/CLionProjects/NumericalMethods/Lab5/vector
+Solve/SystemSolveNewton.h
+/home/andrey/CLionProjects/NumericalMethods/Lab5/Solve/SystemSolveNewton.h
+
 /home/andrey/CLionProjects/NumericalMethods/Lab5/main.cpp
 iostream
 -
@@ -65,6 +87,8 @@ Equation.h
 /home/andrey/CLionProjects/NumericalMethods/Lab5/Equation.h
 vectorOperations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab5/vectorOperations.h
+System.h
+/home/andrey/CLionProjects/NumericalMethods/Lab5/System.h
 
 /home/andrey/CLionProjects/NumericalMethods/Lab5/matrixOperations.cpp
 iostream
@@ -76,6 +100,12 @@ cassert
 cmath
 -
 
+/home/andrey/CLionProjects/NumericalMethods/Lab5/matrixOperations.h
+vector
+-
+matrixOperations.cpp
+/home/andrey/CLionProjects/NumericalMethods/Lab5/matrixOperations.cpp
+
 /home/andrey/CLionProjects/NumericalMethods/Lab5/sourceMatrices.cpp
 iostream
 -
@@ -85,6 +115,12 @@ fstream
 -
 assert.h
 /home/andrey/CLionProjects/NumericalMethods/Lab5/assert.h
+
+/home/andrey/CLionProjects/NumericalMethods/Lab5/tests/Fxy.h
+iostream
+/home/andrey/CLionProjects/NumericalMethods/Lab5/tests/iostream
+vector
+/home/andrey/CLionProjects/NumericalMethods/Lab5/tests/vector
 
 /home/andrey/CLionProjects/NumericalMethods/Lab5/tests/functions.h
 tuple

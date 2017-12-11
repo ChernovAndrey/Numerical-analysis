@@ -17,8 +17,14 @@ public:
         double x2= b;
         assert(func(x1)*func(x2)<0);
         int countIter=0;
-        while(!SolveEq::compareWithZero(abs((x2-x1)/2))){
-            double c = (x1+x2)/2;
+        bool flag = false;
+        double c=0;//not uses this value
+        double prC=0;//not uses this value
+
+        while(!SolveEq::compareWithZero(2*abs((x2-x1)))){
+        //while(!SolveEq::compareWithZero(2*abs(c-prC) ) || !flag){
+            prC = c;
+            c = (x1+x2)/2;
         //    if(SolveEq::compareWithZero(func(c))) return c;
             if(func(c)*func(x1)<=0){
                 x2 = c;
@@ -26,6 +32,7 @@ public:
                 x1 = c;
             }
             countIter++;
+            if(countIter>1) flag = true;
         }
         std::cout<<"count Iterations(a="<<a<<",b="<<b<<")="<<countIter<<std::endl;
         return (x1+x2)/2;

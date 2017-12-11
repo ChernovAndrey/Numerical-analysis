@@ -93,6 +93,9 @@
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab5/Solve">
 			<Option target="Lab5"/>
 		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab5/System.h">
+			<Option target="Lab5"/>
+		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab5/main.cpp">
 			<Option target="Lab5"/>
 		</Unit>

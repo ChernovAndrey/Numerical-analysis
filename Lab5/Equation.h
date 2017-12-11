@@ -25,7 +25,7 @@ private:
     int n{};
     queue<pair<double,double>> intervals;//интервалы локализации корня
     Equation(double a,double b):a(a),b(b){
-         n = static_cast<int>(2);//standart coef= 22(b-a)
+         n = static_cast<int>(22*(b-a));//standart coef= 22(b-a)
     }
 
     void localization(){

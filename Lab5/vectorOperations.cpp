@@ -73,3 +73,12 @@ void normalizeVector(vector<T> &v){
         v[i]=v[i]/normV;
     }
 }
+
+template <typename T>
+vector<T> diffVectors(vector<T> v1, vector<T> v2){
+    vector<double> res(v1.size());
+    for(int i=0;i<v1.size();i++){
+        res[i]=v1[i]-v2[i];
+    }
+    return res;
+}

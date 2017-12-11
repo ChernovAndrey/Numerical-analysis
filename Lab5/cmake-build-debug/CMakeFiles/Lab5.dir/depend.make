@@ -7,7 +7,12 @@ CMakeFiles/Lab5.dir/main.cpp.o: ../Grids/UniformGrid.h
 CMakeFiles/Lab5.dir/main.cpp.o: ../Solve/SolveBisection.h
 CMakeFiles/Lab5.dir/main.cpp.o: ../Solve/SolveEq.h
 CMakeFiles/Lab5.dir/main.cpp.o: ../Solve/SolveNewton.h
+CMakeFiles/Lab5.dir/main.cpp.o: ../Solve/SystemSolveNewton.h
+CMakeFiles/Lab5.dir/main.cpp.o: ../System.h
 CMakeFiles/Lab5.dir/main.cpp.o: ../main.cpp
+CMakeFiles/Lab5.dir/main.cpp.o: ../matrixOperations.cpp
+CMakeFiles/Lab5.dir/main.cpp.o: ../matrixOperations.h
+CMakeFiles/Lab5.dir/main.cpp.o: ../tests/Fxy.h
 CMakeFiles/Lab5.dir/main.cpp.o: ../tests/functions.h
 CMakeFiles/Lab5.dir/main.cpp.o: ../vectorOperations.cpp
 CMakeFiles/Lab5.dir/main.cpp.o: ../vectorOperations.h
