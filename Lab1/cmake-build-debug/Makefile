@@ -111,125 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Lab1
+# Target rules for targets named Lab1WithOOP
 
 # Build rule for target.
-Lab1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Lab1
-.PHONY : Lab1
+Lab1WithOOP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Lab1WithOOP
+.PHONY : Lab1WithOOP
 
 # fast build rule for target.
-Lab1/fast:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/build
-.PHONY : Lab1/fast
-
-QR.o: QR.cpp.o
-
-.PHONY : QR.o
-
-# target to build an object file
-QR.cpp.o:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/QR.cpp.o
-.PHONY : QR.cpp.o
-
-QR.i: QR.cpp.i
-
-.PHONY : QR.i
-
-# target to preprocess a source file
-QR.cpp.i:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/QR.cpp.i
-.PHONY : QR.cpp.i
-
-QR.s: QR.cpp.s
-
-.PHONY : QR.s
-
-# target to generate assembly for a file
-QR.cpp.s:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/QR.cpp.s
-.PHONY : QR.cpp.s
-
-gauss.o: gauss.cpp.o
-
-.PHONY : gauss.o
-
-# target to build an object file
-gauss.cpp.o:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/gauss.cpp.o
-.PHONY : gauss.cpp.o
-
-gauss.i: gauss.cpp.i
-
-.PHONY : gauss.i
-
-# target to preprocess a source file
-gauss.cpp.i:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/gauss.cpp.i
-.PHONY : gauss.cpp.i
-
-gauss.s: gauss.cpp.s
-
-.PHONY : gauss.s
-
-# target to generate assembly for a file
-gauss.cpp.s:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/gauss.cpp.s
-.PHONY : gauss.cpp.s
-
-generalMethods.o: generalMethods.cpp.o
-
-.PHONY : generalMethods.o
-
-# target to build an object file
-generalMethods.cpp.o:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/generalMethods.cpp.o
-.PHONY : generalMethods.cpp.o
-
-generalMethods.i: generalMethods.cpp.i
-
-.PHONY : generalMethods.i
-
-# target to preprocess a source file
-generalMethods.cpp.i:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/generalMethods.cpp.i
-.PHONY : generalMethods.cpp.i
-
-generalMethods.s: generalMethods.cpp.s
-
-.PHONY : generalMethods.s
-
-# target to generate assembly for a file
-generalMethods.cpp.s:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/generalMethods.cpp.s
-.PHONY : generalMethods.cpp.s
-
-invertibleMatrixGauss.o: invertibleMatrixGauss.cpp.o
-
-.PHONY : invertibleMatrixGauss.o
-
-# target to build an object file
-invertibleMatrixGauss.cpp.o:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/invertibleMatrixGauss.cpp.o
-.PHONY : invertibleMatrixGauss.cpp.o
-
-invertibleMatrixGauss.i: invertibleMatrixGauss.cpp.i
-
-.PHONY : invertibleMatrixGauss.i
-
-# target to preprocess a source file
-invertibleMatrixGauss.cpp.i:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/invertibleMatrixGauss.cpp.i
-.PHONY : invertibleMatrixGauss.cpp.i
-
-invertibleMatrixGauss.s: invertibleMatrixGauss.cpp.s
-
-.PHONY : invertibleMatrixGauss.s
-
-# target to generate assembly for a file
-invertibleMatrixGauss.cpp.s:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/invertibleMatrixGauss.cpp.s
-.PHONY : invertibleMatrixGauss.cpp.s
+Lab1WithOOP/fast:
+	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/build
+.PHONY : Lab1WithOOP/fast
 
 main.o: main.cpp.o
 
@@ -237,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -246,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -255,7 +147,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 sourceMatrices.o: sourceMatrices.cpp.o
@@ -264,7 +156,7 @@ sourceMatrices.o: sourceMatrices.cpp.o
 
 # target to build an object file
 sourceMatrices.cpp.o:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/sourceMatrices.cpp.o
+	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/sourceMatrices.cpp.o
 .PHONY : sourceMatrices.cpp.o
 
 sourceMatrices.i: sourceMatrices.cpp.i
@@ -273,7 +165,7 @@ sourceMatrices.i: sourceMatrices.cpp.i
 
 # target to preprocess a source file
 sourceMatrices.cpp.i:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/sourceMatrices.cpp.i
+	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/sourceMatrices.cpp.i
 .PHONY : sourceMatrices.cpp.i
 
 sourceMatrices.s: sourceMatrices.cpp.s
@@ -282,35 +174,8 @@ sourceMatrices.s: sourceMatrices.cpp.s
 
 # target to generate assembly for a file
 sourceMatrices.cpp.s:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/sourceMatrices.cpp.s
+	$(MAKE) -f CMakeFiles/Lab1WithOOP.dir/build.make CMakeFiles/Lab1WithOOP.dir/sourceMatrices.cpp.s
 .PHONY : sourceMatrices.cpp.s
-
-workWithConsole.o: workWithConsole.cpp.o
-
-.PHONY : workWithConsole.o
-
-# target to build an object file
-workWithConsole.cpp.o:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/workWithConsole.cpp.o
-.PHONY : workWithConsole.cpp.o
-
-workWithConsole.i: workWithConsole.cpp.i
-
-.PHONY : workWithConsole.i
-
-# target to preprocess a source file
-workWithConsole.cpp.i:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/workWithConsole.cpp.i
-.PHONY : workWithConsole.cpp.i
-
-workWithConsole.s: workWithConsole.cpp.s
-
-.PHONY : workWithConsole.s
-
-# target to generate assembly for a file
-workWithConsole.cpp.s:
-	$(MAKE) -f CMakeFiles/Lab1.dir/build.make CMakeFiles/Lab1.dir/workWithConsole.cpp.s
-.PHONY : workWithConsole.cpp.s
 
 # Help Target
 help:
@@ -320,28 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Lab1"
-	@echo "... QR.o"
-	@echo "... QR.i"
-	@echo "... QR.s"
-	@echo "... gauss.o"
-	@echo "... gauss.i"
-	@echo "... gauss.s"
-	@echo "... generalMethods.o"
-	@echo "... generalMethods.i"
-	@echo "... generalMethods.s"
-	@echo "... invertibleMatrixGauss.o"
-	@echo "... invertibleMatrixGauss.i"
-	@echo "... invertibleMatrixGauss.s"
+	@echo "... Lab1WithOOP"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... sourceMatrices.o"
 	@echo "... sourceMatrices.i"
 	@echo "... sourceMatrices.s"
-	@echo "... workWithConsole.o"
-	@echo "... workWithConsole.i"
-	@echo "... workWithConsole.s"
 .PHONY : help
 
 

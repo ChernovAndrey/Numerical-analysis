@@ -1,34 +1,43 @@
-
-//
-// Created by andrey on 06.09.17.
-//
-
 #include <iostream>
-#include<vector>
-#include "gauss.h"
+#include "BasicInterface.hpp"
 #include "sourceMatrices.h"
-#include "QR.h"
+#include "QR.hpp"
+#include "matrixOperations.h"
+#include "vectorOperations.h"
 using namespace std;
+using number = double;
+
+
+number getConditionalityAssessment(const vector<number> &result, const vector<number> &resultDisturbance,
+                                   const vector<number> &b, const vector<number> &bDisturbance){
+    auto deltaResult = getResidual(result,resultDisturbance);
+    auto deltaB = getResidual(b,bDisturbance);
+    return deltaResult/deltaB;
+}
 
 int main() {
 
-     vector<vector<float>> matrix;//поменять константу если меняешь тип, а в плюсах есть рефлексия?
-//   matrix = ReadFile(matrix,1);
-    getMatrixEx4(matrix);// return double
-//    printMatrix(matrix);
-    //printMatrix(matrix);
+    number coefDisturbance = 0.01;
+    vector<vector<number>> matrix;
+    getMatrixEx5(matrix);
+    //matrix = readFile(matrix,1);
+    auto A = getMatrixA(matrix);
+    auto b = getVectorB(matrix);
 
-  /*  auto result = methodQR(matrix);
-    if (result.empty()){
-        cout<<"matrix degenerate";
-    }else {
-        printVector(result);
-    }*/
-    auto result = methodQR(matrix);
-   if (result.empty()){
-        cout<<"matrix degenerate";
-    }else {
-       printVector(result);
-   }
-    return 0;
+    auto result = QR<number>::solveSystem(A,b);
+
+    cout<< "CondA="<<getConditionNumber(A,3)<<endl;
+
+    printVector(result);
+
+    for (int i = 0; i < b.size(); ++i) {
+        auto bDisturbance = b;
+        bDisturbance[i]+=coefDisturbance;
+       // printVector(bDisturbance);
+        auto resultDisturbance = QR<number>::solveSystem(A,bDisturbance);
+        printVector(resultDisturbance);
+        cout << "CondA>=" << getConditionalityAssessment(result, resultDisturbance, b, bDisturbance)<<endl;
+    }
+
+   return 0;
 }

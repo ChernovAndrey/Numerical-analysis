@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Lab1.dir/main.cpp.o CMakeFiles/Lab1.dir/gauss.cpp.o CMakeFiles/Lab1.dir/sourceMatrices.cpp.o CMakeFiles/Lab1.dir/QR.cpp.o CMakeFiles/Lab1.dir/generalMethods.cpp.o CMakeFiles/Lab1.dir/workWithConsole.cpp.o CMakeFiles/Lab1.dir/invertibleMatrixGauss.cpp.o  -o Lab1 

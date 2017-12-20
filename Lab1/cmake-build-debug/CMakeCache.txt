@@ -173,6 +173,12 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+Lab1WithOOP_BINARY_DIR:STATIC=/home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug
+
+//Value Computed by CMake
+Lab1WithOOP_SOURCE_DIR:STATIC=/home/andrey/CLionProjects/NumericalMethods/Lab1
+
+//Value Computed by CMake
 Lab1_BINARY_DIR:STATIC=/home/andrey/CLionProjects/NumericalMethods/Lab1/cmake-build-debug
 
 //Value Computed by CMake

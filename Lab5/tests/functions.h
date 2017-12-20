@@ -7,6 +7,8 @@
 
 #include <tuple>
 #include <cmath>
+
+const double eps= 1e-6;
 double func1(double x){
     return (x-0.1)*(x-0.22)*(x-0.55)*(x-0.7)*(x-0.75);
 }
@@ -31,30 +33,23 @@ double derivative3(double x){
     return -3 - 134*x + 105*x*x;
 }
 
-double func4(double x){
-    return pow(4*x*x*x+2*x*x - 4*x+2,sqrt(2))+ asin(1/(5+x-x*x))-5;
-}
 
-
-double func5(double x){
-    return 1;
-}
 
 double func(double x){  //текущая функция
-    return func2(x);
+    return func1(x);
 }
 
 double analyticallyDerivative(double x){
-    return derivative2(x);
+    return derivative1(x);
 }
 
-//
-//double numericallyDerivative(double x){
-//    return 0;
-//}
+
+double numericallyDerivative(double x){
+    return (func(x+eps)-func(x))/eps;
+}
 
 double derivative(double x){
-    return analyticallyDerivative(x);
+    return numericallyDerivative(x);
 }
 
 #endif //LAB5_FUNC_H

@@ -5,12 +5,12 @@
 
 using namespace std;
 int main() {
-//    double a=-1;
-//    double b=10;
-//    printVector(Equation::execute(a,b,Equation::Bisection));
+//    double a=0;
+//    double b=1;
+//    printVector(Equation::execute(a,b,Equation::Newton));
 
     double a1 = 1;
-    double b1 = 3;
+    double b1 = 10;
     double a2 = 0;
     double b2 = 1.5;
 

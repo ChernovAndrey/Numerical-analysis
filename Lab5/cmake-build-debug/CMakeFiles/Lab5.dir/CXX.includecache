@@ -121,6 +121,8 @@ iostream
 /home/andrey/CLionProjects/NumericalMethods/Lab5/tests/iostream
 vector
 /home/andrey/CLionProjects/NumericalMethods/Lab5/tests/vector
+../vectorOperations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab5/vectorOperations.h
 
 /home/andrey/CLionProjects/NumericalMethods/Lab5/tests/functions.h
 tuple
