@@ -79,6 +79,10 @@ vector
 /home/andrey/CLionProjects/NumericalMethods/Lab5/vector
 Solve/SystemSolveNewton.h
 /home/andrey/CLionProjects/NumericalMethods/Lab5/Solve/SystemSolveNewton.h
+iomanip
+-
+fstream
+-
 
 /home/andrey/CLionProjects/NumericalMethods/Lab5/main.cpp
 iostream

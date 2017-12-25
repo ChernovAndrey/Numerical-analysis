@@ -12,10 +12,12 @@ class SolveBisection: public SolveEq {
 public:
     pair<double,double> interval;
     explicit SolveBisection(double a,double b):SolveEq(a,b){};
-    double execute() override {
+    double execute(double (*f)(double)) override {
         double x1= a;
         double x2= b;
-        assert(func(x1)*func(x2)<0);
+       // if(SolveEq::compareWithZero(f(a))) return a;
+       // if(SolveEq::compareWithZero(f(b))) return b;
+        assert(f(x1)*f(x2)<0);
         int countIter=0;
         bool flag = false;
         double c=0;//not uses this value
@@ -25,8 +27,8 @@ public:
         //while(!SolveEq::compareWithZero(2*abs(c-prC) ) || !flag){
             prC = c;
             c = (x1+x2)/2;
-        //    if(SolveEq::compareWithZero(func(c))) return c;
-            if(func(c)*func(x1)<=0){
+        //    if(SolveEq::compareWithZero(f(c))) return c;
+            if(f(c)*f(x1)<=0){
                 x2 = c;
             }else{
                 x1 = c;

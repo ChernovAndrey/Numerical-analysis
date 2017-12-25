@@ -20,10 +20,10 @@ protected:
 
     vector<double> xValues{};
     vector<double> fxValues{};
-
-    double getValueFunc(double x){
-        return func(x);
-    }
+//
+//    double getValueFunc(double x){
+//        return f(x);
+//    }
 
     virtual double getXi(double a, double b, int n,double h , int i)=0;
 public:
@@ -32,18 +32,18 @@ public:
         fxValues=  vector<double>(static_cast<unsigned long>(n));
     }
 
-    pair<vector<double>, vector<double>> get(){
+    pair<vector<double>, vector<double>> get(double (*f)(double)){
         double h = (b-a)/(n-1);
         xValues[0]=a;
-        fxValues[0]=func(a);
+        fxValues[0]=f(a);
 
         for(int i=1;i<n-1;i++){
             xValues[i]= getXi(a,b,n,h,i);
-            fxValues[i]=this->getValueFunc(xValues[i]);
+            fxValues[i]=f(xValues[i]);
         }
 
         xValues[n-1]=b;
-        fxValues[n-1]=func(b);
+        fxValues[n-1]=f(b);
 
         return  make_pair(xValues,fxValues);
     }

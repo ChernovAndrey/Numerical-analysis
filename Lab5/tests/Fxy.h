@@ -59,7 +59,7 @@ vector<vector<double>> numericallyJacobi(double x1, double x2){
 
 
 vector<vector<double>> Jacobi(double x1, double x2){
-    return numericallyJacobi(x1,x2);
+    return analyticallJacobi(x1,x2);
 }
 
 double Det(vector<vector<double>> m){
@@ -69,6 +69,9 @@ double Det(vector<vector<double>> m){
 vector<vector<double>> InverseJacobi(double x1, double x2){
     auto jacobi = Jacobi(x1,x2);
     auto det = Det(jacobi);
+    if(SolveBisection::compareWithZero(det)){
+        return {};
+    }
     return {
             {jacobi[1][1]/det,-jacobi[0][1]/det},
             {-jacobi[1][0]/det, jacobi[0][0]/det}

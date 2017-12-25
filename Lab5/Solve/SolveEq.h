@@ -11,10 +11,9 @@ public:
     double a;
     double b;
     explicit SolveEq(double a, double b):a(a),b(b){}
-    virtual double execute()=0;
+    virtual double execute(double (*f)(double))=0;
 
-protected:
-    bool compareWithZero(double x){
+    static bool compareWithZero(double x){
         return abs(x)<1e-6;
     }
 };

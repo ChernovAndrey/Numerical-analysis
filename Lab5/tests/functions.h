@@ -29,6 +29,16 @@ double func3(double x){
     return 35*x*x*x-67*x*x-3*x+3;
 }
 
+
+double func5(double x){
+    //return x*x -1;
+    return (x-1)*(x-1)*(x-1)*(x-1);
+}
+double func6(double x){
+    return exp(x)-1;
+}
+
+
 double derivative3(double x){
     return -3 - 134*x + 105*x*x;
 }
@@ -36,11 +46,11 @@ double derivative3(double x){
 
 
 double func(double x){  //текущая функция
-    return func1(x);
+    return func3(x);
 }
 
 double analyticallyDerivative(double x){
-    return derivative1(x);
+    return derivative2(x);
 }
 
 
@@ -49,7 +59,7 @@ double numericallyDerivative(double x){
 }
 
 double derivative(double x){
-    return numericallyDerivative(x);
+    return analyticallyDerivative(x);
 }
 
 #endif //LAB5_FUNC_H

@@ -25,7 +25,8 @@ int main() {
     printVector(eigenValues);
 
     cout<<"--------------------------------------------------------(finish find eigen values)"<<endl;
-
+    cout<<"RESSS:"<<abs(eigenValues[0]-0.997313);
+  //  eigenValues[0]=0.997313;
     for(int i=0;i<eigenValues.size();i++){
         cout <<"result eigen vector:"<<endl;
         auto iterMatrix=matrix;
