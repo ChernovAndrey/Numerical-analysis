@@ -24,6 +24,7 @@ public:
         double prC=0;//not uses this value
 
         while(!SolveEq::compareWithZero(2*abs((x2-x1)))){
+     //   while(!SolveEq::compareWithZero(abs((func(x2)-func(x1))))){
         //while(!SolveEq::compareWithZero(2*abs(c-prC) ) || !flag){
             prC = c;
             c = (x1+x2)/2;

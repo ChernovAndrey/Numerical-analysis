@@ -37,6 +37,7 @@ public:
             if(countIter>0) pr2Xk = prXk;
             double  k = (f(xk)-f(prXk))/(xk-prXk);
             xk= xk - f(xk)/derivative(xk);
+       //     xk= xk - f(xk)/secondDerivative(xk);
             if(!((xk>=a)&&(xk<=b)) ){
                 cout<<derivative(prXk)<<" "<<prXk;
                 xk= prXk - k*f(prXk)/derivative(prXk);

@@ -40,7 +40,7 @@ vector<vector<double>> Jacobi2(double x1, double x2){
 }
 
 vector<double> Fxy(double x1, double x2){
-    return Fxy2(x1,x2);
+    return Fxy1(x1,x2);
 }
 
 vector<vector<double>> analyticallJacobi(double x1, double x2){
@@ -59,7 +59,7 @@ vector<vector<double>> numericallyJacobi(double x1, double x2){
 
 
 vector<vector<double>> Jacobi(double x1, double x2){
-    return analyticallJacobi(x1,x2);
+    return numericallyJacobi(x1,x2);
 }
 
 double Det(vector<vector<double>> m){

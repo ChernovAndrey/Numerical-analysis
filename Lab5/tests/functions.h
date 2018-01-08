@@ -46,11 +46,11 @@ double derivative3(double x){
 
 
 double func(double x){  //текущая функция
-    return func3(x);
+    return func2(x);
 }
 
 double analyticallyDerivative(double x){
-    return derivative2(x);
+    return derivative1(x);
 }
 
 
@@ -59,7 +59,10 @@ double numericallyDerivative(double x){
 }
 
 double derivative(double x){
-    return analyticallyDerivative(x);
+    return numericallyDerivative(x);
 }
 
+double secondDerivative(double x){
+    return (derivative(x+eps)-derivative(x))/eps;
+}
 #endif //LAB5_FUNC_H
