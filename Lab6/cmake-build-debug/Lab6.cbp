@@ -84,7 +84,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/ExplicitEuler.h">
+			<Option target="Lab6"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/ImplicitEuler.h">
+			<Option target="Lab6"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/Newton">
+			<Option target="Lab6"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h">
+			<Option target="Lab6"/>
+		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/main.cpp">
+			<Option target="Lab6"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/matrixOperations.cpp">
+			<Option target="Lab6"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/matrixOperations.h">
+			<Option target="Lab6"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/tests.h">
+			<Option target="Lab6"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/vectorOperations.cpp">
+			<Option target="Lab6"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/vectorOperations.h">
 			<Option target="Lab6"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/CMakeLists.txt">

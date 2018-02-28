@@ -49,6 +49,9 @@ private:
                 }
             }
         }
+     fileX.close;
+     fileY.close;
+     fileVal.close;
     }
     vector<double> roots;
     double a1{};

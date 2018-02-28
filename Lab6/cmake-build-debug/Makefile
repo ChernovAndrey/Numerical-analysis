@@ -150,6 +150,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Lab6.dir/build.make CMakeFiles/Lab6.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+matrixOperations.o: matrixOperations.cpp.o
+
+.PHONY : matrixOperations.o
+
+# target to build an object file
+matrixOperations.cpp.o:
+	$(MAKE) -f CMakeFiles/Lab6.dir/build.make CMakeFiles/Lab6.dir/matrixOperations.cpp.o
+.PHONY : matrixOperations.cpp.o
+
+matrixOperations.i: matrixOperations.cpp.i
+
+.PHONY : matrixOperations.i
+
+# target to preprocess a source file
+matrixOperations.cpp.i:
+	$(MAKE) -f CMakeFiles/Lab6.dir/build.make CMakeFiles/Lab6.dir/matrixOperations.cpp.i
+.PHONY : matrixOperations.cpp.i
+
+matrixOperations.s: matrixOperations.cpp.s
+
+.PHONY : matrixOperations.s
+
+# target to generate assembly for a file
+matrixOperations.cpp.s:
+	$(MAKE) -f CMakeFiles/Lab6.dir/build.make CMakeFiles/Lab6.dir/matrixOperations.cpp.s
+.PHONY : matrixOperations.cpp.s
+
+vectorOperations.o: vectorOperations.cpp.o
+
+.PHONY : vectorOperations.o
+
+# target to build an object file
+vectorOperations.cpp.o:
+	$(MAKE) -f CMakeFiles/Lab6.dir/build.make CMakeFiles/Lab6.dir/vectorOperations.cpp.o
+.PHONY : vectorOperations.cpp.o
+
+vectorOperations.i: vectorOperations.cpp.i
+
+.PHONY : vectorOperations.i
+
+# target to preprocess a source file
+vectorOperations.cpp.i:
+	$(MAKE) -f CMakeFiles/Lab6.dir/build.make CMakeFiles/Lab6.dir/vectorOperations.cpp.i
+.PHONY : vectorOperations.cpp.i
+
+vectorOperations.s: vectorOperations.cpp.s
+
+.PHONY : vectorOperations.s
+
+# target to generate assembly for a file
+vectorOperations.cpp.s:
+	$(MAKE) -f CMakeFiles/Lab6.dir/build.make CMakeFiles/Lab6.dir/vectorOperations.cpp.s
+.PHONY : vectorOperations.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +216,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... matrixOperations.o"
+	@echo "... matrixOperations.i"
+	@echo "... matrixOperations.s"
+	@echo "... vectorOperations.o"
+	@echo "... vectorOperations.i"
+	@echo "... vectorOperations.s"
 .PHONY : help
 
 

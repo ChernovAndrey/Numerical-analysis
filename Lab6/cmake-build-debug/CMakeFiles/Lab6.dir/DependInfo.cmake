@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/andrey/CLionProjects/NumericalMethods/Lab6/main.cpp" "/home/andrey/CLionProjects/NumericalMethods/Lab6/cmake-build-debug/CMakeFiles/Lab6.dir/main.cpp.o"
+  "/home/andrey/CLionProjects/NumericalMethods/Lab6/matrixOperations.cpp" "/home/andrey/CLionProjects/NumericalMethods/Lab6/cmake-build-debug/CMakeFiles/Lab6.dir/matrixOperations.cpp.o"
+  "/home/andrey/CLionProjects/NumericalMethods/Lab6/vectorOperations.cpp" "/home/andrey/CLionProjects/NumericalMethods/Lab6/cmake-build-debug/CMakeFiles/Lab6.dir/vectorOperations.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Lab6.dir/main.cpp.o"
+  "CMakeFiles/Lab6.dir/matrixOperations.cpp.o"
+  "CMakeFiles/Lab6.dir/vectorOperations.cpp.o"
   "Lab6.pdb"
   "Lab6"
 )
