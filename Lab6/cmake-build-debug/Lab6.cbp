@@ -84,13 +84,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/ExplicitEuler.h">
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/Adams4.h">
 			<Option target="Lab6"/>
 		</Unit>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/ImplicitEuler.h">
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/Euler">
 			<Option target="Lab6"/>
 		</Unit>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/Newton">
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/PredCor.h">
+			<Option target="Lab6"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/RK4.h">
 			<Option target="Lab6"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h">

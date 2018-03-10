@@ -18,6 +18,9 @@ template <typename T>
 T normVector(vector<T> v);
 
 template <typename T>
+T normC(vector<T> v1, vector<T> v2);
+
+template <typename T>
 void printVector(vector<T> v);
 
 template <typename T>

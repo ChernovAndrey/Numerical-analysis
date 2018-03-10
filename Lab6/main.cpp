@@ -3,9 +3,12 @@
 #include <fstream>
 #include <tuple>
 #include "SolveMethod.h"
-#include "ExplicitEuler.h"
+#include "Euler/ExplicitEuler.h"
 #include "tests.h"
-#include "ImplicitEuler.h"
+#include "Euler/ImplicitEuler.h"
+#include "RK4.h"
+#include "Adams4.h"
+#include "PredCor.h"
 
 using namespace std;
 
@@ -25,14 +28,14 @@ void writingData(vector<vector<double>> U){
 }
 
 void execute(SolveMethod* method, vector<double>(*F)(vector<double>)){
-    auto U = method->solve(F, initVariables());
+    auto U = method->solve(F, initVariables(),N);
     writingData(U);
+    delete method;
 }
 
 
 int main(){
-   // cout<< "answer="<<(new SolveNewton())->execute([](double x){return x*x*x-3*x+2;},0);
     //Euler(,{1,0});
-    execute(new ImplicitEuler,F);
+    execute(new PredCor(),F);
     return 0;
 }
