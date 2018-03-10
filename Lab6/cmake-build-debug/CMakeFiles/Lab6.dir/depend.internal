@@ -6,8 +6,9 @@ CMakeFiles/Lab6.dir/main.cpp.o
  /home/andrey/CLionProjects/NumericalMethods/Lab6/Euler/ExplicitEuler.h
  /home/andrey/CLionProjects/NumericalMethods/Lab6/Euler/ImplicitEuler.h
  /home/andrey/CLionProjects/NumericalMethods/Lab6/PredCor.h
- /home/andrey/CLionProjects/NumericalMethods/Lab6/RK4.h
+ /home/andrey/CLionProjects/NumericalMethods/Lab6/RK.h
  /home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h
+ /home/andrey/CLionProjects/NumericalMethods/Lab6/SymScheme.h
  /home/andrey/CLionProjects/NumericalMethods/Lab6/main.cpp
  /home/andrey/CLionProjects/NumericalMethods/Lab6/matrixOperations.cpp
  /home/andrey/CLionProjects/NumericalMethods/Lab6/matrixOperations.h

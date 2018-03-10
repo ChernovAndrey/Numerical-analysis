@@ -15,7 +15,7 @@ using namespace std;
 
 class SolveMethod { //interface
 public:
-    virtual vector<vector<double>> solve(vector<double>(*F)(vector<double>),const vector<double> &initVariables, int n)=0;//n - кол-во шагов
+    virtual vector<vector<double>> solve(vector<double>(*F)(vector<double>, double),const vector<double> &initVariables, int n)=0;//n - кол-во шагов
 
 
 };

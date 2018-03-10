@@ -8,20 +8,20 @@
 #include <vector>
 #include <iostream>
 #include "SolveMethod.h"
-#include "RK4.h"
+#include "RK.h"
 #include "vectorOperations.h"
 #include "matrixOperations.h"
 
 using namespace std;
 class PredCor: public SolveMethod{
 public:
-    vector<vector<double>> solve(vector<double>(*F)(vector<double>),const vector<double> &initVariables, int n) override{
+    vector<vector<double>> solve(vector<double>(*F)(vector<double>,double),const vector<double> &initVariables, int n) override{
         const auto &variables = initVariables;
         double t = T0;
         double tau = TAU;
         double eps = EPS;
         int p=4;
-        auto * rk4 = new RK4();
+        auto * rk4 = new RK();
         auto initU = rk4->solve(F,initVariables,4);
         delete rk4;
         vector<vector<double>> U(initU);
@@ -34,7 +34,7 @@ public:
         }
         for(int i=4;i<n;i++) {
             vector<double> nVariables(variables.size(),1);
-            nVariables= evaluateNextValue(tau,last4U);
+            nVariables= evaluateNextValue(F,tau,last4U,t);
 
             for (int j = 0; j < U.size(); j++){
                 U[j].push_back(nVariables[j]); // сейчас кол-во элементов равно i
@@ -49,15 +49,15 @@ public:
         }
         return U;
     };
-    vector<double> evaluateNextValue(double tau,vector<vector<double>> last4U){
+    vector<double> evaluateNextValue(vector<double> (*F)(vector<double>,double),double tau,vector<vector<double>> last4U, double t){
         vector<double> u0(last4U[0].size());
         vector<double> res(last4U[0].size());
         for (int i = 0; i < last4U[0].size(); ++i) {
-            u0[i]=last4U[3][i]+ (tau/24.0)*(55.0*F(last4U[3])[i]-59*F(last4U[2])[i]+37*F(last4U[1])[i]-9*F(last4U[0])[i]);
+            u0[i]=last4U[3][i]+ (tau/24.0)*(55.0*F(last4U[3],t)[i]-59*F(last4U[2],t)[i]+37*F(last4U[1],t)[i]-9*F(last4U[0],t)[i]);
         }
 
         for (int j = 0; j < res.size(); ++j) {
-            res[j]= last4U[3][j]+tau/24.0*(9*F(u0)[j]+19*F(last4U[3])[j]-5*F(last4U[2])[j]+F(last4U[1])[j]);
+            res[j]= last4U[3][j]+tau/24.0*(9*F(u0,t)[j]+19*F(last4U[3],t)[j]-5*F(last4U[2],t)[j]+F(last4U[1],t)[j]);
         }
         return res;
     }

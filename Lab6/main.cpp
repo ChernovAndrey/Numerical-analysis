@@ -6,13 +6,28 @@
 #include "Euler/ExplicitEuler.h"
 #include "tests.h"
 #include "Euler/ImplicitEuler.h"
-#include "RK4.h"
+#include "RK.h"
 #include "Adams4.h"
 #include "PredCor.h"
+#include "SymScheme.h"
 
 using namespace std;
 
 
+double compareWithAnswerEx1(SolveMethod* method, vector<double>(*F)(vector<double>, double)){ //вычисление погрешности для шарика с пружинкой; норма C
+    double t =T0;
+    double tau = TAU;
+    int n = N;
+    auto U = method->solve(F, initVariables(),N);
+    auto x = U[0];//x=u1
+    vector<double> accurX(x.size()); //точное значение
+
+    for(int i=0;i<n;i++){
+        accurX[i]=getAnswerEx1(t);
+        t+=tau;
+    }
+    return normC(accurX,x);
+}
 
 
 void writingData(vector<vector<double>> U){
@@ -27,15 +42,17 @@ void writingData(vector<vector<double>> U){
     file.close();
 }
 
-void execute(SolveMethod* method, vector<double>(*F)(vector<double>)){
+void execute(SolveMethod* method, vector<double>(*F)(vector<double>, double)){
     auto U = method->solve(F, initVariables(),N);
     writingData(U);
-    delete method;
 }
 
 
 int main(){
-    //Euler(,{1,0});
-    execute(new PredCor(),F);
+    auto method = new SymScheme();
+    execute(method,Func);
+    cout<<"Residual:"<<endl;
+    cout<< compareWithAnswerEx1(method,Func); // только для маятника с пружинкой
+    delete method;
     return 0;
 }

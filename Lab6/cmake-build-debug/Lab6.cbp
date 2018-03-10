@@ -93,10 +93,13 @@
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/PredCor.h">
 			<Option target="Lab6"/>
 		</Unit>
-		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/RK4.h">
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/RK.h">
 			<Option target="Lab6"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h">
+			<Option target="Lab6"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/SymScheme.h">
 			<Option target="Lab6"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab6/main.cpp">

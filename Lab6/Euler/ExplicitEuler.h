@@ -12,7 +12,7 @@
 using namespace std;
 class ExplicitEuler: public SolveMethod{
 public:
-    vector<vector<double>> solve(vector<double>(*F)(vector<double>),const vector<double> &initVariables,int n) override{
+    vector<vector<double>> solve(vector<double>(*F)(vector<double>, double),const vector<double> &initVariables,int n) override{
         auto variables = initVariables;
         vector<vector<double>> U(variables.size());
         double t = T0;
@@ -22,12 +22,13 @@ public:
 
 
         for(int i=1;i<n;i++) {
-            auto FValue = F(variables); //u_{n}
+            auto FValue = F(variables, t); //u_{n}
             vector<double> nVariables(variables.size());
             for (int j = 0; j < U.size(); j++){
                 U[j].push_back(variables.at(j) + tau*FValue[j]); // сейчас кол-во элементов равно i
                 nVariables[j]=U[j][i];
             }
+
             t+=tau;
             variables=nVariables;
         }

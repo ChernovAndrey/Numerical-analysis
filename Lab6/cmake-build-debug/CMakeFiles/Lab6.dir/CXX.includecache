@@ -13,8 +13,8 @@ iostream
 -
 SolveMethod.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h
-RK4.h
-/home/andrey/CLionProjects/NumericalMethods/Lab6/RK4.h
+RK.h
+/home/andrey/CLionProjects/NumericalMethods/Lab6/RK.h
 vectorOperations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/vectorOperations.h
 matrixOperations.h
@@ -33,8 +33,8 @@ vector
 -
 ../SolveMethod.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h
-assert.h
-/home/andrey/CLionProjects/NumericalMethods/Lab6/Euler/assert.h
+cassert
+-
 
 /home/andrey/CLionProjects/NumericalMethods/Lab6/PredCor.h
 vector
@@ -43,22 +43,32 @@ iostream
 -
 SolveMethod.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h
-RK4.h
-/home/andrey/CLionProjects/NumericalMethods/Lab6/RK4.h
+RK.h
+/home/andrey/CLionProjects/NumericalMethods/Lab6/RK.h
 vectorOperations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/vectorOperations.h
 matrixOperations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/matrixOperations.h
 
-/home/andrey/CLionProjects/NumericalMethods/Lab6/RK4.h
+/home/andrey/CLionProjects/NumericalMethods/Lab6/RK.h
 vector
 -
 SolveMethod.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h
+cassert
+/home/andrey/CLionProjects/NumericalMethods/Lab6/cassert
 
 /home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h
 vector
 -
+
+/home/andrey/CLionProjects/NumericalMethods/Lab6/SymScheme.h
+SolveMethod.h
+/home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h
+tests.h
+/home/andrey/CLionProjects/NumericalMethods/Lab6/tests.h
+cassert
+/home/andrey/CLionProjects/NumericalMethods/Lab6/cassert
 
 /home/andrey/CLionProjects/NumericalMethods/Lab6/main.cpp
 iostream
@@ -77,12 +87,14 @@ tests.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/tests.h
 Euler/ImplicitEuler.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/Euler/ImplicitEuler.h
-RK4.h
-/home/andrey/CLionProjects/NumericalMethods/Lab6/RK4.h
+RK.h
+/home/andrey/CLionProjects/NumericalMethods/Lab6/RK.h
 Adams4.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/Adams4.h
 PredCor.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/PredCor.h
+SymScheme.h
+/home/andrey/CLionProjects/NumericalMethods/Lab6/SymScheme.h
 
 /home/andrey/CLionProjects/NumericalMethods/Lab6/matrixOperations.cpp
 iostream

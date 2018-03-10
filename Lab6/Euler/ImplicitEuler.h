@@ -7,24 +7,15 @@
 
 #include <vector>
 #include "../SolveMethod.h"
-#include "assert.h"
-vector<double> variables;
-double tau= TAU;
+#include <cassert>
 
-vector<double> EulerF (vector<double> nVar){
-    vector<double> res(nVar.size());
-    for (int j = 0; j < nVar.size(); j++) {
-        res[j] = nVar[j] - tau * (F(nVar)[j]) - variables[j];
-    }
-    return res;
-}
-
+// hard code; только для шарика с пружинкой
 class ImplicitEuler : public SolveMethod{
     const double k = getK();
     const double m = getM();
 
-    vector<vector<double>> solve(vector<double>(*F)(vector<double>),const vector<double> &initVariables, int n) override{
-        variables = initVariables;
+    vector<vector<double>> solve(vector<double>(*F)(vector<double>, double),const vector<double> &initVariables, int n) override{
+        auto variables = initVariables;
         vector<vector<double>> U(variables.size());
         double t = T0;
         double tau = TAU;

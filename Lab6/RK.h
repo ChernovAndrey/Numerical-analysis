@@ -7,31 +7,39 @@
 
 #include <vector>
 #include "SolveMethod.h"
-
+#include "cassert"
 using namespace std;
-class RK4: public SolveMethod{
+class RK: public SolveMethod{
 private:
-    const int P =4;
+    int P =4;//порядок точности
     bool autoStepFlag = false;
 public:
-    explicit RK4(bool flag) : SolveMethod(){
+    explicit RK(bool flag,int P=4) : SolveMethod(){
         this->autoStepFlag=flag;
+        this->P=P;
     }
-    RK4() = default;
+    RK() = default;
 
     void setAutoStepFlag(bool flag){this->autoStepFlag=flag;}
 
     bool getAutoStepFlag(){return this->autoStepFlag;}
 
-    vector<vector<double>> solve(vector<double>(*F)(vector<double>), const vector<double> &initVariables, int n) override{
-      if (autoStepFlag){
+    void setP(int P){
+        assert((P==2)||(P==4));
+        this->P=P;
+    }
+
+    int getP(){return P;}
+    vector<vector<double>> solve(vector<double>(*F)(vector<double>,double), const vector<double> &initVariables, int n) override{
+        assert((P==2)||(P==4));
+        if (autoStepFlag){
         return calculateWithChangeTau(F,initVariables,n);
-      }
+        }
         return calculateWithConstTau(F,initVariables,n);
 
     }
 
-    vector<vector<double>> calculateWithConstTau(vector<double>(*F)(vector<double>), const vector<double> &initVariables, int n){
+    vector<vector<double>> calculateWithConstTau(vector<double>(*F)(vector<double>,double), const vector<double> &initVariables, int n){
         auto variables = initVariables;
         vector<vector<double>> U(variables.size());
         double t = T0;
@@ -42,7 +50,7 @@ public:
 
         for(int i=1;i<n;i++) {
             vector<double> nVariables(variables.size(),1);
-            nVariables = calculateNextValue(tau, variables);
+            nVariables = calculateNextValue(F,tau, variables,t);
             for (int j = 0; j < U.size(); j++){
                 U[j].push_back(nVariables[j]); // сейчас кол-во элементов равно i
                 //nVariables[j]=U[j][i];
@@ -55,7 +63,7 @@ public:
     }
 
 
-    vector<vector<double>> calculateWithChangeTau(vector<double>(*F)(vector<double>), const vector<double> &initVariables, int n){
+    vector<vector<double>> calculateWithChangeTau(vector<double>(*F)(vector<double>,double), const vector<double> &initVariables, int n){
         auto variables = initVariables;
         vector<vector<double>> U(variables.size());
         double t = T0;
@@ -68,9 +76,9 @@ public:
             vector<double> nVariables(variables.size(),1);
             vector<double> nVariables2(variables.size(),20);
             while (normC(nVariables, nVariables2)/(pow(2,P)-1) >= eps) {
-                nVariables = calculateNextValue(tau, variables);
+                nVariables = calculateNextValue(F,tau, variables,t);
                 tau=tau/2;
-                nVariables2 = calculateNextValue(tau, variables);
+                nVariables2 = calculateNextValue(F,tau, variables,t);
             }
             for (int j = 0; j < U.size(); j++){
                 U[j].push_back(nVariables2[j]); // сейчас кол-во элементов равно i
@@ -86,27 +94,36 @@ public:
         return U;
     }
 
-    vector<double> calculateNextValue(double tau,vector<double> variables){
+    vector<double> calculateNextValue(vector<double>(*F)(vector<double>,double),double tau,vector<double> variables,double t){
         vector<double> nVariables(variables.size());
-        auto k1=F(variables); //добваить t  в variables
+        auto k1=F(variables,t); //добваить t  в variables
 
         vector<double> variablesK2(variables.size());
         for(int k =0;k<variables.size();k++){
             variablesK2[k]=variables[k]+tau/2 * k1[k];
         }
-        auto k2=F(variablesK2);
+        auto k2=F(variablesK2,t);
+
+        //если PK2
+        if(P==2){
+            for (int j = 0; j < variables.size(); j++){
+                nVariables[j] =variables[j]+tau*k2[j]; // сейчас кол-во элементов равно i
+            }
+            return nVariables;
+        }
+        // конец если PK2
 
         vector<double> variablesK3(variables.size());
         for(int k =0;k<variables.size();k++){
             variablesK3[k]=variables[k]+tau/2 * k2[k];
         }
-        auto k3=F(variablesK3);
+        auto k3=F(variablesK3,t);
 
         vector<double> variablesK4(variables.size());
         for(int k =0;k<variables.size();k++){
             variablesK4[k]=variables[k]+tau * k3[k];
         }
-        auto k4=F(variablesK4);
+        auto k4=F(variablesK4,t);
 
         vector<double> K(k4.size());
         for (int l = 0; l < K.size(); ++l) {

@@ -32,6 +32,14 @@ vector<double> example1(vector<double> variables) { //шарик с пружин
                            });
 }
 
+//ответ на шарик с пружинкой ( cos(wt))
+double getAnswerEx1(double t){
+    const double k = getK();
+    const double m = getM();
+    const double omega = sqrt(k/m);
+    return cos(omega*t);
+}
+
 
 vector<double> example2(vector<double> variables) { //шарик с пружиной
     return
@@ -55,7 +63,7 @@ vector<double> example3(vector<double> variables) { //шарик с пружин
                            });
 }
 
-vector<double> F(vector<double> variables) { // pass functions and init variables
+vector<double> Func(vector<double> variables, double t) { // pass functions and init variables
    return basicEx(std::move(variables));
    //return example2(std::move(variables));
 

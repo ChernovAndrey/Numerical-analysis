@@ -5,8 +5,9 @@ CMakeFiles/Lab6.dir/main.cpp.o: ../Adams4.h
 CMakeFiles/Lab6.dir/main.cpp.o: ../Euler/ExplicitEuler.h
 CMakeFiles/Lab6.dir/main.cpp.o: ../Euler/ImplicitEuler.h
 CMakeFiles/Lab6.dir/main.cpp.o: ../PredCor.h
-CMakeFiles/Lab6.dir/main.cpp.o: ../RK4.h
+CMakeFiles/Lab6.dir/main.cpp.o: ../RK.h
 CMakeFiles/Lab6.dir/main.cpp.o: ../SolveMethod.h
+CMakeFiles/Lab6.dir/main.cpp.o: ../SymScheme.h
 CMakeFiles/Lab6.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Lab6.dir/main.cpp.o: ../matrixOperations.cpp
 CMakeFiles/Lab6.dir/main.cpp.o: ../matrixOperations.h
