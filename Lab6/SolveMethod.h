@@ -7,8 +7,8 @@
 
 #define N 500
 #define T0 0
-#define TAU 0.01
-#define EPS 1e-2
+#define TAU 0.055371
+#define EPS 1e-4
 
 #include <vector>
 using namespace std;

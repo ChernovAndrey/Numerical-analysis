@@ -37,7 +37,7 @@ vector<T> multiMatrixVector(vector<vector<T>> m, vector<T> v){
 }
 
 template <typename T>
-T normVector(vector<T> v){
+T normVector2(vector<T> v){
     T norm =0;
     for (int i = 0; i <v.size() ; ++i) {
         norm+=v[i]*v[i];
@@ -68,7 +68,7 @@ void printVector(vector<T> v){
 
 template <typename T>
 void normalizeVector(vector<T> &v){
-    T normV=normVector(v);
+    T normV=normVector2(v);
     for(int i=0;i<v.size();i++){
         v[i]=v[i]/normV;
     }
@@ -84,13 +84,33 @@ vector<T> diffVectors(vector<T> v1, vector<T> v2){
 }
 
 template <typename T>
-T normC(vector<T> v1,vector<T> v2){
+vector<T> multiVectorByNumber(const vector<T> &v, T a){
+    vector<double> v1(v.size());
+    for(int i =0;i<v.size();i++){
+        v1[i] = v[i]*a;
+    }
+    return v1;
+}
+
+template <typename T>
+T normC(vector<T> v1,vector<T> v2){ // норма разности между двумя векторами
     T norm =0;
     auto v = diffVectors(v1,v2);
 
     for(int i=0;i<v.size();i++){
         if (v[i]>norm){
-            norm =v[i];
+            norm =abs(v[i]);
+        }
+    }
+    return norm;
+}
+
+template <typename T>
+T normC(vector<T> v){
+    T norm =0;
+    for(int i=0;i<v.size();i++){
+        if (abs(v[i])>norm){
+            norm =abs(v[i]);
         }
     }
     return norm;

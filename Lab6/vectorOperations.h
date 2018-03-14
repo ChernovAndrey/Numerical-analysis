@@ -15,7 +15,7 @@ template <typename T>
 vector<T> multiMatrixVector(vector<vector<T>> m, vector<T> v);
 
 template <typename T>
-T normVector(vector<T> v);
+T normVector2(vector<T> v);
 
 template <typename T>
 T normC(vector<T> v1, vector<T> v2);
@@ -25,5 +25,11 @@ void printVector(vector<T> v);
 
 template <typename T>
 vector<T> diffVectors(vector<T> v1, vector<T> v2);
+
+template <typename T>
+vector<T> multiVectorByNumber(const vector<T> &v, T a);
+
+template <typename T>
+T normC(vector<T> v);
 #include "vectorOperations.cpp"
 #endif //LAB1WITHOOP_VECTOROPERATIONS_H

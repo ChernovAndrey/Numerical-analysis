@@ -14,7 +14,7 @@
 using namespace std;
 
 
-double compareWithAnswerEx1(SolveMethod* method, vector<double>(*F)(vector<double>, double)){ //вычисление погрешности для шарика с пружинкой; норма C
+void compareWithAnswerEx1(SolveMethod* method, vector<double>(*F)(vector<double>, double)){ //вычисление погрешности для шарика с пружинкой; норма C
     double t =T0;
     double tau = TAU;
     int n = N;
@@ -26,7 +26,7 @@ double compareWithAnswerEx1(SolveMethod* method, vector<double>(*F)(vector<doubl
         accurX[i]=getAnswerEx1(t);
         t+=tau;
     }
-    return normC(accurX,x);
+    cout<< "Residual="<<normC(accurX,x);
 }
 
 
@@ -49,10 +49,10 @@ void execute(SolveMethod* method, vector<double>(*F)(vector<double>, double)){
 
 
 int main(){
-    auto method = new SymScheme();
-    execute(method,Func);
-    cout<<"Residual:"<<endl;
-    cout<< compareWithAnswerEx1(method,Func); // только для маятника с пружинкой
+
+    auto method = new RK(true,4);
+    //execute(method,Func);
+    compareWithAnswerEx1(method,Func); // только для маятника с пружинкой не работает для автомат шага
     delete method;
     return 0;
 }
