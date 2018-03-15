@@ -24,7 +24,7 @@ vector<double> basicEx(vector<double> variables) { //шарик с пружин�
 }
 
 
-vector<double> example1(vector<double> variables) { //шарик с пружиной
+vector<double> example1(vector<double> variables) {
     return
             vector<double>({
                                    2*variables.at(0)+variables.at(1)*variables.at(1)-1,

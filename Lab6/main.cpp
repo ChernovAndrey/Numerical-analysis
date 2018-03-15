@@ -52,7 +52,7 @@ int main(){
 
     auto method = new RK(true,4);
     //execute(method,Func);
-    compareWithAnswerEx1(method,Func); // только для маятника с пружинкой не работает для автомат шага
+    compareWithAnswerEx1(method,Func); // только для маятника с пружинкой; не работает для автомат шага
     delete method;
     return 0;
 }
