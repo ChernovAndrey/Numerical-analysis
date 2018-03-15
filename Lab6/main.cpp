@@ -17,12 +17,14 @@ using namespace std;
 void compareWithAnswerEx1(SolveMethod* method, vector<double>(*F)(vector<double>, double)){ //вычисление погрешности для шарика с пружинкой; норма C
     double t =T0;
     double tau = TAU;
-    int n = N;
-    auto U = method->solve(F, initVariables(),N);
+    double tf = Tf;
+
+    auto U = method->solve(F, initVariables(),T0,Tf);
     auto x = U[0];//x=u1
     vector<double> accurX(x.size()); //точное значение
 
-    for(int i=0;i<n;i++){
+    accurX[0]=getAnswerEx1(0);
+    for(int i=1;t<=tf;i++){
         accurX[i]=getAnswerEx1(t);
         t+=tau;
     }
@@ -43,15 +45,15 @@ void writingData(vector<vector<double>> U){
 }
 
 void execute(SolveMethod* method, vector<double>(*F)(vector<double>, double)){
-    auto U = method->solve(F, initVariables(),N);
+    auto U = method->solve(F, initVariables(),T0,Tf);
     writingData(U);
 }
 
 
 int main(){
 
-    auto method = new RK(true,4);
-    //execute(method,Func);
+    auto method = new RK4();
+    execute(method,Func);
     compareWithAnswerEx1(method,Func); // только для маятника с пружинкой; не работает для автомат шага
     delete method;
     return 0;

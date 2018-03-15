@@ -5,9 +5,9 @@
 #ifndef LAB6_SOLVEMETHOD_H
 #define LAB6_SOLVEMETHOD_H
 
-#define N 500
-#define T0 0
-#define TAU 0.055371
+#define Tf 5
+#define TAU 1.25e-03
+#define T0 TAU
 #define EPS 1e-4
 
 #include <vector>
@@ -15,7 +15,9 @@ using namespace std;
 
 class SolveMethod { //interface
 public:
-    virtual vector<vector<double>> solve(vector<double>(*F)(vector<double>, double),const vector<double> &initVariables, int n)=0;//n - кол-во шагов
+    virtual vector<vector<double>> solve(vector<double>(*F)(vector<double>, double),const vector<double> &initVariables,
+    double to, double tf)=0;//n - кол-во шагов
+
 
 
 };

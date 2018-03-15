@@ -15,16 +15,17 @@ class SymScheme: public SolveMethod {
         const double k = getK();
         const double m = getM();
 
-        vector<vector<double>> solve(vector<double>(*F)(vector<double>, double),const vector<double> &initVariables, int n) override{
+        vector<vector<double>> solve(vector<double>(*F)(vector<double>, double),const vector<double> &initVariables,
+                                    double t0,double tf) override{
             auto variables = initVariables;
             vector<vector<double>> U(variables.size());
-            double t = T0;
+            double t = t0;
             double tau = TAU;
             for(int i=0;i<variables.size();i++) U[i].push_back(variables[i]); // заполнение вектора начальным данными
             assert(U.size()==2);
             assert(variables.size()==2);
 
-            for(int i=1;i<n;i++) {
+            for(int i=1;t<=tf;i++) {
                 // auto FValue = F(variables); //u_{n}
                 vector<double> nVariables(variables.size());
                 nVariables[1]= (variables[1] - (k*tau/m)*( variables[0]+(tau/4)*variables[1] ) ) / (k*tau*tau/(4*m) +1) ;
@@ -33,6 +34,8 @@ class SymScheme: public SolveMethod {
                 for (int j = 0; j < U.size(); j++){
                     U[j].push_back(nVariables[j]); // сейчас кол-во элементов равно i
                 }
+                //cout<<t<<endl;
+                t+=tau;
             }
             return U;
         };

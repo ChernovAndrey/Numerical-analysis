@@ -31,25 +31,27 @@ public:
 
     int getP(){return P;}
 
-    vector<vector<double>> solve(vector<double>(*F)(vector<double>,double), const vector<double> &initVariables, int n) override{
+    vector<vector<double>> solve(vector<double>(*F)(vector<double>,double), const vector<double> &initVariables,
+                                    double t0, double tf) override{
         assert((P==2)||(P==4));
         if (autoStepFlag){
-        return calculateWithChangeTau(F,initVariables,n);
+        return calculateWithChangeTau(F,initVariables,t0,tf);
         }
-        return calculateWithConstTau(F,initVariables,n);
+        return calculateWithConstTau(F,initVariables,t0,tf);
 
     }
 
-    vector<vector<double>> calculateWithConstTau(vector<double>(*F)(vector<double>,double), const vector<double> &initVariables, int n){
+    vector<vector<double>> calculateWithConstTau(vector<double>(*F)(vector<double>,double), const vector<double> &initVariables,
+                                                 double t0,double tf){
         auto variables = initVariables;
         vector<vector<double>> U(variables.size());
-        double t = T0;
+        double t = t0;
         double tau = TAU;
         double eps = EPS;
         for(int i=0;i<variables.size();i++) U[i].push_back(variables[i]); // заполнение вектора начальным данными
 
 
-        for(int i=1;i<n;i++) {
+        for(int i=1;t<=tf;i++) {
             vector<double> nVariables(variables.size(),1);
             nVariables = calculateNextValue(F,tau, variables,t);
             for (int j = 0; j < U.size(); j++){
@@ -64,10 +66,11 @@ public:
     }
 
 
-    vector<vector<double>> calculateWithChangeTau(vector<double>(*F)(vector<double>,double), const vector<double> &initVariables, int n){
+    vector<vector<double>> calculateWithChangeTau(vector<double>(*F)(vector<double>,double), const vector<double> &initVariables,
+                                                  double t0, double tf){
         auto variables = initVariables;
         vector<vector<double>> U(variables.size());
-        double t = T0;
+        double t = t0;
         double tau = TAU;
         double eps = EPS;
         for(int i=0;i<variables.size();i++) U[i].push_back(variables[i]); // заполнение вектора начальным данными
@@ -75,7 +78,7 @@ public:
         auto minTau = tau;
         auto maxTau = tau;
 
-        for(int i=1;i<n;i++) {
+        for(int i=1;t<=tf;i++) {
             vector<double> nVariables(variables.size(),1); //произвольный init
             vector<double> nVariables2(variables.size(),20); //произвольный init
             bool flagFirst = true;

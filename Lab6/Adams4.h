@@ -15,14 +15,16 @@
 using namespace std;
 class Adams4: public SolveMethod{
 public:
-    vector<vector<double>> solve(vector<double>(*F)(vector<double>,double),const vector<double> &initVariables, int n) override{
+    vector<vector<double>> solve(vector<double>(*F)(vector<double>,double),const vector<double> &initVariables,
+                                 double t0,double tf) override{
         const auto &variables = initVariables;
-        double t = T0;
+        double t = t0;
         double tau = TAU;
         double eps = EPS;
 
-        auto * rk4 = new RK();
-        auto initU = rk4->solve(F,initVariables,4);
+        auto * rk4 = new RK(false,4);
+        auto initU = rk4->solve(F,initVariables,t0,t0+2*tau);
+        t+=3*tau; // так как рунге кутте сходил три раза
         delete rk4;
         vector<vector<double>> U(initU);
 
@@ -32,7 +34,7 @@ public:
                last4U[k].push_back(U[l][k]);
             }
         }
-        for(int i=4;i<n;i++) {
+        for(int i=4;t<=tf;i++) {
             vector<double> nVariables(variables.size(),1);
             nVariables= evaluateNextValue(F,tau,last4U,t);
             for (int j = 0; j < U.size(); j++){
