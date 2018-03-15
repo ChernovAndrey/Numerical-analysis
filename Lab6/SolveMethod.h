@@ -6,7 +6,7 @@
 #define LAB6_SOLVEMETHOD_H
 
 #define Tf 5
-#define TAU 1.25e-03
+#define TAU 0.015
 #define T0 TAU
 #define EPS 1e-4
 

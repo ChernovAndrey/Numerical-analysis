@@ -77,13 +77,13 @@ vector<double> example4(vector<double> variables) {
 
 vector<double> Func(vector<double> variables, double t) { // pass functions and init variables
    return basicEx(std::move(variables));
-  // return example4(std::move(variables));
+   return example4(std::move(variables));
 
 };
 
 vector<double> initVariables() {
-    const double eps = 0.01;
-  //  return {0.0+eps,1.0+eps};
+    const double eps = 0.0001;
+ //  return {0.0+eps,-1.0+eps};
     return {1.0,0.0};
    // return {1.0,0.0,0.0};
 }
