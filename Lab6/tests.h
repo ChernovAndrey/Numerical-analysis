@@ -75,16 +75,30 @@ vector<double> example4(vector<double> variables) {
 }
 
 
+vector<double> example5(vector<double> variables,double t) {
+    const double sigma =0.1;
+    const double nu =0.3;
+    const double v =0.5;
+    const double M =0.25;
+    return
+            vector<double>({
+                                  variables[1],
+                                 M-2*sigma*variables[1] -0.2*(nu+v*sin(t))*sin(variables[0])
+                           });
+}
+
+
 vector<double> Func(vector<double> variables, double t) { // pass functions and init variables
-   return basicEx(std::move(variables));
-   return example4(std::move(variables));
+   //return basicEx(std::move(variables));
+   return example5(std::move(variables),t);
 
 };
 
 vector<double> initVariables() {
     const double eps = 0.0001;
  //  return {0.0+eps,-1.0+eps};
-    return {1.0,0.0};
+    //return {1.0,0.0};
+    return {0.1,0.1};
    // return {1.0,0.0,0.0};
 }
 

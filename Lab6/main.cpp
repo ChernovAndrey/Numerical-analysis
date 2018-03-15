@@ -52,7 +52,7 @@ void execute(SolveMethod* method, vector<double>(*F)(vector<double>, double)){
 
 int main(){
 
-    auto method = new RK(false,4);
+    auto method = new RK();
     execute(method,Func);
     //compareWithAnswerEx1(method,Func); // только для маятника с пружинкой; не работает для автомат шага
     delete method;
