@@ -57,6 +57,10 @@ SolveMethod.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h
 cassert
 /home/andrey/CLionProjects/NumericalMethods/Lab6/cassert
+vectorOperations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab6/vectorOperations.h
+tests.h
+/home/andrey/CLionProjects/NumericalMethods/Lab6/tests.h
 
 /home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h
 vector

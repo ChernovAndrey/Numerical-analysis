@@ -28,6 +28,8 @@ void compareWithAnswerEx1(SolveMethod* method, vector<double>(*F)(vector<double>
         accurX[i]=getAnswerEx1(t);
         t+=tau;
     }
+    printVector(accurX);
+    printVector(x);
     cout<< "Residual="<<normC(accurX,x);
 }
 
@@ -52,7 +54,7 @@ void execute(SolveMethod* method, vector<double>(*F)(vector<double>, double)){
 
 int main(){
 
-    auto method = new RK();
+    auto method = new RK(true,4);
     execute(method,Func);
     //compareWithAnswerEx1(method,Func); // только для маятника с пружинкой; не работает для автомат шага
     delete method;

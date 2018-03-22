@@ -42,6 +42,7 @@ double getAnswerEx1(double t){
 }
 
 
+
 vector<double> example2(vector<double> variables) {
     return
             vector<double>({
@@ -89,16 +90,16 @@ vector<double> example5(vector<double> variables,double t) {
 
 
 vector<double> Func(vector<double> variables, double t) { // pass functions and init variables
-   //return basicEx(std::move(variables));
-   return example5(std::move(variables),t);
+   return basicEx(std::move(variables));
+   //return example4(std::move(variables));
 
 };
 
 vector<double> initVariables() {
     const double eps = 0.0001;
  //  return {0.0+eps,-1.0+eps};
-    //return {1.0,0.0};
-    return {0.1,0.1};
+    return {1.0,0.0};
+//    return {0.1,0.1};
    // return {1.0,0.0,0.0};
 }
 

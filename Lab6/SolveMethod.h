@@ -5,10 +5,10 @@
 #ifndef LAB6_SOLVEMETHOD_H
 #define LAB6_SOLVEMETHOD_H
 
-#define Tf 100
-#define TAU 0.01
+#define Tf 5
+#define TAU 5
 #define T0 TAU
-#define EPS 1e-4
+#define EPS 1e-2
 
 #include <vector>
 using namespace std;

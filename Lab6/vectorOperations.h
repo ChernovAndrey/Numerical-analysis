@@ -31,5 +31,9 @@ vector<T> multiVectorByNumber(const vector<T> &v, T a);
 
 template <typename T>
 T normC(vector<T> v);
+
+template <typename T>
+T norm3(vector<T> v);
+
 #include "vectorOperations.cpp"
 #endif //LAB1WITHOOP_VECTOROPERATIONS_H

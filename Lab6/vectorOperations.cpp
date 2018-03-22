@@ -78,7 +78,7 @@ template <typename T>
 vector<T> diffVectors(vector<T> v1, vector<T> v2){
     vector<double> res(v1.size());
     for(int i=0;i<v1.size();i++){
-        res[i]=abs(v1[i]-v2[i]);
+        res[i]=v1[i]-v2[i];
     }
     return res;
 }
@@ -112,6 +112,17 @@ T normC(vector<T> v){
         if (abs(v[i])>norm){
             norm =abs(v[i]);
         }
+    }
+    return norm;
+}
+
+
+
+template <typename T>
+T norm3(vector<T> v){
+    T norm =0.0;
+    for(int i=0;i<v.size();i++){
+        norm+=abs(v[i]);
     }
     return norm;
 }
