@@ -21,10 +21,9 @@ public:
         double t = t0;
         double tau = TAU;
         double eps = EPS;
-
         auto * rk4 = new RK(false,4);
         auto initU = rk4->solve(F,initVariables,t0,t0+2*tau);
-        t+=3*tau; // так как рунге кутте сходил три раза
+        t+=3*tau; // так как рунге-кутте сходил три раза
         delete rk4;
         vector<vector<double>> U(initU);
 

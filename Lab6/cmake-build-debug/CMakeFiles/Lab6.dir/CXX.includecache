@@ -53,6 +53,8 @@ matrixOperations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/RK.h
 vector
 -
+fstream
+-
 SolveMethod.h
 /home/andrey/CLionProjects/NumericalMethods/Lab6/SolveMethod.h
 cassert
