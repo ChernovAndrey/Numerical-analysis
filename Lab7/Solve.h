@@ -87,7 +87,7 @@ public:
                 Ui[j] = equations->getExplicitValue(h,tau,U[i-1][j-1],U[i-1][j],U[i-1][j+1], xPrev, x, xNext);
             }
             U.push_back(Ui);
-            cout<<"size: "<<U.size()<<"  "<<U[0].size()<<endl;
+  //          cout<<"size: "<<U.size()<<"  "<<U[0].size()<<endl;
        //     printMatrix(U);
         }
         return U;

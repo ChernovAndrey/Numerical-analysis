@@ -35,32 +35,32 @@ public:
 
         if (x<=par->x1){ // от нуля до x1
             auto a=(x-xPrev)/(par->k1*h);
-            std::cout<<1.0/a<<std::endl;
+//            std::cout<<1.0/a<<std::endl;
             return 1.0/a;
         }
         if ( (xPrev<=par->x1) && (x>par->x1) && (x<par->x2) ){
             auto a1= (par->x1-xPrev)/(par->k1 *h);
             auto a2= ( middleIntegral(x) - middleIntegral(par->x1) )/h;
-            std::cout<<1.0/(a1+a2)<<std::endl;
+//            std::cout<<1.0/(a1+a2)<<std::endl;
             return 1.0/(a1+a2);
         }
 
         if ( (xPrev>par->x1) && (x<par->x2) ){
             auto a = ( middleIntegral(x) - middleIntegral(xPrev) )/h;
-            std::cout<<1.0/(a)<<std::endl;
+//            std::cout<<1.0/(a)<<std::endl;
             return 1.0/a;
         }
 
         if ( (xPrev<par->x2) && (x>=par->x2) && (x<par->l) ){
             auto a1= ( middleIntegral(par->x2) - middleIntegral(xPrev) )/h;
             auto a2= (x-par->x2)/(par->k2 *h);
-            std::cout<<1.0/(a1+a2)<<std::endl;
+//            std::cout<<1.0/(a1+a2)<<std::endl;
             return 1.0/(a1+a2);
         }
 
         if (xPrev>=par->x2){
             auto a=(x-xPrev)/(par->k2*h);
-            std::cout<<1.0/(a)<<std::endl;
+//            std::cout<<1.0/(a)<<std::endl;
             return 1.0/a;
         }
         assert(false);
