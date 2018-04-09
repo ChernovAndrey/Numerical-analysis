@@ -93,6 +93,9 @@
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab7/Solve.h">
 			<Option target="Lab7"/>
 		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab7/Var.h">
+			<Option target="Lab7"/>
+		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab7/helping/matrixOperations.h">
 			<Option target="Lab7"/>
 		</Unit>
@@ -103,6 +106,9 @@
 			<Option target="Lab7"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab7/main.cpp">
+			<Option target="Lab7"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab7/solveSystem">
 			<Option target="Lab7"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab7/CMakeLists.txt">

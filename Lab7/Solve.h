@@ -10,93 +10,118 @@
 #include <tuple>
 #include "Equations.h"
 #include "helping/workWithConsole.h"
+#include "Params.h"
 
 using namespace std;
 
-struct Variable {  //объект, который содержит начало, шаг и кол-во шагов какой-либо переменной
-public:
-    Variable(double start,double step, int n):start(start),step(step),n(n){}
-    double start;
-    double step;
-    int n; //кол-во шагов
-};
-
-struct GridParam{
-public:
-    Variable* X;
-    Variable* T;
-    GridParam(Variable* X, Variable* T):X(X), T(T){}
-};
 
 class Solve {
 public:
 
 
     Solve(double h, double tau, double x0, double xf, double t0, double tf, double sigma=0){
-        this->sigma=sigma;
-        setGridParam(h, tau, x0, xf, t0, tf);
+        int nx= static_cast<int>((xf - x0) / h) +1;
+        int nt= static_cast<int>((tf - t0) / tau) +1;
+        init(h,tau,x0,nx,t0,nt,sigma);
     }
 
 
-    Solve(double h, double tau, double x0, int nx, double t0, int nt,double sigma=0){ 
+    Solve(double h, double tau, double x0, int nx, double t0, int nt,double sigma=0){
+        init(h,tau,x0,nx,t0,nt,sigma);
+    }
+
+    void init(double h, double tau, double x0, int nx, double t0, int nt,double sigma=0){
         this->sigma=sigma;
+        this->var= new Var(h,tau,sigma);
         setGridParam(h, tau, x0, nx, t0, nt);
-    
     }
+
     ~Solve(){
         delete gp->X;
         delete gp->T;
         delete gp;
         delete equations;
+        delete var;
     }
     //tf- t конечная; xf- x конечная
-    void setGridParam(double h, double tau, double x0, double xf, double t0, double tf){
-        int nx= static_cast<int>((xf - x0) / h) +1;
-        int nt= static_cast<int>((tf - t0) / tau) +1;
-        setGridParam(h,tau,x0,nx,t0,nt);
-    };
+//    void setGridParam(double h, double tau, double x0, double xf, double t0, double tf){
+//        setGridParam(h,tau,x0,nx,t0,nt);
+//    };
 
     //nx- кол-во точек по x;nt- кол-во точек по t
     GridParam setGridParam(double h, double tau, double x0, int nx, double t0, int nt){
-        auto *X = new Variable(x0,h,nx);
-        auto *T = new Variable(t0,tau,nt);
+        auto *X = new Params(x0,h,nx);
+        auto *T = new Params(t0,tau,nt);
         this->gp  = new GridParam(X,T);
+        this->var->setX(X);
+        this->var->setT(T);
+        cout<<gp->X->n<<endl;
     };
 
     vector<vector<double>> calculateExplicit(){
-        vector<vector<double>> U;// то есть сначала время.
+     //   vector<vector<double>> U;// то есть сначала время.
+        cout<<gp->X->step;
         vector<double> U0(gp->X->n);//при t равном нулю
 
-        U0[0] = equations->getBoundValueLeft(0);
-        U0[U0.size()-1] = equations->getBoundValueLeft(0);
-        for(int i=0;i<U0.size()-1;i++){
-            U0[i]=equations->getBeginningValue(gp->X->start + i * gp->X->step);
+        for(int i=0;i<U0.size();i++){
+            U0[i]=equations->getBeginningValue(var,i);
         }
-        U.push_back(U0);
+
+        var->U.push_back(U0);
 //        printMatrix(U);
         double h = gp->X->step;
         double tau = gp->T->step;
         for(int i=1;i<gp->T->n;i++){
             vector<double> Ui(gp->X->n);
-            Ui[0]=equations->getBoundValueLeft(i);
-            Ui[Ui.size()-1]= equations->getBoundValueRight(i);
+            Ui[0]=equations->getBoundValueLeft(var,i);
             for (int j = 1; j < gp->X->n-1; j++) {
-                auto x = gp->X->start + gp->X->step*j;
-                auto xPrev = x - gp->X->step;
-                auto xNext = x + gp->X->step;
-                Ui[j] = equations->getExplicitValue(h,tau,U[i-1][j-1],U[i-1][j],U[i-1][j+1], xPrev, x, xNext);
+                Ui[j] = equations->getExplicitValue(var,i,j);
             }
-            U.push_back(Ui);
-  //          cout<<"size: "<<U.size()<<"  "<<U[0].size()<<endl;
-       //     printMatrix(U);
+            Ui[Ui.size()-1]= equations->getBoundValueRight(var,i);
+            var->U.push_back(Ui);
         }
-        return U;
+        return var->U;
     }
 
-private:
-    Equations* equations= new Equations1();
+
+
+    vector<vector<double>> calculateImplicit(){
+
+        vector<double> U0(gp->X->n);//при t равном нулю
+
+        U0[0] = equations->getBoundValueLeft(var,0);
+        U0[U0.size()-1] = equations->getBoundValueLeft(var,gp->T->n-1);
+        for(int i=0;i<U0.size()-1;i++){
+            U0[i]=equations->getBeginningValue(var,i);
+        }
+        var->U.push_back(U0);
+//        printMatrix(U);
+        vector<double> X(U0.size());
+        for(int i=1;i<gp->T->n;i++){
+            vector<double> Ui(gp->X->n);
+
+          //  double t = gp->T->start + gp->T->step*(i-1);
+
+
+            var->U.push_back( equations->getFullImplicitValue(var,i) );
+            //          cout<<"size: "<<U.size()<<"  "<<var->U[0].size()<<endl;
+            //     printMatrix(U);
+        }
+        return var->U;
+    }
+
+
+//
+//    vector<vector<double>> calculate(){
+//
+//    }
+
+
+//private:
+    Equations* equations= new Equations2();
     double sigma = 0;
     GridParam *gp;
+    Var *var;
 };
 
 

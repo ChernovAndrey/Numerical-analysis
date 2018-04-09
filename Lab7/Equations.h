@@ -6,60 +6,216 @@
 #define LAB7_EQUATIONS_H
 
 #include <cassert>
-#include "Params.h"
-#include "math.h"
-
+#include "Var.h"
+#include "solveSystem/Sweep.h"
+#include "helping/workWithConsole.h"
+#include <iostream>
+#include <cmath>
+#include <utility>
+#include <vector>
+#include <tuple>
+using namespace std;
 class Equations {
 public:
-    Params* par = new Params();
-    double getExplicitValue(double h, double tau, double yPrev, double y, double yNext, double xPrev, double x, double xNext) {
-            double aNext = calculateA(x,xNext,h);
-            double a= calculateA(xPrev,x,h);
-            return (tau / (h * h * par->c * par->p)) *
-                   ((aNext) * (yNext - y) - (a) * (y - yPrev)) + y;
+
+    virtual int getKindLeft()=0;
+    virtual int getKindRight()=0;
+
+    double getExplicitValue(Var* var, int it, int ix) {  //ix - текущий индекс по x
+        auto U = var->U;
+        double aNext = calculateA(var,ix+1);
+        double a = calculateA(var,ix);
+        return (var->tau / (var->h * var->h * var->c * var->p) * (1 - var->sigma)) *
+               ((aNext) * (U[it-1][ix+1] - U[it-1][ix]) - (a) * (U[it-1][ix] - U[it-1][ix-1])) + U[it-1][ix];
     }
 
-    ~Equations(){delete par;}
 
-    virtual double getBoundValueLeft(int j)=0;  // че то странное передал
 
-    virtual double getBoundValueRight(int j)=0; // че то странное передал
 
-    virtual double getBeginningValue(double x)=0;
 
-    double calculateA(double xPrev, double x,double h) {   //для подсчета explicit
+
+    virtual double getBoundValueLeft(Var* var, int it)=0;  // че то странное передал ересь какая-то=)
+
+
+    virtual double getBoundValueRight(Var* var, int it)=0;
+
+    virtual double getBeginningValue(Var *var, int ix)=0;
+
+
+
+    vector<double> getFullImplicitValue(Var *var, int it) {
+        vector<vector<double>> matrix;
+        vector<double> f;
+        vector<double> Y;
+        if (getKindLeft() == 1) {
+            if (getKindRight() == 1) {
+                tie(matrix,f) = FactoryDiagMatrixL1R1(var, it);
+                Y=(new Sweep(matrix,f))->solveSystem();
+                Y.insert(Y.begin(),getBoundValueLeft(var,it) );
+                Y.push_back( getBoundValueRight(var,it) );
+
+            }
+
+            if (getKindRight()==2){
+                tie(matrix,f) = FactoryDiagMatrixL1R2(var, it);
+                Y=(new Sweep(matrix,f))->solveSystem();
+                Y.insert(Y.begin(),getBoundValueLeft(var,it));
+            }
+        }
+
+        return Y;
+
+    }
+
+    pair<vector<vector<double>>, vector<double>>
+    FactoryDiagMatrixL1R1(Var *var, int it) {  // на левой и правой границе условия первого рода.
+        unsigned countDiag = 3;
+
+        auto c = var->c;
+        auto p = var->p;
+
+        auto n = var->X.size() - 2;// так как y0 и yN я знаю
+        vector<vector<double>> matrix(n);
+        vector<double> b(n);
+        auto h = var->h;
+        auto tau=var->tau;
+        auto y0= getBoundValueLeft(var,it);
+        auto yN = getBoundValueRight(var,it);
+        auto yPrevLayer = var->U[it-1];
+        for (int i = 0; i < n; i++) { //знаем y0 и yN; считаем только для y1...yN-1
+            int j = i + 1;// индекс для X
+            vector<double> strMatrix(countDiag);//строка матрицы
+            double a = calculateA(var, j);
+            double aNext = calculateA(var, j + 1);
+
+
+
+            if (i == 0) { // для y1
+                strMatrix[0] = 0.0;
+                strMatrix[1] = (1.0 / h) * (a + aNext) + (c * p * h) / tau;
+                strMatrix[2] = -(1.0 / h) * aNext;
+                b[i] = (c * p * h / tau) * yPrevLayer[j] + (1.0 / h) * a * y0;
+                matrix[i] = strMatrix;
+                continue;
+            }
+
+
+            if (i == n - 1) { // для yN-1
+                strMatrix[2] = 0.0;
+                strMatrix[1] = (1.0 / h) * (a + aNext) + (c * p * h) / tau;
+                strMatrix[0] = -(1.0 / h) * a;
+                b[i] = (c * p * h / tau) * yPrevLayer[j] + (1.0 / h) * aNext * yN;
+                matrix[i] = strMatrix;
+                continue;
+            }
+
+            b[i] = (c * p * h / tau) * yPrevLayer[j];
+            strMatrix[0] = -(1.0 / h) * a;
+            strMatrix[1] = (1.0 / h) * (a + aNext) + (c * p * h) / tau;
+            strMatrix[2] = -(1.0 / h) * aNext;
+            matrix[i] = strMatrix;
+        }
+        return make_pair(matrix, b);
+
+    }
+
+
+    pair<vector<vector<double>>, vector<double>>
+    FactoryDiagMatrixL1R2(Var *var, int it) {  // на левой условие первого рода, на правой второго.
+        unsigned countDiag = 3;
+
+        auto c = var->c;
+        auto p = var->p;
+
+        auto n = var->X.size() - 1;// так как y0  я знаю
+        vector<vector<double>> matrix(n);
+        vector<double> b(n);
+        auto h = var->h;
+        auto tau=var->tau;
+        auto y0= getBoundValueLeft(var,it);
+        auto yPrevLayer = var->U[it-1];
+        for (int i = 0; i < n; i++) { //знаем y0, считаем только для y1...yN
+            int j = i + 1;// индекс для X
+            vector<double> strMatrix(countDiag);//строка матрицы
+            double a = calculateA(var, j);
+            if (i == n - 1) { // для yN
+               // cout<<a<<endl;
+                strMatrix[2] = 0.0;
+                strMatrix[1] =1.0;
+                strMatrix[0] =-( (a/h) /( c*p*h/(2*tau) + (a/h) ) );
+                b[i] =( c*p*yPrevLayer[j]*h/(2*tau) + getP2(var,it) )/(c*p*h/(2*tau) + a/h);
+                matrix[i] = strMatrix;
+                continue;
+            }
+
+            auto aNext = calculateA(var, j + 1);
+
+
+            if (i == 0) { // для y1
+                strMatrix[0] = 0.0;
+                strMatrix[1] = (1.0 / h) * (a + aNext) + (c * p * h) / tau;
+                strMatrix[2] = -(1.0 / h) * aNext;
+                b[i] = (c * p * h / tau) * yPrevLayer[j] + (1.0 / h) * a * y0;
+                matrix[i] = strMatrix;
+                continue;
+            }
+
+
+
+            b[i] = (c * p * h / tau) * yPrevLayer[j];
+            strMatrix[0] = -(1.0 / h) * a;
+            strMatrix[1] = (1.0 / h) * (a + aNext) + (c * p * h) / tau;
+            strMatrix[2] = -(1.0 / h) * aNext;
+            matrix[i] = strMatrix;
+        }
+        return make_pair(matrix, b);
+
+    }
+    double getP2(Var *var, int it){
+        auto t0=var->t0;
+        auto Q = var->Q;
+        auto t = var->T[it];
+        if(t<t0){
+            return 2*Q*t;
+        }
+        return 0;
+
+    }
+    double calculateA(Var *var, int ix) {
         //5 cлучаев так как считаем аналитически
 
         // уравнение для среднего отрезка-9x+6.5(c учетом параметров);
         auto middleIntegral =[](double z){return (-1.0/9)*log(-9*z + 6.5);};
-
-        if (x<=par->x1){ // от нуля до x1
-            auto a=(x-xPrev)/(par->k1*h);
+        auto x = var->X[ix];
+        auto xPrev = var->X[ix-1];
+        auto h =var->h;
+        if (x<=var->x1){ // от нуля до x1
+            auto a=(x-xPrev)/(var->k1*h);
 //            std::cout<<1.0/a<<std::endl;
             return 1.0/a;
         }
-        if ( (xPrev<=par->x1) && (x>par->x1) && (x<par->x2) ){
-            auto a1= (par->x1-xPrev)/(par->k1 *h);
-            auto a2= ( middleIntegral(x) - middleIntegral(par->x1) )/h;
+        if ( (xPrev<=var->x1) && (x>var->x1) && (x<var->x2) ){
+            auto a1= (var->x1-xPrev)/(var->k1 *h);
+            auto a2= ( middleIntegral(x) - middleIntegral(var->x1) )/h;
 //            std::cout<<1.0/(a1+a2)<<std::endl;
             return 1.0/(a1+a2);
         }
 
-        if ( (xPrev>par->x1) && (x<par->x2) ){
+        if ( (xPrev>var->x1) && (x<var->x2) ){
             auto a = ( middleIntegral(x) - middleIntegral(xPrev) )/h;
 //            std::cout<<1.0/(a)<<std::endl;
             return 1.0/a;
         }
 
-        if ( (xPrev<par->x2) && (x>=par->x2) && (x<par->l) ){
-            auto a1= ( middleIntegral(par->x2) - middleIntegral(xPrev) )/h;
-            auto a2= (x-par->x2)/(par->k2 *h);
+        if ( (xPrev<var->x2) && (x>=var->x2) && (x<var->l) ){
+            auto a1= ( middleIntegral(var->x2) - middleIntegral(xPrev) )/h;
+            auto a2= (x-var->x2)/(var->k2 *h);
 //            std::cout<<1.0/(a1+a2)<<std::endl;
             return 1.0/(a1+a2);
         }
 
-        if (xPrev>=par->x2){
-            auto a=(x-xPrev)/(par->k2*h);
+        if (xPrev>=var->x2){
+            auto a=(x-xPrev)/(var->k2*h);
 //            std::cout<<1.0/(a)<<std::endl;
             return 1.0/a;
         }
@@ -67,7 +223,14 @@ public:
     }
 };
 
-class Equations1 : public Equations {
+class Equations2 : public Equations {
+    int getKindLeft() override {
+        return 1;
+    }
+
+    int getKindRight() override {
+        return 2;
+    } // вид граничных условий
 
 //    double getExplicitValue(double h, double tau, double yPrev, double y, double yNext) override {
 //        double aNext = 1.0;
@@ -76,16 +239,66 @@ class Equations1 : public Equations {
 //               ((aNext) * (yNext - y) - (a) * (y - yPrev)) + y;
 //    }
 
-    double getBoundValueLeft(int j) override {
-            return par->u0;
+    double getBoundValueLeft(Var *var, int it) override {
+            return var->u0;
     }
 
-    double getBoundValueRight(int j) override {
-            return par->u0;
+    double getBoundValueRight(Var *var, int it) override {
+        auto sigma=var->sigma;
+        auto tau=var->tau;
+        auto h = var->h;
+        auto c = var->c;
+        auto p = var->p;
+        auto a = calculateA(var, static_cast<int>(var->X.size() - 1));// второай аргумент ix
+
+        if (sigma==0){
+//            return (2.0*tau/(h*var->c*var->p))*(getP2(var,it)-var->U[it-1][var->X.size()-1]*calculateA(var, static_cast<int>(var->X.size() - 1)))
+//                   + var->U[it-1][var->X.size()-1];
+        return ( (c*p*h*var->U[it-1][var->X.size()-1])/(2*tau) + (getP2(var,it-1)-a*var->U[it-1][var->X.size()-1]) )/( c*p*h/(2*tau) );
+        }
+//        if (sigma==1){
+//            return
+//        }
+//         return var->u0;
     }
 
-    double getBeginningValue(double x) override {
-            return par->u0 + x*(par->l-x);
+    double getBeginningValue(Var *var, int ix) override {
+//            return var->u0 + x*(var->l-x);
+            return var->u0;
+    }
+
+};
+
+
+class Equations1 : public Equations {
+public:
+    int getKindLeft() override {
+        return 1;
+    }
+
+    int getKindRight() override {
+        return 1;
+    } // вид граничных условий
+
+private:
+//    double getExplicitValue(double h, double tau, double yPrev, double y, double yNext) override {
+//        double aNext = 1.0;
+//        double a = 1.0;
+//        return (tau / (h * h * c * p)) *
+//               ((aNext) * (yNext - y) - (a) * (y - yPrev)) + y;
+//    }
+
+    double getBoundValueLeft(Var *var, int it) override {
+        return var->u0;
+    }
+
+    double getBoundValueRight(Var *var, int it) override {
+        return var->u0;
+    }
+
+    double getBeginningValue(Var *var, int ix) override {
+        auto x = var->X[ix];
+        return var->u0 + x*(var->l-x);
     }
 
 };

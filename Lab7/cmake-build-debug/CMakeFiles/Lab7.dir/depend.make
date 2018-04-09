@@ -4,7 +4,9 @@
 CMakeFiles/Lab7.dir/main.cpp.o: ../Equations.h
 CMakeFiles/Lab7.dir/main.cpp.o: ../Params.h
 CMakeFiles/Lab7.dir/main.cpp.o: ../Solve.h
+CMakeFiles/Lab7.dir/main.cpp.o: ../Var.h
 CMakeFiles/Lab7.dir/main.cpp.o: ../helping/workWithConsole.cpp
 CMakeFiles/Lab7.dir/main.cpp.o: ../helping/workWithConsole.h
 CMakeFiles/Lab7.dir/main.cpp.o: ../main.cpp
+CMakeFiles/Lab7.dir/main.cpp.o: ../solveSystem/Sweep.h
 

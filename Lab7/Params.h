@@ -1,28 +1,25 @@
+
+// Created by andrey on 08.04.18.
 //
-// Created by andrey on 29.03.18.
-//
 
-#ifndef LAB7_PARAMS_H
-#define LAB7_PARAMS_H
+#ifndef LAB7_PAR_H
+#define LAB7_PAR_H
 
 
-class Params {
+struct Params {  //объект, который содержит начало, шаг и кол-во шагов какой-либо переменной
 public:
-        const double p=0.25;
-        const double c = 2.0;
-        const double alpha = 0.5;
-        const double beta = 2;
-        const double gamma = 2;
-        const double u0= 0.2;
-        const double k1=2.0;
-        const double k2=0.5;
-        const double x1=0.5;
-        const double x2=2.0/3.0;
-        const double l =1.0;
-        const double Q = 10.0;
+    Params(double start,double step, int n):start(start),step(step),n(n){}
+    double start;
+    double step;
+    int n; //кол-во шагов
+};
 
+struct GridParam{
+public:
+    Params* X;
+    Params* T;
+    GridParam(Params* X, Params* T):X(X), T(T){}
 };
 
 
-
-#endif //LAB7_PARAMS_H
+#endif //LAB7_PAR_H

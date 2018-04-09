@@ -9,10 +9,22 @@
 /home/andrey/CLionProjects/NumericalMethods/Lab7/Equations.h
 cassert
 -
-Params.h
-/home/andrey/CLionProjects/NumericalMethods/Lab7/Params.h
-math.h
-/home/andrey/CLionProjects/NumericalMethods/Lab7/math.h
+Var.h
+/home/andrey/CLionProjects/NumericalMethods/Lab7/Var.h
+solveSystem/Sweep.h
+/home/andrey/CLionProjects/NumericalMethods/Lab7/solveSystem/Sweep.h
+helping/workWithConsole.h
+/home/andrey/CLionProjects/NumericalMethods/Lab7/helping/workWithConsole.h
+iostream
+-
+cmath
+-
+utility
+-
+vector
+-
+tuple
+-
 
 /home/andrey/CLionProjects/NumericalMethods/Lab7/Params.h
 
@@ -27,6 +39,18 @@ Equations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab7/Equations.h
 helping/workWithConsole.h
 /home/andrey/CLionProjects/NumericalMethods/Lab7/helping/workWithConsole.h
+Params.h
+/home/andrey/CLionProjects/NumericalMethods/Lab7/Params.h
+
+/home/andrey/CLionProjects/NumericalMethods/Lab7/Var.h
+iostream
+-
+vector
+-
+Solve.h
+/home/andrey/CLionProjects/NumericalMethods/Lab7/Solve.h
+Params.h
+/home/andrey/CLionProjects/NumericalMethods/Lab7/Params.h
 
 /home/andrey/CLionProjects/NumericalMethods/Lab7/helping/workWithConsole.cpp
 iostream
@@ -49,6 +73,14 @@ iostream
 -
 Solve.h
 /home/andrey/CLionProjects/NumericalMethods/Lab7/Solve.h
+vector
+-
+
+/home/andrey/CLionProjects/NumericalMethods/Lab7/solveSystem/Sweep.h
+iostream
+-
+utility
+-
 vector
 -
 
