@@ -25,7 +25,7 @@ public:
         auto U = var->U;
         double aNext = calculateA(var,ix+1);
         double a = calculateA(var,ix);
-        return (var->tau / (var->h * var->h * var->c * var->p) * (1 - var->sigma)) *
+        return (var->tau / (var->h * var->h * var->c * var->p)) *
                ((aNext) * (U[it-1][ix+1] - U[it-1][ix]) - (a) * (U[it-1][ix] - U[it-1][ix-1])) + U[it-1][ix];
     }
 

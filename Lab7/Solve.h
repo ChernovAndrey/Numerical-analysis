@@ -58,6 +58,50 @@ public:
         cout<<gp->X->n<<endl;
     };
 
+
+    vector<double> merge(const vector<double> &UiEx, const vector<double> &UiIm, double sigma){
+        vector<double> Ui(UiEx.size());
+        for (int i = 0; i < UiEx.size(); ++i) {
+            Ui[i]= sigma*UiIm[i] + (1-sigma)*UiEx[i];
+        }
+        return Ui;
+
+    }
+
+    vector<vector<double>> calculate(){
+//        auto UExp = calculateExplicit();
+//        auto UImp = calculateImplicit();
+
+        cout<<gp->X->step;
+        vector<double> U0(gp->X->n);//при t равном нулю
+
+        for(int i=0;i<U0.size();i++){
+            U0[i]=equations->getBeginningValue(var,i);
+        }
+
+        var->U.push_back(U0);
+//        printMatrix(U);
+        double h = gp->X->step;
+        double tau = gp->T->step;
+        for(int i=1;i<gp->T->n;i++){
+            vector<double> UiEx(gp->X->n);
+            UiEx[0]=equations->getBoundValueLeft(var,i);
+            for (int j = 1; j < gp->X->n-1; j++) {
+                UiEx[j] =equations->getExplicitValue(var,i,j);
+            }
+            UiEx[UiEx.size()-1]= equations->getBoundValueRight(var,i);
+
+            vector<double> Ui(gp->X->n);
+            auto UiIm = equations->getFullImplicitValue(var,i);
+            var->U.push_back(merge(UiEx,UiIm,var->sigma) );
+        }
+        return var->U;
+
+    }
+
+
+
+
     vector<vector<double>> calculateExplicit(){
      //   vector<vector<double>> U;// то есть сначала время.
         cout<<gp->X->step;
@@ -99,13 +143,7 @@ public:
         vector<double> X(U0.size());
         for(int i=1;i<gp->T->n;i++){
             vector<double> Ui(gp->X->n);
-
-          //  double t = gp->T->start + gp->T->step*(i-1);
-
-
             var->U.push_back( equations->getFullImplicitValue(var,i) );
-            //          cout<<"size: "<<U.size()<<"  "<<var->U[0].size()<<endl;
-            //     printMatrix(U);
         }
         return var->U;
     }
@@ -118,7 +156,7 @@ public:
 
 
 //private:
-    Equations* equations= new Equations2();
+    Equations* equations= new Equations1();
     double sigma = 0;
     GridParam *gp;
     Var *var;
