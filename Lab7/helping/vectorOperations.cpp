@@ -51,3 +51,15 @@ T getResidual(vector<T> a,vector<T> b){
     }
     return sqrt(norm);
 }
+
+
+template <typename T>
+T normVectorC(vector<T> v){
+    T  max =0.0;
+    for (int i = 0; i < v.size(); ++i) {
+        if (max<abs(v[i])){
+            max = abs(v[i]);
+        }
+    }
+    return max;
+}

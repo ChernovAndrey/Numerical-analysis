@@ -323,4 +323,37 @@ private:
 };
 
 
+
+class EquationsTest : public Equations {
+public:
+    int getKindLeft() override {
+        return 1;
+    }
+
+    int getKindRight() override {
+        return 1;
+    } // вид граничных условий
+
+private:
+//    double getExplicitValue(double h, double tau, double yPrev, double y, double yNext) override {
+//        double aNext = 1.0;
+//        double a = 1.0;
+//        return (tau / (h * h * c * p)) *
+//               ((aNext) * (yNext - y) - (a) * (y - yPrev)) + y;
+//    }
+
+    double getBoundValueLeft(Var *var, int it) override {
+        return 0.0;
+    }
+
+    double getBoundValueRight(Var *var, int it) override {
+        return 0.0;
+    }
+
+    double getBeginningValue(Var *var, int ix) override {
+        auto x = var->X[ix];
+        return var->u0 + x*(var->l-x);
+    }
+
+};
 #endif //LAB7_EQUATIONS_H

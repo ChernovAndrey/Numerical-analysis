@@ -6,6 +6,8 @@ CMakeFiles/Lab7.dir/main.cpp.o
  /home/andrey/CLionProjects/NumericalMethods/Lab7/Params.h
  /home/andrey/CLionProjects/NumericalMethods/Lab7/Solve.h
  /home/andrey/CLionProjects/NumericalMethods/Lab7/Var.h
+ /home/andrey/CLionProjects/NumericalMethods/Lab7/helping/vectorOperations.cpp
+ /home/andrey/CLionProjects/NumericalMethods/Lab7/helping/vectorOperations.h
  /home/andrey/CLionProjects/NumericalMethods/Lab7/helping/workWithConsole.cpp
  /home/andrey/CLionProjects/NumericalMethods/Lab7/helping/workWithConsole.h
  /home/andrey/CLionProjects/NumericalMethods/Lab7/main.cpp

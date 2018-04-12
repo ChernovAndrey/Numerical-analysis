@@ -52,6 +52,22 @@ Solve.h
 Params.h
 /home/andrey/CLionProjects/NumericalMethods/Lab7/Params.h
 
+/home/andrey/CLionProjects/NumericalMethods/Lab7/helping/vectorOperations.cpp
+iostream
+-
+vector
+-
+cmath
+-
+
+/home/andrey/CLionProjects/NumericalMethods/Lab7/helping/vectorOperations.h
+iostream
+-
+vector
+-
+vectorOperations.cpp
+/home/andrey/CLionProjects/NumericalMethods/Lab7/helping/vectorOperations.cpp
+
 /home/andrey/CLionProjects/NumericalMethods/Lab7/helping/workWithConsole.cpp
 iostream
 -
@@ -73,6 +89,8 @@ iostream
 -
 Solve.h
 /home/andrey/CLionProjects/NumericalMethods/Lab7/Solve.h
+helping/vectorOperations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab7/helping/vectorOperations.h
 vector
 -
 

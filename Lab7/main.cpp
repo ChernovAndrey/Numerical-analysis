@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Solve.h"
+#include "helping/vectorOperations.h"
 #include <vector>
 using namespace std;
 
@@ -46,9 +47,11 @@ void writingData(vector<vector<double>> U){
 //лямда равна единице
 vector<double> getAccuracy(double h,  double x0, double xf,  double tf){ //для первого уравнения
     auto getSolution = [](double t, double x){
-        auto C1=0.2;
-        auto C2=C1*(1- cos(1.0))/( sin(1) );
-        return exp(-t)*( C1*cos(x) + C2*sin(x) ) ;
+        int n =1;
+        double l =1.0;
+        auto pi = M_PI;
+        auto C1=8/pow((M_PI),3);
+        return C1*exp( -(pi*n/l)*(pi*n/l) * t)*sin( (n*pi*x)/l );
     };
     vector<double> UAcc;
     for (double i = x0; i <= xf ; i+=h) {
@@ -76,9 +79,9 @@ int main() {
     double x0=0;
     double xf=1;
     double t0=0.0;
-    double tf=1.0;
+    double tf=0.5;
 
-    double sigma = 0.5;
+    double sigma = 0.0;
     auto * solve = new Solve(h,tau,x0,xf,t0,tf,sigma);
     auto U = solve->calculate();
 
@@ -91,7 +94,17 @@ int main() {
 
     printMaxTMiddle(U);
 
-//    cout<<"Accuracy"<<endl;
-//    printVector(getAccuracy(h,x0,xf,tf));
-    return 0;
+
+
+    auto flagCompare = true;//cравнивать с точным решением, только для тестовой задачи
+
+    if (flagCompare){
+
+        cout << "Accuracy" << endl;
+        auto accur = getAccuracy(h, x0, xf, tf);
+        printVector(accur);
+        cout<<"Residual:"<<endl;
+        cout<<normVectorC( diffVectors(accur,U[U.size()-1]) );
+    }
+        return 0;
 }

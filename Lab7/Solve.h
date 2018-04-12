@@ -170,7 +170,7 @@ public:
 
 
 //private:
-    Equations* equations= new Equations1();
+    Equations* equations= new EquationsTest();
     double sigma = 0;
     GridParam *gp;
     Var *var;
