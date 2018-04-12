@@ -75,13 +75,13 @@ void printMaxTMiddle(vector<vector<double>> U){
 int main() {
 
     double h=0.1;
-    double tau=0.1;  //0.062e-1 -граница сх-ти явного метода  для Ex1
+    double tau=0.0005;  //0.062e-1 -граница сх-ти явного метода  для Ex1
     double x0=0;
     double xf=1;
     double t0=0.0;
-    double tf=0.5;
+    double tf=1.0;
 
-    double sigma = 0.0;
+    double sigma = 1.0;
     auto * solve = new Solve(h,tau,x0,xf,t0,tf,sigma);
     auto U = solve->calculate();
 
