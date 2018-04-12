@@ -62,7 +62,9 @@ public:
     vector<double> merge(const vector<double> &UiEx, const vector<double> &UiIm, double sigma){
         vector<double> Ui(UiEx.size());
         for (int i = 0; i < UiEx.size(); ++i) {
-            Ui[i]= sigma*UiIm[i] + (1-sigma)*UiEx[i];
+            cout<<"Im:"<<UiIm[i]<<endl;
+            cout<<"Ex:"<<UiEx[i]<<endl;
+            Ui[i]= UiIm[i] + UiEx[i];
         }
         return Ui;
 
@@ -85,15 +87,27 @@ public:
         double tau = gp->T->step;
         for(int i=1;i<gp->T->n;i++){
             vector<double> UiEx(gp->X->n);
-            UiEx[0]=equations->getBoundValueLeft(var,i);
-            for (int j = 1; j < gp->X->n-1; j++) {
-                UiEx[j] =equations->getExplicitValue(var,i,j);
+            if(var->sigma!=1) {
+                UiEx[0]=(1-var->sigma)*equations->getBoundValueLeft(var,i);
+                for (int j = 1; j < gp->X->n - 1; j++) {
+                    UiEx[j] = equations->getExplicitValue(var, i, j);
+                }
+                UiEx[UiEx.size()-1]= (1-var->sigma)*equations->getBoundValueRight(var,i);
+
             }
-            UiEx[UiEx.size()-1]= equations->getBoundValueRight(var,i);
 
             vector<double> Ui(gp->X->n);
-            auto UiIm = equations->getFullImplicitValue(var,i);
-            var->U.push_back(merge(UiEx,UiIm,var->sigma) );
+            if(sigma!=0) {
+                auto UiIm = equations->getFullImplicitValue(var, i);
+           //     if(sigma==1) {
+                    var->U.push_back(UiIm);
+//                }else {
+//                        var->U.push_back(merge(UiEx, UiIm, var->sigma));
+//                }
+            }else{
+                var->U.push_back(UiEx);
+            }
+            //var->U.push_back(merge(UiEx,UiIm,var->sigma) );
         }
         return var->U;
 

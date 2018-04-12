@@ -16,8 +16,10 @@ class Var {
 public:
     Var(double h, double tau, double sigma): h(h), tau(tau), sigma(sigma){}
 
-    const double p = 0.25;
-    const double c = 2.0;
+//    const double p = 0.25;
+    const double p =1.0;
+//    const double c = 2.0;
+    const double c = 1.0;
     const double alpha = 0.5;
     const double beta = 2;
     const double gamma = 2;

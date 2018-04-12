@@ -25,10 +25,26 @@ public:
         auto U = var->U;
         double aNext = calculateA(var,ix+1);
         double a = calculateA(var,ix);
-        return (var->tau / (var->h * var->h * var->c * var->p)) *
-               ((aNext) * (U[it-1][ix+1] - U[it-1][ix]) - (a) * (U[it-1][ix] - U[it-1][ix-1])) + U[it-1][ix];
+//        return (1-var->sigma)*(var->tau / (var->h  * var->c * var->p)) *
+//               ((aNext) * (U[it-1][ix+1] - U[it-1][ix]) - (a) * (U[it-1][ix] - U[it-1][ix-1])) + U[it-1][ix];
+
+        return (1-var->sigma)*(var->tau/(var->h * var->c * var->p)) *
+                ( getOmega(var,it,ix,0.5) - getOmega(var,it,ix,-0.5) ) + U[it-1][ix];
     }
 
+    double getOmega(Var *var, int it, int ix, double flag){ // flag +0.5 или минус 0.5
+        auto U = var->U;
+        if(flag==0.5){
+            auto a = calculateA(var,ix+1);
+            return (a/var->h)*(U[it-1][ix+1] - U[it-1][ix]);
+        }
+
+        if(flag==-0.5){
+            auto a = calculateA(var,ix);
+            return (a/var->h)*(U[it-1][ix] - U[it-1][ix-1]);
+        }
+        assert(false);
+    }
 
 
 
@@ -73,7 +89,7 @@ public:
 
         auto c = var->c;
         auto p = var->p;
-
+        auto sigma = var->sigma;
         auto n = var->X.size() - 2;// так как y0 и yN я знаю
         vector<vector<double>> matrix(n);
         vector<double> b(n);
@@ -92,9 +108,10 @@ public:
 
             if (i == 0) { // для y1
                 strMatrix[0] = 0.0;
-                strMatrix[1] = (1.0 / h) * (a + aNext) + (c * p * h) / tau;
-                strMatrix[2] = -(1.0 / h) * aNext;
-                b[i] = (c * p * h / tau) * yPrevLayer[j] + (1.0 / h) * a * y0;
+                strMatrix[1] = (sigma / h) * (a + aNext) + (c * p * h) / tau;
+                strMatrix[2] = -(sigma / h) * aNext;
+                b[i] = (c * p * h / tau) * yPrevLayer[j] +
+                        (1-sigma)*( getOmega(var,it,j,0.5) - getOmega(var,it,j,-0.5) ) + (sigma/h)*a*y0 ;
                 matrix[i] = strMatrix;
                 continue;
             }
@@ -102,17 +119,19 @@ public:
 
             if (i == n - 1) { // для yN-1
                 strMatrix[2] = 0.0;
-                strMatrix[1] = (1.0 / h) * (a + aNext) + (c * p * h) / tau;
-                strMatrix[0] = -(1.0 / h) * a;
-                b[i] = (c * p * h / tau) * yPrevLayer[j] + (1.0 / h) * aNext * yN;
+                strMatrix[1] = (sigma / h) * (a + aNext) + (c * p * h) / tau;
+                strMatrix[0] = -(sigma / h) * a;
+                b[i] = (c * p * h / tau) * yPrevLayer[j] +
+                        (1-sigma)*( getOmega(var,it,j,0.5) - getOmega(var,it,j,-0.5) ) + (sigma / h) * aNext * yN;
                 matrix[i] = strMatrix;
                 continue;
             }
 
-            b[i] = (c * p * h / tau) * yPrevLayer[j];
-            strMatrix[0] = -(1.0 / h) * a;
-            strMatrix[1] = (1.0 / h) * (a + aNext) + (c * p * h) / tau;
-            strMatrix[2] = -(1.0 / h) * aNext;
+            b[i] = (c * p * h / tau) * yPrevLayer[j] +
+                    (1-sigma)*( getOmega(var,it,j,0.5) - getOmega(var,it,j,-0.5) );
+            strMatrix[0] = -(sigma / h) * a;
+            strMatrix[1] = (sigma / h) * (a + aNext) + (c * p * h) / tau;
+            strMatrix[2] = -(sigma / h) * aNext;
             matrix[i] = strMatrix;
         }
         return make_pair(matrix, b);
@@ -181,9 +200,9 @@ public:
         return 0;
 
     }
-    double calculateA(Var *var, int ix) {
+    double  calculateA(Var *var, int ix) {
         //5 cлучаев так как считаем аналитически
-
+        return 1/( (var->X[ix]-var->X[ix-1]) )*var->h;
         // уравнение для среднего отрезка-9x+6.5(c учетом параметров);
         auto middleIntegral =[](double z){return (-1.0/9)*log(-9*z + 6.5);};
         auto x = var->X[ix];

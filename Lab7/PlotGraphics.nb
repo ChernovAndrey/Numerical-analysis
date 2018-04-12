@@ -10,259 +10,105 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9978,        295]
-NotebookOptionsPosition[      8887,        267]
-NotebookOutlinePosition[      9226,        282]
-CellTagsIndexPosition[      9183,        279]
+NotebookDataLength[      5101,        129]
+NotebookOptionsPosition[      4680,        113]
+NotebookOutlinePosition[      5019,        128]
+CellTagsIndexPosition[      4976,        125]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"Ui", "=", 
-   RowBox[{"ReadList", "[", 
-    RowBox[{
-    "\"\</home/andrey/CLionProjects/NumericalMethods/Lab7/files/Ui1.txt\>\"", 
-     ",", 
-     RowBox[{"{", "Number", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"ListLinePlot", "[", 
-  RowBox[{
-   RowBox[{"Flatten", "@", "Ui"}], ",", 
-   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "Input",
- CellChangeTimes->{{3.731378675598027*^9, 3.731378675830749*^9}, {
-   3.731379771422496*^9, 3.731379791304489*^9}, 
-   3.732009830274784*^9},ExpressionUUID->"98246676-3f90-451d-8dbf-\
-10a2a93d1459"],
-
 Cell[BoxData[
- GraphicsBox[{{}, {{}, {}, 
-    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.019444444444444445`],
-      AbsoluteThickness[1.6], 
-     LineBox[{{1., 0.2}, {2., 0.36}, {3., 0.44}, {4., 0.44}, {5., 0.36}, {6., 
-      0.2}}]}}, {}, {}, {}, {}},
-  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-  Axes->{True, True},
-  AxesLabel->{None, None},
-  AxesOrigin->{0.921875, 0},
-  DisplayFunction->Identity,
-  Frame->{{False, False}, {False, False}},
-  FrameLabel->{{None, None}, {None, None}},
-  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
-  GridLines->{None, None},
-  GridLinesStyle->Directive[
-    GrayLevel[0.5, 0.4]],
-  ImagePadding->All,
-  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
-        (Identity[#]& )[
-         Part[#, 1]], 
-        (Identity[#]& )[
-         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
-        (Identity[#]& )[
-         Part[#, 1]], 
-        (Identity[#]& )[
-         Part[#, 2]]}& )}},
-  PlotRange->{{1., 6.}, {0, 0.44}},
-  PlotRangeClipping->True,
-  PlotRangePadding->{{
-     Scaled[0.02], 
-     Scaled[0.02]}, {
-     Scaled[0.02], 
-     Scaled[0.05]}},
-  Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{{3.7313797868004313`*^9, 3.7313798292396107`*^9}, 
-   3.731379883296674*^9, {3.7313800244262657`*^9, 3.731380041611013*^9}, 
-   3.732008435791359*^9, 3.73200966630184*^9, {3.732009717309143*^9, 
-   3.7320097210098743`*^9}, 3.732009830979628*^9, 3.7320099676689653`*^9, 
-   3.732009999606124*^9, 
-   3.732012612961364*^9},ExpressionUUID->"21ff9331-25a2-4375-a216-\
-8d07496b92b4"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"Ui", "=", 
-   RowBox[{"ReadList", "[", 
-    RowBox[{
-    "\"\</home/andrey/CLionProjects/NumericalMethods/Lab7/files/Ui2.txt\>\"", 
-     ",", 
-     RowBox[{"{", "Number", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"ListLinePlot", "[", 
-  RowBox[{
-   RowBox[{"Flatten", "@", "Ui"}], ",", 
-   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "Input",
- CellChangeTimes->{{3.732009842480459*^9, 
-  3.732009842629953*^9}},ExpressionUUID->"5e893478-21dd-42c7-8a8f-\
-98a8c43e19bc"],
-
-Cell[BoxData[
- GraphicsBox[{{}, {{}, {}, 
-    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.019444444444444445`],
-      AbsoluteThickness[1.6], 
-     LineBox[{{1., 0.2}, {2., 0.212435}, {3., 0.222211}, {4., 0.228067}, {5., 
-      0.224689}, {6., 0.2}}]}}, {}, {}, {}, {}},
-  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-  Axes->{True, True},
-  AxesLabel->{None, None},
-  AxesOrigin->{0.921875, 0.19859665},
-  DisplayFunction->Identity,
-  Frame->{{False, False}, {False, False}},
-  FrameLabel->{{None, None}, {None, None}},
-  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
-  GridLines->{None, None},
-  GridLinesStyle->Directive[
-    GrayLevel[0.5, 0.4]],
-  ImagePadding->All,
-  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
-        (Identity[#]& )[
-         Part[#, 1]], 
-        (Identity[#]& )[
-         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
-        (Identity[#]& )[
-         Part[#, 1]], 
-        (Identity[#]& )[
-         Part[#, 2]]}& )}},
-  PlotRange->{{1., 6.}, {0.2, 0.228067}},
-  PlotRangeClipping->True,
-  PlotRangePadding->{{
-     Scaled[0.02], 
-     Scaled[0.02]}, {
-     Scaled[0.05], 
-     Scaled[0.05]}},
-  Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{{3.732009839957172*^9, 3.732009843117107*^9}, 
-   3.732009969536462*^9, 3.732010001432413*^9, 
-   3.732012614348987*^9},ExpressionUUID->"88fddc88-298c-46ec-a5f8-\
-50b2f321abe0"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{"Ui", "=", 
+    RowBox[{"steps", "=", 
      RowBox[{"ReadList", "[", 
       RowBox[{
-      "\"\</home/andrey/CLionProjects/NumericalMethods/Lab7/files/Ui3.txt\>\"\
-", ",", 
-       RowBox[{"{", "Number", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   
-   RowBox[{"ListLinePlot", "[", 
+      "\"\</home/andrey/CLionProjects/NumericalMethods/Lab7/files/config.txt\>\
+\"", ",", "Number"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", 
     RowBox[{
-     RowBox[{"Flatten", "@", "Ui"}], ",", 
-     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}]}]], "Input",
- CellChangeTimes->{{3.7320098460827417`*^9, 
-  3.73200984914017*^9}},ExpressionUUID->"17ec25de-67f3-42f0-90cb-\
-9a2221484343"],
-
-Cell[BoxData[
- GraphicsBox[{{}, {{}, {}, 
-    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.019444444444444445`],
-      AbsoluteThickness[1.6], 
-     LineBox[{{1., 0.2}, {2., 0.201409}, {3., 0.202519}, {4., 0.203186}, {5., 
-      0.202815}, {6., 0.2}}]}}, {}, {}, {}, {}},
-  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-  Axes->{True, True},
-  AxesLabel->{None, None},
-  AxesOrigin->{0.921875, 0.1998407},
-  DisplayFunction->Identity,
-  Frame->{{False, False}, {False, False}},
-  FrameLabel->{{None, None}, {None, None}},
-  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
-  GridLines->{None, None},
-  GridLinesStyle->Directive[
-    GrayLevel[0.5, 0.4]],
-  ImagePadding->All,
-  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
-        (Identity[#]& )[
-         Part[#, 1]], 
-        (Identity[#]& )[
-         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
-        (Identity[#]& )[
-         Part[#, 1]], 
-        (Identity[#]& )[
-         Part[#, 2]]}& )}},
-  PlotRange->{{1., 6.}, {0.2, 0.203186}},
-  PlotRangeClipping->True,
-  PlotRangePadding->{{
-     Scaled[0.02], 
-     Scaled[0.02]}, {
-     Scaled[0.05], 
-     Scaled[0.05]}},
-  Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.7320098497865133`*^9, 3.732009970973855*^9, 
-  3.732010002836318*^9, 
-  3.7320126156361237`*^9},ExpressionUUID->"fc4e45db-239b-4f5b-a7af-\
-1c5d1ab0f54f"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  
-  RowBox[{
-   RowBox[{
-    RowBox[{"Ui", "=", 
-     RowBox[{"ReadList", "[", 
+     RowBox[{"ListLinePlot", "[", 
       RowBox[{
-      "\"\</home/andrey/CLionProjects/NumericalMethods/Lab7/files/Ui4.txt\>\"\
-", ",", 
-       RowBox[{"{", "Number", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   
-   RowBox[{"ListLinePlot", "[", 
-    RowBox[{
-     RowBox[{"Flatten", "@", "Ui"}], ",", 
-     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}]}]], "Input",
- CellChangeTimes->{{3.732009917140674*^9, 
-  3.732009922384901*^9}},ExpressionUUID->"bfa45f35-ed64-45b2-902a-\
+       RowBox[{"Partition", "[", 
+        RowBox[{
+         RowBox[{"Flatten", "[", 
+          RowBox[{"Import", "[", 
+           RowBox[{
+           "\"\</home/andrey/CLionProjects/NumericalMethods/Lab7/files/Ui.txt\
+\>\"", ",", "\"\<Table\>\""}], "]"}], "]"}], ",", 
+         RowBox[{"steps", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], " ", "]"}], "[", 
+       RowBox[{"[", "k", "]"}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "1", ",", 
+       RowBox[{"steps", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], ",", "1"}], "}"}]}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.732009917140674*^9, 3.732009922384901*^9}, {
+  3.732414361277466*^9, 3.732414396333769*^9}, {3.732414548369083*^9, 
+  3.732414549345084*^9}, {3.732414906232239*^9, 3.7324149085341063`*^9}, {
+  3.732415022889835*^9, 3.732415024547989*^9}, {3.7324151431969233`*^9, 
+  3.732415145258258*^9}, {3.7324162657761602`*^9, 3.732416266534778*^9}, {
+  3.732416353604024*^9, 3.7324163796482067`*^9}, {3.732416911073141*^9, 
+  3.732416912523589*^9}, {3.732417089205755*^9, 3.7324172057801*^9}, {
+  3.732417354046525*^9, 3.732417355478181*^9}, {3.73254361024098*^9, 
+  3.732543619333117*^9}, {3.7325437312139263`*^9, 3.732543773306291*^9}, {
+  3.732543997714925*^9, 3.7325444229406977`*^9}, {3.732544484571521*^9, 
+  3.732544647335301*^9}},ExpressionUUID->"bfa45f35-ed64-45b2-902a-\
 96c1e9e6a148"],
 
 Cell[BoxData[
- GraphicsBox[{{}, {{}, {}, 
-    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.019444444444444445`],
-      AbsoluteThickness[1.6], 
-     LineBox[{{1., 0.2}, {2., 0.200018}, {3., 0.200033}, {4., 0.200041}, {5., 
-      0.200036}, {6., 0.2}}]}}, {}, {}, {}, {}},
-  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-  Axes->{True, True},
-  AxesLabel->{None, None},
-  AxesOrigin->{0.921875, 0.19999795},
-  DisplayFunction->Identity,
-  Frame->{{False, False}, {False, False}},
-  FrameLabel->{{None, None}, {None, None}},
-  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
-  GridLines->{None, None},
-  GridLinesStyle->Directive[
-    GrayLevel[0.5, 0.4]],
-  ImagePadding->All,
-  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
-        (Identity[#]& )[
-         Part[#, 1]], 
-        (Identity[#]& )[
-         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
-        (Identity[#]& )[
-         Part[#, 1]], 
-        (Identity[#]& )[
-         Part[#, 2]]}& )}},
-  PlotRange->{{1., 6.}, {0.2, 0.200041}},
-  PlotRangeClipping->True,
-  PlotRangePadding->{{
-     Scaled[0.02], 
-     Scaled[0.02]}, {
-     Scaled[0.05], 
-     Scaled[0.05]}},
-  Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.732009923687043*^9, 3.7320099732593307`*^9, 
-  3.7320100045804453`*^9, 
-  3.732012617800905*^9},ExpressionUUID->"c33642d1-0f38-4e88-8c80-\
-a8219ff739ab"]
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`k$$ = 35, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`k$$], 1, 101, 1}}, Typeset`size$$ = {
+    360., {111., 115.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`k$76896$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`k$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`k$$, $CellContext`k$76896$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ListLinePlot[
+        Part[
+         Partition[
+          Flatten[
+           Import[
+           "/home/andrey/CLionProjects/NumericalMethods/Lab7/files/Ui.txt", 
+            "Table"]], 
+          Part[$CellContext`steps, 2]], $CellContext`k$$]], 
+      "Specifications" :> {{$CellContext`k$$, 1, 101, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {166., 171.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7325436229651203`*^9, 3.73254366918227*^9, {3.732543738568385*^9, 
+   3.732543773865553*^9}, {3.732544005612629*^9, 3.7325440941484833`*^9}, {
+   3.732544129816193*^9, 3.7325441636976137`*^9}, {3.7325442160315037`*^9, 
+   3.732544322845057*^9}, {3.7325443651354837`*^9, 3.732544376459083*^9}, {
+   3.732544407296535*^9, 3.732544416840317*^9}, {3.732544493535452*^9, 
+   3.732544500724065*^9}, {3.732544580064302*^9, 
+   3.732544616974902*^9}},ExpressionUUID->"5db1ff25-1c85-4a16-9120-\
+0017d56b430a"]
 }, Open  ]]
 },
 WindowSize->{1855, 1056},
@@ -282,20 +128,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 601, 15, 55, "Input",ExpressionUUID->"98246676-3f90-451d-8dbf-10a2a93d1459"],
-Cell[1184, 39, 1589, 41, 244, "Output",ExpressionUUID->"21ff9331-25a2-4375-a216-8d07496b92b4"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[2810, 85, 528, 14, 55, "Input",ExpressionUUID->"5e893478-21dd-42c7-8a8f-98a8c43e19bc"],
-Cell[3341, 101, 1419, 38, 240, "Output",ExpressionUUID->"88fddc88-298c-46ec-a5f8-50b2f321abe0"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[4797, 144, 595, 17, 78, "Input",ExpressionUUID->"17ec25de-67f3-42f0-90cb-9a2221484343"],
-Cell[5395, 163, 1396, 38, 235, "Output",ExpressionUUID->"fc4e45db-239b-4f5b-a7af-1c5d1ab0f54f"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[6828, 206, 643, 18, 124, "Input",ExpressionUUID->"bfa45f35-ed64-45b2-902a-96c1e9e6a148"],
-Cell[7474, 226, 1397, 38, 231, "Output",ExpressionUUID->"c33642d1-0f38-4e88-8c80-a8219ff739ab"]
+Cell[580, 22, 1815, 39, 124, "Input",ExpressionUUID->"bfa45f35-ed64-45b2-902a-96c1e9e6a148"],
+Cell[2398, 63, 2266, 47, 389, "Output",ExpressionUUID->"5db1ff25-1c85-4a16-9120-0017d56b430a"]
 }, Open  ]]
 }
 ]

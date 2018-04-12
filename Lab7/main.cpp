@@ -21,20 +21,26 @@ void writingData(vector<vector<double>> U){
     const string pathToFile = "/home/andrey/CLionProjects/NumericalMethods/Lab7/files/Ui.txt";
     ofstream file(pathToFile, ios_base::out | ios_base::trunc);
 
-    file << "{";
+   // file << "{";
     for (int i = 0; i < U.size(); i++) {
         auto v = U[i];
-        file << "{ ";
+     //   file << "{ ";
         for (int j = 0; j < v.size(); j++) {
             file << v[j]<<" ";
             if (j!=v.size()-1){
                // file << " ";
             }
         }
-        file << "} ";
+       // file << "} ";
     }
-    file << "}"<<endl;
+   // file << "}"<<endl;
     file.close();
+
+    const string pathToConfig = "/home/andrey/CLionProjects/NumericalMethods/Lab7/files/config.txt";
+    ofstream config(pathToConfig, ios_base::out | ios_base::trunc);
+    config<<U.size()<<endl;
+    config<<U[0].size()<<endl;
+    config.close();
 }
 
 //лямда равна единице
@@ -65,23 +71,21 @@ void printMaxTMiddle(vector<vector<double>> U){
 
 int main() {
 
-    double h=0.25;
-    double tau=0.002;  //0.062e-1 -граница сх-ти явного метода  для Ex1
+    double h=0.1;
+    double tau=0.1;  //0.062e-1 -граница сх-ти явного метода  для Ex1
     double x0=0;
     double xf=1;
     double t0=0.0;
-    double tf=0.5;
+    double tf=1.0;
 
     double sigma = 0.5;
-    Solve* solve = new Solve(h,tau,x0,xf,t0,tf,sigma);
+    auto * solve = new Solve(h,tau,x0,xf,t0,tf,sigma);
     auto U = solve->calculate();
+
     delete solve;
     printMatrix(U);
     cout<<"size="<<U.size()<<'\t'<<U[0].size()<<endl;
      writingData(U);
-//    writingData(U[50],"2");
-//    writingData(U[100],"3");
-//    writingData(U[200],"4");
     printVector(U[0]);
     printVector(U[1]);
 
