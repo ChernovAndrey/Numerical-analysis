@@ -205,6 +205,8 @@ public:
     }
 
     double calculateA(Var *var, int ix) {
+
+
         //5 cлучаев так как считаем аналитически
         return 1 / ((var->X[ix] - var->X[ix - 1])) * var->h;
         // уравнение для среднего отрезка-9x+6.5(c учетом параметров);
@@ -355,6 +357,42 @@ private:
     double getBeginningValue(Var *var, int ix) override {
         auto x = var->X[ix];
         return var->u0 + x * (var->l - x);
+    }
+
+};
+
+
+class EquationsTest2 : public Equations {
+public:
+    int getKindLeft() override {
+        return 1;
+    }
+
+    int getKindRight() override {
+        return 1;
+    } // вид граничных условий
+
+private:
+//    double getExplicitValue(double h, double tau, double yPrev, double y, double yNext) override {
+//        double aNext = 1.0;
+//        double a = 1.0;
+//        return (tau / (h * h * c * p)) *
+//               ((aNext) * (yNext - y) - (a) * (y - yPrev)) + y;
+//    }
+
+    double getBoundValueLeft(Var *var, int it) override {//длина начальная ноль
+        return 1/sqrt(var->T[it]);
+    }
+
+    double getBoundValueRight(Var *var, int it) override {// длина конечная один
+        double t= var->T[it];
+        return (1/sqrt(t))*exp( -1/(4*t) ) ;
+    }
+
+    double getBeginningValue(Var *var, int ix) override { // процесс от 0.1 до 1.1
+        double t =0.1;
+        auto x = var->X[ix];
+        return (1/sqrt(t))* exp( -x*x/(4*t) );
     }
 
 };

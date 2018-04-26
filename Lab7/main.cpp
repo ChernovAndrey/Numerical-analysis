@@ -50,8 +50,20 @@ vector<double> getAccuracy(double h,  double x0, double xf,  double tf){ //дл�
         int n =1;
         double l =1.0;
         auto pi = M_PI;
-        auto C1=8/pow((M_PI),3);
+        auto C1=8/(pow((M_PI),3));
         return C1*exp( -(pi*n/l)*(pi*n/l) * t)*sin( (n*pi*x)/l );
+    };
+    vector<double> UAcc;
+    for (double i = x0; i <= xf ; i+=h) {
+        UAcc.push_back( getSolution(tf,i) );
+    }
+    return UAcc;
+}
+
+
+vector<double> getAccuracy2(double h,  double x0, double xf,  double tf){
+    auto getSolution = [](double t, double x){
+        return (1/sqrt(t))*exp(-x*x/(4*t) );
     };
     vector<double> UAcc;
     for (double i = x0; i <= xf ; i+=h) {
@@ -72,14 +84,24 @@ void printMaxTMiddle(vector<vector<double>> U){
 }
 
 
+
 int main() {
 
-    double h=0.1;
-    double tau=0.0005;  //0.062e-1 -граница сх-ти явного метода  для Ex1
+//    cout<< 1.152e-08/6.021e-7<<endl;//2
+//    cout<< 3.822e-09/1.152e-08<<endl;//3/2
+//    cout<< 2.4845e-09/3.822e-09<<endl;//4/3
+//
+//    cout<< 2.0171e-09/2.4845e-09<<endl;//5/4
+//    cout<< 1.796e-09/2.0171e-09<<endl;//6/5
+//    cout<< 1.707e-09/1.796e-09<<endl;//7//6
+//  //  return 0;
+    double q =1.0;
+    double h=0.2/q;
+    double tau=0.2/(q*q);  //0.062e-1 -граница сх-ти явного метода  для Ex1
     double x0=0;
     double xf=1;
-    double t0=0.0;
-    double tf=1.0;
+    double t0=0.1;
+    double tf=1.1;
 
     double sigma = 1.0;
     auto * solve = new Solve(h,tau,x0,xf,t0,tf,sigma);
@@ -101,7 +123,7 @@ int main() {
     if (flagCompare){
 
         cout << "Accuracy" << endl;
-        auto accur = getAccuracy(h, x0, xf, tf);
+        auto accur = getAccuracy2(h, x0, xf, tf);
         printVector(accur);
         cout<<"Residual:"<<endl;
         cout<<normVectorC( diffVectors(accur,U[U.size()-1]) );

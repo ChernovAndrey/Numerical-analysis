@@ -99,7 +99,7 @@ public:
 
 
 
-    Equations* equations= new Equations2();
+    Equations* equations= new EquationsTest2();
     double sigma = 0;
     GridParam *gp;
     Var *var;
