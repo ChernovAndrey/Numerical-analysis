@@ -83,25 +83,45 @@ void printMaxTMiddle(vector<vector<double>> U){
     cout <<"max="<<max<<endl;
 }
 
+vector<double> getAccuracyKv(double h,  double x0, double xf,  double tf){  // квазилинейное
+    auto getSolution = [](double t, double x){
+        double delta = 2.0;
+        double kappa0=0.5;
+        double c = 5.0 ;
+        return  pow((delta*c/kappa0) *(c*t-x),1.0/delta);
+    };
+    vector<double> UAcc;
+    double c = 5.0;
+    for (double i = x0; i <= xf ; i+=h) {
+        if (i<=c*tf) {
+        //    cout<<"i:"<<i<<'\t'<<"c*tf:"<<c*tf<<endl;
+            UAcc.push_back(getSolution(tf, i));
+        }else{
+            return UAcc;
+//            UAcc.push_back(0.0);
+        }
+    }
+    return UAcc;
+}
 
+double getArea(vector<double> v,double h){
+    double area=0.0;
+    for (int i=0;i<v.size()-1;i++){
+        area+=0.5*(v[i]+v[i+1])*(h);
+    }
+    return area;
+}
 
 int main() {
 
-//    cout<< 1.152e-08/6.021e-7<<endl;//2
-//    cout<< 3.822e-09/1.152e-08<<endl;//3/2
-//    cout<< 2.4845e-09/3.822e-09<<endl;//4/3
-//
-//    cout<< 2.0171e-09/2.4845e-09<<endl;//5/4
-//    cout<< 1.796e-09/2.0171e-09<<endl;//6/5
-//    cout<< 1.707e-09/1.796e-09<<endl;//7//6
-//  //  return 0;
     double q =1.0;
     double h=0.2/q;
-    double tau=0.2/(q*q);  //0.062e-1 -граница сх-ти явного метода  для Ex1
-    double x0=0;
-    double xf=1;
-    double t0=0.1;
-    double tf=1.1;
+//    double tau=0.0002/(q*q);  //0.062e-1 -граница сх-ти явного метода  для Ex1
+    double tau=0.002/(q*q);  //0.062e-1 -граница сх-ти явного метода  для Ex1
+    double x0=0.0;
+    double xf=10.0;
+    double t0=0.0;
+    double tf=1.0;
 
     double sigma = 1.0;
     auto * solve = new Solve(h,tau,x0,xf,t0,tf,sigma);
@@ -110,23 +130,29 @@ int main() {
     delete solve;
     printMatrix(U);
     cout<<"size="<<U.size()<<'\t'<<U[0].size()<<endl;
-     writingData(U);
+    writingData(U);
     printVector(U[0]);
     printVector(U[1]);
 
     printMaxTMiddle(U);
 
+    cout.precision(16);
+//    for(int t=0;t<U.size() ; t++){
+//
+//        cout<<"area:"<<getArea(U[t],h)<<endl;
+//    }
 
-
-    auto flagCompare = true;//cравнивать с точным решением, только для тестовой задачи
-
-    if (flagCompare){
-
-        cout << "Accuracy" << endl;
-        auto accur = getAccuracy2(h, x0, xf, tf);
-        printVector(accur);
-        cout<<"Residual:"<<endl;
-        cout<<normVectorC( diffVectors(accur,U[U.size()-1]) );
-    }
+//    cout<<"area first"<<getArea(U[0],h)<<endl;
+//
+//    auto flagCompare = true;//cравнивать с точным решением, только для тестовой задачи
+//
+//    if (flagCompare==true){
+//
+//        cout << "Accuracy" << endl;
+//        auto accur = getAccuracyKv(h, x0, xf, tf);
+//        printVector(accur);
+//        cout<<"Residual:"<<endl;
+//        cout<<normVectorC( diffVectors(accur,U[U.size()-1]) );
+//    }
         return 0;
 }
