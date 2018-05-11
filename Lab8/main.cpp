@@ -6,7 +6,7 @@ void writingData(vector<vector<double>> U){
     const string pathToFile = "/home/andrey/CLionProjects/NumericalMethods/Lab8/files/Ui.txt";
     ofstream file(pathToFile, ios_base::out | ios_base::trunc);
 
-    // file << "{";
+    //F file << "{";
     for (int i = 0; i < U.size(); i++) {
         auto v = U[i];
         //   file << "{ ";
@@ -42,15 +42,36 @@ vector<double> getAccuracy1(double h,  double x0, double xf,  double tf){ //дл
 }
 
 
+vector<double> getAccuracy2(double h,  double x0, double xf,  double tf){ //для первого уравнения
+    double eps=1e-8;
+    auto getTerm = [](double t, double x, int n){
+        auto pi = M_PI;
+        return pow(2*n+1,-3)*sin( (2*n+1)*pi*x)*cos( (2*n+1)*pi*t);
+    };
+    auto pi = M_PI;
+    vector<double> UAcc;
+    for (double i = x0; i <= xf ; i+=h) {
+        int k = (int)(0.5*( sqrt( 2/(pi*pi*eps) ) -1 ))+1;
+        double term=0.0;
+        for (int j = 0; j <= k; ++j) {
+            term+=getTerm(tf,i,j);
+        }
+        UAcc.push_back( 8*term/(pi*pi*pi) );
+    }
+    return UAcc;
+}
+
+
 int main() {
 
     double q =1.0;
+//    double h=1/(90.0*q);
     double h=0.01/q;
     double tau=0.01/q;
     double x0=0.0;
     double xf=1.0;
     double t0=0.0;
-    double tf=0.2;
+    double tf=0.5;
 
     auto * solve = new Solve(h,tau,x0,xf,t0,tf);
     auto U = solve->calculate();
@@ -70,19 +91,21 @@ int main() {
 
         cout << "Accuracy" << endl;
 
-        auto accur0 = getAccuracy1(h, x0, xf, 0);
-        cout<<"accur0:"<<endl;
-        printVector(accur0);
+//        auto accur0 = getAccuracy2(h, x0, xf, 0);
+//        cout<<"accur0:"<<endl;
+//        printVector(accur0);
+//
+//        auto accur1 = getAccuracy2(h, x0, xf, tau);
+//        cout<<"accur1:"<<endl;
+//        printVector(accur1);
 
-        auto accur1 = getAccuracy1(h, x0, xf, tau);
-        cout<<"accur1:"<<endl;
-        printVector(accur1);
-
-        auto accur = getAccuracy1(h, x0, xf, tf);
+        auto accur = getAccuracy2(h, x0, xf, tf);
         printVector(accur);
         cout<<"Residual:"<<endl;
-        cout<<normVectorC( diffVectors(accur,U[U.size()-1]) );
+        cout<<normVectorC( diffVectors(accur,U[U.size()-1]) )<<endl;
     }
+
+    cout<<"Res U0 Uf "<<normVectorC( diffVectors(U[0],U[U.size()-1]) )<<endl;
 
     return 0;
 }

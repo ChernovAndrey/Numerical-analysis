@@ -81,10 +81,10 @@ public:
         for (int i = 2; i < gp->T->n; i++) {
             vector<double> UiEx(gp->X->n);
             UiEx[0] = equations->getBoundValueLeft(var, i);
-            UiEx[UiEx.size() - 1] = equations->getBoundValueRight(var, i);
             for (int j = 1; j < gp->X->n - 1; j++) {
                 UiEx[j] = equations->getExplicitValue(var, i, j);
             }
+            UiEx[UiEx.size() - 1] = equations->getBoundValueRight(var, i);
             var->U.push_back(UiEx);
         }
         return var->U;
@@ -92,7 +92,7 @@ public:
     }
 
 
-    Equations *equations = new Equations1();
+    Equations *equations = new Equations4();
     GridParam *gp;
     Var *var;
 };
