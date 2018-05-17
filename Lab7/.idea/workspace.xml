@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f5bc3b8-c641-49f0-8630-af9e44f7a170" name="Default" comment="" />
+    <list default="true" id="08131da8-45a7-448e-bec2-69d79d4de032" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="155" selection-end-column="7" />
+            <state relative-caret-position="1314">
+              <caret line="73" column="39" lean-forward="false" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -67,8 +67,8 @@
       <file leaf-file-name="Solve.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Solve.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="2466">
+              <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#84#103#0" expanded="true" />
@@ -101,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Equations.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Equations.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Equations.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8838">
-              <caret line="491" column="7" lean-forward="false" selection-start-line="491" selection-start-column="7" selection-end-line="491" selection-end-column="7" />
+            <state relative-caret-position="700">
+              <caret line="73" column="19" lean-forward="true" selection-start-line="71" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
               <folding>
                 <element signature="e#1#34#0" expanded="false" />
                 <element signature="e#90#108#0" expanded="true" />
@@ -120,8 +120,8 @@
       <file leaf-file-name="Var.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Var.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="522">
+              <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding>
                 <element signature="e#80#99#0" expanded="true" />
               </folding>
@@ -141,63 +141,11 @@
       </file>
     </leaf>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Explici</find>
-      <find>getFi</find>
-      <find>calcula</find>
-      <find>merge</find>
-      <find>getO</find>
-      <find>getEx</find>
-      <find>getFul</find>
-      <find>calcul</find>
-      <find>R2</find>
-      <find>cal</find>
-      <find>R1</find>
-      <find>FullImp</find>
-      <find>var-&gt;c</find>
-      <find>Equations2</find>
-      <find>Equat</find>
-      <find>Params</find>
-      <find>Equations</find>
-      <find>calculate</find>
-      <find>calcu</find>
-      <find>ValueRight</find>
-      <find>equa</find>
-      <find>cout</find>
-      <find>Equations3</find>
-      <find>calculateA</find>
-      <find>getK</find>
-      <find>flagKv</find>
-      <find>yPrevLa</find>
-      <find>countII</find>
-      <find>getP2</find>
-      <find>count</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>gp-&gt;</replace>
-      <replace>T-&gt;</replace>
-      <replace>var</replace>
-      <replace>Params</replace>
-      <replace>var-&gt;U[</replace>
-      <replace>Imp</replace>
-    </replaceStrings>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ExplicitSolve.h" />
-        <option value="$PROJECT_DIR$/Equations.cpp" />
-        <option value="$PROJECT_DIR$/BoundaryValue.h" />
-        <option value="$PROJECT_DIR$/Params.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/FactoryDiagMatrix.h" />
         <option value="$PROJECT_DIR$/Var.h" />
-        <option value="$PROJECT_DIR$/helping/vectorOperations.h" />
-        <option value="$PROJECT_DIR$/helping/vectorOperations.cpp" />
-        <option value="$PROJECT_DIR$/Equations.h" />
         <option value="$PROJECT_DIR$/Solve.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -207,7 +155,6 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="992" />
     <option name="y" value="24" />
@@ -243,11 +190,6 @@
             </path>
             <path>
               <item name="Lab7" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="Lab7" type="462c0819:PsiDirectoryNode" />
-              <item name="solveSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lab7" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -258,12 +200,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab9" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -294,7 +231,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1f5bc3b8-c641-49f0-8630-af9e44f7a170" name="Default" comment="" />
+      <changelist id="08131da8-45a7-448e-bec2-69d79d4de032" name="Default" comment="" />
       <created>1522310069789</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -320,17 +257,24 @@
       <workItem from="1525265016693" duration="12315000" />
       <workItem from="1525369617768" duration="6473000" />
       <workItem from="1525881673929" duration="1752000" />
+      <workItem from="1526293896146" duration="765000" />
+      <workItem from="1526303362253" duration="46000" />
+      <workItem from="1526311966587" duration="211000" />
+      <workItem from="1526316738452" duration="144000" />
+      <workItem from="1526317260220" duration="40000" />
+      <workItem from="1526317377139" duration="636000" />
+      <workItem from="1526400647430" duration="17000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130661000" />
+    <option name="totallyTimeSpent" value="1032000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="992" y="24" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31509122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.342178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -723,28 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Params.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Equations.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8838">
-          <caret line="491" column="7" lean-forward="false" selection-start-line="491" selection-start-column="7" selection-end-line="491" selection-end-column="7" />
-          <folding>
-            <element signature="e#1#34#0" expanded="false" />
-            <element signature="e#90#108#0" expanded="true" />
-            <element signature="e#2848#5885#0" expanded="false" />
-            <element signature="e#5892#8078#0" expanded="false" />
-            <element signature="e#12450#12502#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/solveSystem/Sweep.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -753,10 +675,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Var.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#80#99#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Solve.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="2466">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#84#103#0" expanded="true" />
@@ -768,22 +700,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Var.h">
+    <entry file="file://$PROJECT_DIR$/Params.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding>
-            <element signature="e#80#99#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="155" selection-end-column="7" />
+        <state relative-caret-position="1314">
+          <caret line="73" column="39" lean-forward="false" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Equations.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="73" column="19" lean-forward="true" selection-start-line="71" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+          <folding>
+            <element signature="e#1#34#0" expanded="false" />
+            <element signature="e#90#108#0" expanded="true" />
+            <element signature="e#2848#5885#0" expanded="false" />
+            <element signature="e#5892#8078#0" expanded="false" />
+            <element signature="e#12450#12502#0" expanded="false" />
           </folding>
         </state>
       </provider>
