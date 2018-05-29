@@ -47,6 +47,7 @@ private:
                 intervals.emplace(values.first[i],values.first[i+1]);
             }
         }
+        delete grid;// возможно не тут надо удалять.
     }
 public:
     Equation() = default;
@@ -68,11 +69,15 @@ public:
             tie(x1,x2)= instance->intervals.front();
             instance->intervals.pop();
             if (method == Bisection){
-                instance->roots.push_back((new SolveBisection(x1, x2))->execute(f));
+                auto solveBisection=new SolveBisection(x1,x2);
+                instance->roots.push_back(solveBisection->execute(f));
+                delete solveBisection;
                 continue;
             }
             if (method == Newton){
-                instance->roots.push_back((new SolveNewton(x1, x2))->execute(f));
+                auto solveNewton = new SolveNewton(x1,x2);
+                instance->roots.push_back(solveNewton->execute(f));
+                delete solveNewton;
                 continue;
             }
             assert(false);

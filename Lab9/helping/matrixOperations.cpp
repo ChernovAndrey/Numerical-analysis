@@ -120,3 +120,21 @@ T getNormMatrix1(vector<vector<T>> matrix) { //по столбцам
 
 
 }
+
+template<typename T>
+vector<vector<T>> getDiffMatrix(vector<vector<T>> matrix1,vector<vector<T>> matrix2) { //по столбцам
+    vector<vector<T>> res=vector<vector<T>>(matrix1.size());
+
+    for (int i = 0; i < matrix1.size(); ++i) {
+
+        vector<T> resI = vector<T>(matrix1[i].size());
+        for (int j = 0; j < matrix1[0].size(); ++j) {
+            resI[j]=abs(matrix1[i][j]-matrix2[i][j]);
+        }
+        res.push_back(resI);
+    }
+
+    return res;
+
+
+}

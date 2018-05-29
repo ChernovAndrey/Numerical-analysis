@@ -67,7 +67,9 @@ public:
         if (getKindLeft() == 1) {
             if (getKindRight() == 1) {
                 tie(matrix, f) = FactoryDiagMatrixL1R1(var, it,flagKv, std::move(YPr));
-                Y = (new Sweep(matrix, f))->solveSystem();
+                auto sweep=new Sweep(matrix, f);
+                Y = (sweep)->solveSystem();
+                delete sweep;
                 Y.insert(Y.begin(), getBoundValueLeft(var, it));
           //      if (!this->flagKv) {
                     Y.push_back(getBoundValueRight(var, it));
@@ -76,14 +78,18 @@ public:
 
             if (getKindRight() == 2) {
                 tie(matrix, f) = FactoryDiagMatrixL1R2(var, it);
-                Y = (new Sweep(matrix, f))->solveSystem();
+                auto sweep=new Sweep(matrix, f);
+                Y = (sweep)->solveSystem();
+                delete sweep;
                 Y.insert(Y.begin(), getBoundValueLeft(var, it));
             }
 
         }else{
             if(getKindRight()==2){
                 tie(matrix, f) = FactoryDiagMatrixL2R2(var, it);
-                Y = (new Sweep(matrix, f))->solveSystem();
+                auto sweep=new Sweep(matrix, f);
+                Y = (sweep)->solveSystem();
+                delete sweep;
             }
         }
 

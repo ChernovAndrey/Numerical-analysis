@@ -51,8 +51,10 @@ private:
         vector<double> x;
         tie(matrix, f) = createDiagMatrix(h, g);
 
-        auto c=(new Sweep(matrix,f))->solveSystem();
 
+        auto sweep = new Sweep(matrix,f);
+        auto c=sweep->solveSystem();
+        delete sweep;
         vector<double> b(fxValues.size()-1);
         vector<double> d(fxValues.size()-1);
 

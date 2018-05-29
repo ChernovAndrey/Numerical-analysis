@@ -18,7 +18,8 @@ using namespace std;
 
 class Solve {
 public:
-
+double eps = 1e-7;
+bool flagOut= true;//флаг выхода
 
     Solve(double h1, double h2,double tau, double x1b, double x1f, double x2b, double x2f, double t0, double tf) {
         int nx1 = static_cast<int>((x1f - x1b) / h1) + 1;
@@ -88,20 +89,33 @@ public:
 
 //        printVector("U0")
         var->U.push_back(U0);
+//        for (int k = 0; k < U0.size(); ++k) {
+//            for (int i = 0; i < U0[0].size(); ++i) {
+//                U0[k][i]=1+var->X2[k];
+//            }
+//        }
         printMatrix(U0);
         double h1 = gp->X1->step;
         double h2 = gp->X2->step;
         double tau = gp->T->step;
+
         for (int i = 1; i < gp->T->n; i++) {
-              auto Ui = equations->getImplicitValue(var, i,gp);
-              var->U.push_back(Ui);
+            auto UPrev = var->U[var->U.size()-1];
+            auto Ui = equations->getImplicitValue(var, i,gp);
+            var->U.push_back(Ui);
+            if (flagOut){
+                  if( (getNormMatrix3( getDiffMatrix(Ui,UPrev) )/var->tau)  <eps){
+                      cout <<"fin T: "<<var->T[i]<<endl;
+                      return var->U;
+                  }
+              }
         }
         return var->U;
 
     }
 
 
-    Equations *equations = new Equations1();
+    Equations *equations = new Equations3();
     double sigma = 0;
     GridParam *gp;
     Var *var;

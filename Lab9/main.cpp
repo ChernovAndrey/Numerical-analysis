@@ -43,7 +43,7 @@ void writingData(vector<vector<vector<double>>> U){
 }
 
 //лямда равна единице
-vector<vector<double>> getAccuracy(double h1, double h2, double x1b, double x1f, double x2b, double x2f, double tf){ //для первого уравнения
+vector<vector<double>> getAccuracy1(double h1, double h2, double x1b, double x1f, double x2b, double x2f, double tf){ //для первого уравнения
     auto getSolution = [](double t, double x1,double x2){
         return 1.0;
     };
@@ -60,65 +60,94 @@ vector<vector<double>> getAccuracy(double h1, double h2, double x1b, double x1f,
 }
 
 
-vector<double> getAccuracy2(double h,  double x0, double xf,  double tf){
-    auto getSolution = [](double t, double x){
-        return (1/sqrt(t))*exp(-x*x/(4*t) );
+vector<vector<double>> getAccuracy2(double h1, double h2, double x1b, double x1f, double x2b, double x2f, double tf){ //для первого уравнения
+    auto getSolution = [](double t, double x1,double x2){
+        return 1.0+x2;
     };
-    vector<double> UAcc;
-    for (double i = x0; i <= xf ; i+=h) {
-        UAcc.push_back( getSolution(tf,i) );
+    auto eps=1e-7;
+    vector<vector<double>> U;
+    for (double i = x2b; i <= x2f+eps; i+=h2) {
+        vector<double> Ui;
+        for (double j = x1b; j <= x1f+eps; j+=h1) {
+            Ui.push_back( getSolution(tf,j,i) );
+        }
+        U.push_back(Ui);
     }
-    return UAcc;
+    return U;
+}
+
+
+vector<vector<double>> getAccuracy3(double h1, double h2, double x1b, double x1f, double x2b, double x2f, double tf){ //для первого уравнения
+    auto getSolution = [](double t, double x1,double x2){
+        return x1*x1+x2*x2;
+    };
+    auto eps=1e-7;
+    vector<vector<double>> U;
+    for (double i = x2b; i <= x2f+eps; i+=h2) {
+        vector<double> Ui;
+        for (double j = x1b; j <= x1f+eps; j+=h1) {
+            Ui.push_back( getSolution(tf,j,i) );
+        }
+        U.push_back(Ui);
+    }
+    return U;
+}
+
+
+void writeFile2(vector<vector<double>> U, vector<double> X1, vector<double> X2){
+    const string pathToFile = "/home/andrey/CLionProjects/NumericalMethods/Lab9/files/U2.txt";
+    ofstream file(pathToFile, ios_base::out | ios_base::app);
+
+    for (int j = 0; j < X2.size(); ++j) {
+        for (int i = 0; i < X1.size(); ++i) {
+            file<< X1[i] << " "<< X2[j] <<" " << U[i][j] <<" ";
+        }
+    }
+    file.close();
+
 }
 
 int main() {
 
-    double q =4.0;
-    double h1=0.2/q;
-    double h2=0.2/q;
-//    double tau=0.0002/(q*q);  //0.062e-1 -граница сх-ти явного метода  для Ex1
-    double tau=0.2/(4);  //0.062e-1 -граница сх-ти явного метода  для Ex1
+    double q =1.0;
+    double h1=0.1/q;
+    double h2=0.1/q;
+    double tau=0.1;
     double x1b=0.0;
     double x2b=0.0;
     double x1f=1.0;
     double x2f=1.0;
     double t0=0.0;
-    double tf=10.0;
+    double tf=20.0;
 
     auto * solve = new Solve(h1,h2,tau,x1b,x1f,x2b,x2f,t0,tf);
     auto U = solve->calculate();
    // cout<<U[0][0][0]
-    delete solve;
     printMatrix(U[U.size()-1]);
     cout<<"size="<<U.size()<<'\t'<<U[0].size()<<endl;
     writingData(U);
-//    printMatrix(U[0]);
+    writeFile2(U[0],solve->var->X1,solve->var->X2);
 
-//    printMatrix(U[1]);
+    const string pathToFile = "/home/andrey/CLionProjects/NumericalMethods/Lab9/files/U2.txt";
+    ofstream file(pathToFile, ios_base::out | ios_base::trunc);
+    file.close();
+    for (int i = 0; i < U.size(); ++i) {
+        writeFile2(U[i],solve->var->X1,solve->var->X2);
+    }
 
+    delete solve;
 
-//    cout.precision(16);
-//    for(int t=0;t<U.size() ; t++){
-//
-//        cout<<"area:"<<getArea(U[t],h)<<endl;
-//    }
-
-//    cout<<"area first"<<getArea(U[0],h)<<endl;
-//
-//    auto flagCompare = true;//cравнивать с точным решением, только для тестовой задачи
-//
-//    if (flagCompare==true){
-//
-//        cout << "Accuracy" << endl;
-//        auto accur = getAccuracyKv(h, x0, xf, tf);
-//        printVector(accur);
-//        cout<<"Residual:"<<endl;
-//        cout<<normVectorC( diffVectors(accur,U[U.size()-1]) );
-//    }
-    auto UAccur =  getAccuracy(h1,h2,x1b,x1f,x2b,x2f,tf);
+    auto UAccur =  getAccuracy3(h1,h2,x1b,x1f,x2b,x2f,tf);
     auto ULast = U[U.size()-1] ;
     cout<<"size"<<U[U.size()-1].size()<<" accur "<<UAccur.size()<<endl;
     cout<<"size"<<U[U.size()-1][0].size()<<" accur "<<UAccur[0].size();
-    cout<<"Resid:"<<getNormMatrix3(ULast)-getNormMatrix3(UAccur);
+
+
+    cout<<"UAccur"<<endl;
+    printMatrix(UAccur);
+    cout<<"diff finish matrix:"<<endl;
+    auto diff = getDiffMatrix(ULast,UAccur);
+    printMatrix(diff);
+    cout<<"error: "<<getNormMatrix3(diff);
     return 0;
 }

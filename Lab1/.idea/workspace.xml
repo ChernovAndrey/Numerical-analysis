@@ -12,82 +12,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6312420b-b14d-47ec-9dce-65371f119df3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/.idea/Lab1WithOOP.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/BasicInterface.hpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/CMakeLists.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/Gauss.hpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/QR.hpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeCache.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/CXX.includecache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/DependInfo.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/build.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/cmake_clean.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/depend.internal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/depend.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/flags.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/main.cpp.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/progress.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Lab1WithOOP.dir/sourceMatrices.cpp.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/Makefile2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/CMakeFiles/progress.marks" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/Lab1WithOOP" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/Lab1WithOOP.cbp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/cmake-build-debug/cmake_install.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/main.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/matrixOperations.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/matrixOperations.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/sourceMatrices.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/sourceMatrices.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/systems/DATA1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/systems/DATA2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/vectorOperations.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1WithOOP/vectorOperations.h" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab4/cmake-build-debug/CMakeFiles/Lab4.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../Lab4/cmake-build-debug/CMakeFiles/Lab4.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab4/cmake-build-debug/Lab4" afterPath="$PROJECT_DIR$/../Lab4/cmake-build-debug/Lab4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/cmake-build-debug/CMakeFiles/Lab5.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../Lab5/cmake-build-debug/CMakeFiles/Lab5.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/cmake-build-debug/Lab5" afterPath="$PROJECT_DIR$/../Lab5/cmake-build-debug/Lab5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/cmake-build-debug/CMakeFiles/Lab6.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../Lab6/cmake-build-debug/CMakeFiles/Lab6.dir/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/cmake-build-debug/Lab6" afterPath="$PROJECT_DIR$/../Lab6/cmake-build-debug/Lab6" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab7/cmake-build-debug/CMakeFiles/Lab7.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../Lab7/cmake-build-debug/CMakeFiles/Lab7.dir/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab7/cmake-build-debug/Lab7" afterPath="$PROJECT_DIR$/../Lab7/cmake-build-debug/Lab7" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/cmake-build-debug/CMakeFiles/Lab9.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../Lab9/cmake-build-debug/CMakeFiles/Lab9.dir/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/cmake-build-debug/Lab9" afterPath="$PROJECT_DIR$/../Lab9/cmake-build-debug/Lab9" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab3/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab3/Interpolating/CubicSpline.h" afterPath="$PROJECT_DIR$/../Lab3/Interpolating/CubicSpline.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab4/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab4/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab4/QR.hpp" afterPath="$PROJECT_DIR$/../Lab4/QR.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab4/main.cpp" afterPath="$PROJECT_DIR$/../Lab4/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab5/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/Equation.h" afterPath="$PROJECT_DIR$/../Lab5/Equation.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/Grids/Grid.h" afterPath="$PROJECT_DIR$/../Lab5/Grids/Grid.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/Solve/SolveBisection.h" afterPath="$PROJECT_DIR$/../Lab5/Solve/SolveBisection.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/Solve/SolveEq.h" afterPath="$PROJECT_DIR$/../Lab5/Solve/SolveEq.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/Solve/SolveNewton.h" afterPath="$PROJECT_DIR$/../Lab5/Solve/SolveNewton.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/Solve/SystemSolveNewton.h" afterPath="$PROJECT_DIR$/../Lab5/Solve/SystemSolveNewton.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/System.h" afterPath="$PROJECT_DIR$/../Lab5/System.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/cmake-build-debug/CMakeFiles/Lab5.dir/CXX.includecache" afterPath="$PROJECT_DIR$/../Lab5/cmake-build-debug/CMakeFiles/Lab5.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/main.cpp" afterPath="$PROJECT_DIR$/../Lab5/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/tests/Fxy.h" afterPath="$PROJECT_DIR$/../Lab5/tests/Fxy.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/tests/functions.h" afterPath="$PROJECT_DIR$/../Lab5/tests/functions.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PlotGraph.nb" afterPath="$PROJECT_DIR$/../PlotGraph.nb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab6/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/SolveMethod.h" afterPath="$PROJECT_DIR$/../Lab6/SolveMethod.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/files/U.txt" afterPath="$PROJECT_DIR$/../Lab6/files/U.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/main.cpp" afterPath="$PROJECT_DIR$/../Lab6/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab7/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab7/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab7/Equations.h" afterPath="$PROJECT_DIR$/../Lab7/Equations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab7/PlotGraphics.nb" afterPath="$PROJECT_DIR$/../Lab7/PlotGraphics.nb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab8/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab8/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab9/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/Equations.h" afterPath="$PROJECT_DIR$/../Lab9/Equations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/Solve.h" afterPath="$PROJECT_DIR$/../Lab9/Solve.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/cmake-build-debug/CMakeFiles/Lab9.dir/CXX.includecache" afterPath="$PROJECT_DIR$/../Lab9/cmake-build-debug/CMakeFiles/Lab9.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/files/U.txt" afterPath="$PROJECT_DIR$/../Lab9/files/U.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/files/config.txt" afterPath="$PROJECT_DIR$/../Lab9/files/config.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/helping/matrixOperations.cpp" afterPath="$PROJECT_DIR$/../Lab9/helping/matrixOperations.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/main.cpp" afterPath="$PROJECT_DIR$/../Lab9/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
@@ -152,6 +104,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="QR.hpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/QR.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="119" column="29" lean-forward="false" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="matrixOperations.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matrixOperations.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -177,8 +139,8 @@
       <file leaf-file-name="Gauss.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gauss.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1926">
-              <caret line="107" column="44" lean-forward="false" selection-start-line="107" selection-start-column="44" selection-end-line="107" selection-end-column="44" />
+            <state relative-caret-position="193">
+              <caret line="99" column="29" lean-forward="false" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="29" />
               <folding>
                 <element signature="e#1#34#0" expanded="false" />
               </folding>
@@ -190,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>exc</find>
       <find>matrix</find>
       <find>Gauss</find>
       <find>prin</find>
@@ -220,6 +181,7 @@
       <find>getMa</find>
       <find>print</find>
       <find>Residua</find>
+      <find>new</find>
     </findStrings>
     <replaceStrings>
       <replace>this-&gt;A</replace>
@@ -302,7 +264,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../courseProject5Sem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -363,28 +325,30 @@
       <workItem from="1511245068980" duration="1420000" />
       <workItem from="1513786267954" duration="156000" />
       <workItem from="1513786534354" duration="159000" />
+      <workItem from="1527590122209" duration="16000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62917000" />
+    <option name="totallyTimeSpent" value="62933000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="992" y="24" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.262576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26589274" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -737,11 +701,34 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/matrixOperations.h" />
-    <entry file="file://$PROJECT_DIR$/QR.hpp" />
+    <entry file="file://$PROJECT_DIR$/matrixOperations.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gauss.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1926">
-          <caret line="107" column="44" lean-forward="false" selection-start-line="107" selection-start-column="44" selection-end-line="107" selection-end-column="44" />
+        <state relative-caret-position="193">
+          <caret line="99" column="29" lean-forward="false" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="29" />
           <folding>
             <element signature="e#1#34#0" expanded="false" />
           </folding>
@@ -766,26 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matrixOperations.cpp">
+    <entry file="file://$PROJECT_DIR$/QR.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        <state relative-caret-position="193">
+          <caret line="119" column="29" lean-forward="false" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="29" />
           <folding />
         </state>
       </provider>
