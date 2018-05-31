@@ -12,34 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6312420b-b14d-47ec-9dce-65371f119df3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/cmake-build-debug/CMakeFiles/Lab6.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../Lab6/cmake-build-debug/CMakeFiles/Lab6.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/cmake-build-debug/Lab6" afterPath="$PROJECT_DIR$/../Lab6/cmake-build-debug/Lab6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab7/cmake-build-debug/CMakeFiles/Lab7.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../Lab7/cmake-build-debug/CMakeFiles/Lab7.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab7/cmake-build-debug/Lab7" afterPath="$PROJECT_DIR$/../Lab7/cmake-build-debug/Lab7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/cmake-build-debug/CMakeFiles/Lab9.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../Lab9/cmake-build-debug/CMakeFiles/Lab9.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/cmake-build-debug/Lab9" afterPath="$PROJECT_DIR$/../Lab9/cmake-build-debug/Lab9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab3/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab3/Interpolating/CubicSpline.h" afterPath="$PROJECT_DIR$/../Lab3/Interpolating/CubicSpline.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab4/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab4/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab5/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/Equation.h" afterPath="$PROJECT_DIR$/../Lab5/Equation.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab6/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/SolveMethod.h" afterPath="$PROJECT_DIR$/../Lab6/SolveMethod.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/files/U.txt" afterPath="$PROJECT_DIR$/../Lab6/files/U.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6/main.cpp" afterPath="$PROJECT_DIR$/../Lab6/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab7/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab7/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab7/Equations.h" afterPath="$PROJECT_DIR$/../Lab7/Equations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab7/PlotGraphics.nb" afterPath="$PROJECT_DIR$/../Lab7/PlotGraphics.nb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab8/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab8/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab9/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/Equations.h" afterPath="$PROJECT_DIR$/../Lab9/Equations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/Solve.h" afterPath="$PROJECT_DIR$/../Lab9/Solve.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/cmake-build-debug/CMakeFiles/Lab9.dir/CXX.includecache" afterPath="$PROJECT_DIR$/../Lab9/cmake-build-debug/CMakeFiles/Lab9.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/files/U.txt" afterPath="$PROJECT_DIR$/../Lab9/files/U.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/files/config.txt" afterPath="$PROJECT_DIR$/../Lab9/files/config.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/helping/matrixOperations.cpp" afterPath="$PROJECT_DIR$/../Lab9/helping/matrixOperations.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/main.cpp" afterPath="$PROJECT_DIR$/../Lab9/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab9/PlotGraphics.nb" afterPath="$PROJECT_DIR$/../Lab9/PlotGraphics.nb" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,12 +30,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="398">
+              <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,7 +65,7 @@
       <file leaf-file-name="BasicInterface.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BasicInterface.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
+            <state relative-caret-position="846">
               <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
@@ -104,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QR.hpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QR.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QR.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="119" column="29" lean-forward="false" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="29" />
+            <state relative-caret-position="2214">
+              <caret line="123" column="9" lean-forward="false" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -131,6 +109,7 @@
               <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#1285#1297#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,8 +118,8 @@
       <file leaf-file-name="Gauss.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gauss.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="99" column="29" lean-forward="false" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="29" />
+            <state relative-caret-position="2052">
+              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding>
                 <element signature="e#1#34#0" expanded="false" />
               </folding>
@@ -152,8 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>matrix</find>
-      <find>Gauss</find>
       <find>prin</find>
       <find>b</find>
       <find>matrixmul</find>
@@ -182,6 +159,8 @@
       <find>print</find>
       <find>Residua</find>
       <find>new</find>
+      <find>new</find>
+      <find>G</find>
     </findStrings>
     <replaceStrings>
       <replace>this-&gt;A</replace>
@@ -264,7 +243,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -326,29 +305,31 @@
       <workItem from="1513786267954" duration="156000" />
       <workItem from="1513786534354" duration="159000" />
       <workItem from="1527590122209" duration="16000" />
+      <workItem from="1527594952866" duration="499000" />
+      <workItem from="1527651318098" duration="40000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62933000" />
+    <option name="totallyTimeSpent" value="63472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26589274" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27252626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -414,7 +395,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -466,6 +449,7 @@
           <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1285#1297#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -491,7 +475,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1278">
           <caret line="71" column="22" lean-forward="false" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -542,6 +528,7 @@
           <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1285#1297#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -618,6 +605,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1285#1297#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -636,7 +624,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -690,29 +680,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sourceMatrices.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matrixOperations.h" />
     <entry file="file://$PROJECT_DIR$/matrixOperations.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -725,19 +697,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gauss.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="99" column="29" lean-forward="false" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="29" />
-          <folding>
-            <element signature="e#1#34#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BasicInterface.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
+        <state relative-caret-position="846">
           <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
@@ -753,11 +715,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sourceMatrices.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1098">
+          <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1285#1297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/QR.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="119" column="29" lean-forward="false" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="29" />
+        <state relative-caret-position="2214">
+          <caret line="123" column="9" lean-forward="false" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gauss.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

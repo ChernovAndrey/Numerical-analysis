@@ -804,7 +804,7 @@ public:
 private:
 
     double getBoundValueDown(Var *var, int ix1) override {
-        return -sqrt(var->X1[ix1] + 2);
+        return sqrt(var->X1[ix1] + 2);
     }
 
 
@@ -822,7 +822,7 @@ private:
     }
 
     double getBeginningValue(Var *var, int ix1, int ix2) override {
-        return 0.0;
+        return 1+var->X1[ix1]+var->X2[ix2];
     }
 
     double getFi(Var *var, int ix1, int ix2) override {

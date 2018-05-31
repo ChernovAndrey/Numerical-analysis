@@ -18,7 +18,7 @@ using namespace std;
 
 class Solve {
 public:
-double eps = 1e-7;
+double eps = 1e-2;
 bool flagOut= true;//флаг выхода
 
     Solve(double h1, double h2,double tau, double x1b, double x1f, double x2b, double x2f, double t0, double tf) {
@@ -65,15 +65,15 @@ bool flagOut= true;//флаг выхода
 //        cout<<gp->X->step;
         vector<vector<double>> U0(gp->X1->n);//при t равном нулю
 
-        vector<double> Uup(gp->X2->n); // верхние гран усл
-        for (int i = 0; i < gp->X2->n; ++i) {
-            Uup[i] = equations->getBoundValueUp(var,i);
-        }
-        U0[0]=Uup;
-        for (int i = 1; i < U0.size()-1; i++) {
+//        vector<double> Uup(gp->X2->n); // верхние гран усл
+//        for (int i = 0; i < gp->X2->n; ++i) {
+//            Uup[i] = equations->getBoundValueUp(var,i);
+//        }
+//        U0[0]=Uup;
+        for (int i = 0; i < U0.size(); i++) {
             vector<double> Ustr(gp->X2->n);
             Ustr[0] = equations->getBoundValueLeft(var,i);
-            for (int j = 1; j < gp->X2->n-1; ++j) {
+            for (int j = 0; j < gp->X2->n; ++j) {
                 Ustr[j] = equations->getBeginningValue(var, j, i);
             }
             Ustr[Ustr.size()-1] = equations->getBoundValueRight(var,i);
@@ -81,11 +81,11 @@ bool flagOut= true;//флаг выхода
             U0[i]=(Ustr);
         }
 
-        vector<double> Udown(gp->X2->n); // нижние гран усл
-        for (int i = 0; i < gp->X2->n; ++i) {
-            Udown[i] = equations->getBoundValueUp(var,i);
-        }
-        U0[U0.size()-1]=Udown;
+//        vector<double> Udown(gp->X2->n); // нижние гран усл
+//        for (int i = 0; i < gp->X2->n; ++i) {
+//            Udown[i] = equations->getBoundValueUp(var,i);
+//        }
+//        U0[U0.size()-1]=Udown;
 
 //        printVector("U0")
         var->U.push_back(U0);
@@ -115,7 +115,7 @@ bool flagOut= true;//флаг выхода
     }
 
 
-    Equations *equations = new Equations3();
+    Equations *equations = new EquationsVar6();
     double sigma = 0;
     GridParam *gp;
     Var *var;

@@ -94,60 +94,37 @@ vector<vector<double>> getAccuracy3(double h1, double h2, double x1b, double x1f
 }
 
 
-void writeFile2(vector<vector<double>> U, vector<double> X1, vector<double> X2){
-    const string pathToFile = "/home/andrey/CLionProjects/NumericalMethods/Lab9/files/U2.txt";
+void writeFile(vector<double> U, vector<double> X){
+    const string pathToFile = "/home/andrey/CLionProjects/NumericalMethods/Lab10/files/U2.txt";
     ofstream file(pathToFile, ios_base::out | ios_base::app);
 
-    for (int j = 0; j < X2.size(); ++j) {
-        for (int i = 0; i < X1.size(); ++i) {
-            file<< X1[i] << " "<< X2[j] <<" " << U[i][j] <<" ";
+        for (int i = 0; i < X.size(); ++i) {
+            file<< X[i] <<" " << U[i] <<" ";
         }
-    }
+
     file.close();
 
 }
 
 int main() {
 
-    double q =1.0;
-    double h1=0.1/q;
-    double h2=0.1/q;
-    double tau=0.001;
-    double x1b=0.0;
-    double x2b=0.0;
-    double x1f=1.0;
-    double x2f=1.0;
-    double t0=0.0;
-    double tf=20.0;
+//    double h=0.11;
+//    double h=0.075;
+    double a = 0.0;
+    double b = 1.0;
 
-    auto * solve = new Solve(h1,h2,tau,x1b,x1f,x2b,x2f,t0,tf);
+    int nx = 22;
+    double h = (b-a)/(nx-1);
+    double as=a;
+    double bs=b;
+    double hs=h;
+    int ns = nx;
+
+//    auto *solve = new Solve(h,a,b,hs,as,bs);
+    auto *solve = new Solve(h,a,nx,hs,as,ns);
     auto U = solve->calculate();
-   // cout<<U[0][0][0]
-    printMatrix(U[U.size()-1]);
-    cout<<"size="<<U.size()<<'\t'<<U[0].size()<<endl;
-    writingData(U);
-    writeFile2(U[0],solve->var->X1,solve->var->X2);
-
-    const string pathToFile = "/home/andrey/CLionProjects/NumericalMethods/Lab9/files/U2.txt";
-    ofstream file(pathToFile, ios_base::out | ios_base::trunc);
-    file.close();
-    for (int i = 0; i < U.size(); ++i) {
-        writeFile2(U[i],solve->var->X1,solve->var->X2);
-    }
-
+    printVector(U);
+    writeFile(U,solve->var->X);
     delete solve;
-
-    auto UAccur =  getAccuracy2(h1,h2,x1b,x1f,x2b,x2f,tf);
-    auto ULast = U[U.size()-1] ;
-    cout<<"size"<<U[U.size()-1].size()<<" accur "<<UAccur.size()<<endl;
-    cout<<"size"<<U[U.size()-1][0].size()<<" accur "<<UAccur[0].size();
-
-
-    cout<<"UAccur"<<endl;
-    printMatrix(UAccur);
-    cout<<"diff finish matrix:"<<endl;
-    auto diff = getDiffMatrix(ULast,UAccur);
-    printMatrix(diff);
-    cout<<"error: "<<getNormMatrix3(diff);
     return 0;
 }
