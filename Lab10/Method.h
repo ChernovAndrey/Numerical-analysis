@@ -108,21 +108,29 @@ public:
 
 class MethodReplaceKernel : public Method { // метод замены ядра на вырожденное.
     vector<double> solve(Equations *eq, Var *var) override {
-        vector<vector<double>> A(var->X.size());
-        vector<double> f(var->X.size());
-        for (int ix = 0; ix < var->X.size(); ++ix) {
-//            vector<double> strMatrix(var->X.size(),0);
-            vector<double> coef = formula3_8(eq, var, var->X[ix]);
-//            vector<double> coef = formula3(var,var->X[ix]);
-            for (int j = 0; j < coef.size(); ++j) {
-                coef[j] = -eq->getLambda() * coef[j];
+       // сначала находим константы в разложении ядра.
+        int countTermsSeries = eq->getCountTermsSeries();
+        vector<vector<double>> A(countTermsSeries);
+        vector<double> f(countTermsSeries);
+        for (int i = 0; i < countTermsSeries; ++i) {
+            vector<double> coef(countTermsSeries);
+            for (int j = 0; j < countTermsSeries; ++j) {
+                coef[j] = -eq->getLambda() * getAlpha(i,j,eq,var);
             }
-            coef[ix] += 1.0;
-            f[ix] = eq->getF(var->X[ix]);
-            A[ix] = coef;
+            coef[i] += 1.0;
+            f[i] = getBeta(i,eq,var);
+            A[i] = coef;
         }
-        auto result = Gauss::solveSystem(A, f);
-        return result;
+        auto C = Gauss::solveSystem(A, f);
+        vector<double> U(var->X.size());
+        for (int ix = 0; ix < var->X.size(); ++ix) {
+            double sumSeries=0.0;
+            for (int j = 0; j < C.size(); ++j) {
+                sumSeries+=C[j]*eq->getGj(j,var->X[ix]);
+            }
+            U[ix]=eq->getF(var->X[ix]) + eq->getLambda()*sumSeries;
+        }
+        return U;
     }
 
 private:
@@ -138,7 +146,7 @@ private:
             auto f2 = eq->getGj(j,var->S[is+1]) * eq->getKi(i,var->S[is+1]);
             auto f3 = eq->getGj(j,var->S[is+2]) * eq->getKi(i,var->S[is+2]);
             auto f4 = eq->getGj(j,var->S[is+3]) * eq->getKi(i,var->S[is+3]);
-            valueIntegral+=(3.0/8.0)*(f1 + 3*f2 + 3*f3 + f4);
+            valueIntegral+=(3.0*h/8.0)*(f1 + 3*f2 + 3*f3 + f4);
         }
         return valueIntegral;
     }
@@ -155,7 +163,7 @@ private:
             auto f2 = eq->getF(var->S[is+1]) * eq->getKi(i,var->S[is+1]);
             auto f3 = eq->getF(var->S[is+2]) * eq->getKi(i,var->S[is+2]);
             auto f4 = eq->getF(var->S[is+3]) * eq->getKi(i,var->S[is+3]);
-            valueIntegral+=(3.0/8.0)*(f1 + 3*f2 + 3*f3 + f4);
+            valueIntegral+=(3.0*h/8.0)*(f1 + 3*f2 + 3*f3 + f4);
         }
         return valueIntegral;
     }

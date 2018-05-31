@@ -26,10 +26,16 @@ public:
 
     virtual double getKernel(double x, double s)=0;
 
-    virtual double getKi(int i,double s)=0;
 
-    virtual double getGj(int j,double x)=0;
+// для метода замены ядра на вырожденное.
+//Gi - функции от x. Ki - функции от s. ( получаются при представлении ядра, как вырожденного.
+// расскладываем по формуле Тейлора ядро и берем первые три ненулевых члена.
 
+    virtual double getKi(int i,double s)=0; // i - номер функции (от 1 до 3)
+
+    virtual double getGj(int j,double x)=0; // j - номер функции (от 1 до 3)
+
+    virtual int getCountTermsSeries()=0;// количество ненулевых слагаемых разложения в ряд ядра.
 };
 
 class Equations1: public Equations{
@@ -50,30 +56,34 @@ public:
 //Gi - функции от x. Ki - функции от s. ( получаются при представлении ядра, как вырожденного.
 // расскладываем по формуле Тейлора ядро и берем первые три ненулевых члена.
 
-    double getGj(int j,double x) override { // i - номер функции (от 1 до 3)
-        if (j==1){
+    double getGj(int j,double x) override { // j - номер функции (от 1 до 3)
+        if (j==0){
             return 1.0-x;
         }
-        if (j==2){
+        if (j==1){
             return 0.5*pow(x,3);
         }
-        if (j==3){
+        if (j==2){
             return -pow(x,5)/24.0;
         }
         assert(false);
     }
 
     double getKi(int i,double s) override { // i - номер функции (от 1 до 3)
-        if (i==1){
+        if (i==0){
             return 1.0;
         }
-        if (i==2){
+        if (i==1){
             return pow(s,2);
         }
-        if (i==3){
+        if (i==2){
             return pow(s,4);
         }
         assert(false);
+    }
+
+    int getCountTermsSeries() override {
+        return 3;
     }
 
 };
@@ -92,39 +102,40 @@ public:
     double getKernel(double x, double s) override {
         return (1-x*cos(x*s));
     }
-
-
-
+    
     // для метода замены ядра на вырожденное.
 //Gi - функции от x. Ki - функции от s. ( получаются при представлении ядра, как вырожденного.
 // расскладываем по формуле Тейлора ядро и берем первые три ненулевых члена.
 
     double getGj(int j,double x) override { // j - номер функции (от 1 до 3)
-        if (j==1){
+        if (j==0){
             return 1.0-x;
         }
-        if (j==2){
+        if (j==1){
             return 0.5*pow(x,3);
         }
-        if (j==3){
+        if (j==2){
             return -pow(x,5)/24.0;
         }
         assert(false);
     }
 
     double getKi(int i,double s) override { // i - номер функции (от 1 до 3)
-        if (i==1){
+        if (i==0){
             return 1.0;
         }
-        if (i==2){
+        if (i==1){
             return pow(s,2);
         }
-        if (i==3){
+        if (i==2){
             return pow(s,4);
         }
         assert(false);
     }
-
+    
+    int getCountTermsSeries() override {
+        return 3;
+    }
 
 };
 #endif //LAB9_EQUATIONS_H
