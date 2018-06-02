@@ -4,8 +4,10 @@
 CMakeFiles/Lab10.dir/main.cpp.o
  /home/andrey/CLionProjects/NumericalMethods/Lab10/Equations.h
  /home/andrey/CLionProjects/NumericalMethods/Lab10/Method.h
+ /home/andrey/CLionProjects/NumericalMethods/Lab10/MethodSingular.h
  /home/andrey/CLionProjects/NumericalMethods/Lab10/Params.h
  /home/andrey/CLionProjects/NumericalMethods/Lab10/Solve.h
+ /home/andrey/CLionProjects/NumericalMethods/Lab10/SolveSingular.h
  /home/andrey/CLionProjects/NumericalMethods/Lab10/Var.h
  /home/andrey/CLionProjects/NumericalMethods/Lab10/helping/matrixOperations.cpp
  /home/andrey/CLionProjects/NumericalMethods/Lab10/helping/matrixOperations.h

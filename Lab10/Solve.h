@@ -58,7 +58,6 @@ bool flagOut= true;//флаг выхода
     };
     vector<double> calculate() {
         return method->solve(equations,var);
-
     }
 
 

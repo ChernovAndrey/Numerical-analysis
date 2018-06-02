@@ -40,6 +40,8 @@ Var.h
 solveSystem/Gauss.hpp
 /home/andrey/CLionProjects/NumericalMethods/Lab10/solveSystem/Gauss.hpp
 
+/home/andrey/CLionProjects/NumericalMethods/Lab10/MethodSingular.h
+
 /home/andrey/CLionProjects/NumericalMethods/Lab10/Params.h
 
 /home/andrey/CLionProjects/NumericalMethods/Lab10/Solve.h
@@ -57,6 +59,12 @@ helping/vectorOperations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab10/helping/vectorOperations.h
 Method.h
 /home/andrey/CLionProjects/NumericalMethods/Lab10/Method.h
+
+/home/andrey/CLionProjects/NumericalMethods/Lab10/SolveSingular.h
+Equations.h
+/home/andrey/CLionProjects/NumericalMethods/Lab10/Equations.h
+MethodSingular.h
+/home/andrey/CLionProjects/NumericalMethods/Lab10/MethodSingular.h
 
 /home/andrey/CLionProjects/NumericalMethods/Lab10/Var.h
 iostream
@@ -121,8 +129,12 @@ iostream
 -
 Solve.h
 /home/andrey/CLionProjects/NumericalMethods/Lab10/Solve.h
+MethodSingular.h
+/home/andrey/CLionProjects/NumericalMethods/Lab10/MethodSingular.h
 helping/vectorOperations.h
 /home/andrey/CLionProjects/NumericalMethods/Lab10/helping/vectorOperations.h
+SolveSingular.h
+/home/andrey/CLionProjects/NumericalMethods/Lab10/SolveSingular.h
 vector
 -
 

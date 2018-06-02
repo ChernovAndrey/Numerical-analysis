@@ -90,10 +90,16 @@
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab10/Method.h">
 			<Option target="Lab10"/>
 		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab10/MethodSingular.h">
+			<Option target="Lab10"/>
+		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab10/Params.h">
 			<Option target="Lab10"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab10/Solve.h">
+			<Option target="Lab10"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab10/SolveSingular.h">
 			<Option target="Lab10"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/NumericalMethods/Lab10/Var.h">

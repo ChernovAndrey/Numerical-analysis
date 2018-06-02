@@ -67,7 +67,7 @@ class MethodQuadr : public Method { // метод квадратур
 class MethodSequence : public Method { // метод последовательных приближений.
 
 private:
-    double eps = 1e-8;
+    double eps = 1e-2;
     vector<double> getBeginningValue(Equations *eq, Var *var) {
         vector<double> U0(var->X.size());
         for (int i = 0; i < var->X.size(); ++i) {

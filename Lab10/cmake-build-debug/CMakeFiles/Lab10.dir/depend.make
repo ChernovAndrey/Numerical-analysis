@@ -3,8 +3,10 @@
 
 CMakeFiles/Lab10.dir/main.cpp.o: ../Equations.h
 CMakeFiles/Lab10.dir/main.cpp.o: ../Method.h
+CMakeFiles/Lab10.dir/main.cpp.o: ../MethodSingular.h
 CMakeFiles/Lab10.dir/main.cpp.o: ../Params.h
 CMakeFiles/Lab10.dir/main.cpp.o: ../Solve.h
+CMakeFiles/Lab10.dir/main.cpp.o: ../SolveSingular.h
 CMakeFiles/Lab10.dir/main.cpp.o: ../Var.h
 CMakeFiles/Lab10.dir/main.cpp.o: ../helping/matrixOperations.cpp
 CMakeFiles/Lab10.dir/main.cpp.o: ../helping/matrixOperations.h
