@@ -28,8 +28,17 @@ vector<double> getAccuracy1(vector<double> X){
     return U;
 }
 
+vector<double> getAccuracySingular(vector<double> X){
+    vector<double> res(X.size());
+    for (int i = 0; i < X.size(); ++i) {
+        res[i] = 2*sin(3*X[i])+1;
+    }
+    return res;
+}
+
+
 void solveSingularEq(){
-    int n = 40; // кол-во точек
+    int n = 2000; // кол-во точек
     auto *solve = new SolveSingular(n);
     auto U = solve->calculate();
     double R = U.back(); // невязка.
@@ -41,9 +50,10 @@ void solveSingularEq(){
         X[i] = 2*M_PI*i/n;
     }
     writingFile(U,X);
+    auto UAccur = getAccuracySingular(X);
+    cout<<"error="<<normVectorC( diffVectors(UAccur,U) );
     delete solve;
 }
-
 
 int main() {
     solveSingularEq();

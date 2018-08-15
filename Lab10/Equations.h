@@ -188,6 +188,106 @@ public:
 
 };
 
+class Equations4: public Equations{
+public:
+    double getF(double x) override {
+        return 2 - exp(-x) - sin(x);
+    }
+
+    double getLambda() override {
+        return 1.0;
+    }
+
+    double getKernel(double x, double s) override {
+        return x*( cos(x*s) - exp(-x*s) );
+    }
+
+// для метода замены ядра на вырожденное.
+//Gi - функции от x. Ki - функции от s. ( получаются при представлении ядра, как вырожденного.
+// расскладываем по формуле Тейлора ядро и берем первые три ненулевых члена.
+
+    double getGj(int j,double x) override { // j - номер функции (от 1 до 3)
+        if (j==0){
+            return x*x;
+        }
+        if (j==1){
+            return -pow(x,3);
+        }
+        if (j==2){
+            return pow(x,4)/6.0;
+        }
+        assert(false);
+    }
+
+    double getKi(int i,double s) override { // i - номер функции (от 1 до 3)
+        if (i==0){
+            return s;
+        }
+        if (i==1){
+            return s*s;
+        }
+        if (i==2){
+            return pow(s,3);
+        }
+        assert(false);
+    }
+
+    int getCountTermsSeries() override {
+        return 3;
+    }
+
+};
+
+
+class Equations5: public Equations{
+public:
+    double getF(double x) override {
+        return x*x + sqrt(x);
+    }
+
+    double getLambda() override {
+        return 1.0;
+    }
+
+    double getKernel(double x, double s) override {
+        return x*( cos(x*s) - exp(-x*s) );
+    }
+
+// для метода замены ядра на вырожденное.
+//Gi - функции от x. Ki - функции от s. ( получаются при представлении ядра, как вырожденного.
+// расскладываем по формуле Тейлора ядро и берем первые три ненулевых члена.
+
+    double getGj(int j,double x) override { // j - номер функции (от 1 до 3)
+        if (j==0){
+            return x*x;
+        }
+        if (j==1){
+            return -pow(x,3);
+        }
+        if (j==2){
+            return pow(x,4)/6.0;
+        }
+        assert(false);
+    }
+
+    double getKi(int i,double s) override { // i - номер функции (от 1 до 3)
+        if (i==0){
+            return s;
+        }
+        if (i==1){
+            return s*s;
+        }
+        if (i==2){
+            return pow(s,3);
+        }
+        assert(false);
+    }
+
+    int getCountTermsSeries() override {
+        return 3;
+    }
+
+};
 
 class EquationsSingular{
 public:
@@ -196,7 +296,7 @@ public:
     explicit EquationsSingular(int n) : n(n),arcLen(2*M_PI/n){};
     // на единичной окружности с центром в точке (0,0)
     double getF(int i){ // номер точки на круге от 1 до N
-        return cos(3 * 2*M_PI*(i-1.0)/n);
+        return cos(3 * 2*M_PI*(i-0.5)/n);
     }
 
     pair<double,double> getKernel(pair<double,double> r, pair<double,double> p){

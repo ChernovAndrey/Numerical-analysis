@@ -36,7 +36,7 @@ public:
         }
         lastStrMatrix[n] = 0.0;
         A[n] = lastStrMatrix;
-        f[n] = 0.0;
+        f[n] = 2*M_PI;
 //        printMatrix(A);
         auto result = Gauss::solveSystem(A, f);
         return result;

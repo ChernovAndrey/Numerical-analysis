@@ -61,7 +61,7 @@ bool flagOut= true;//флаг выхода
     }
 
 
-    Equations *equations = new Equations1();
+    Equations *equations = new Equations4();
     Method *method= new MethodReplaceKernel();
     GridParam *gp{};
     Var *var{};
